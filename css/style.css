@@ -408,7 +408,7 @@ section#main .row .col h2 {
 .slider-wrapper {
     float: right;
     position: relative;
-    //background: url(../images/slider.png) no-repeat;
+    background: url(../images/slider.png) no-repeat;
     margin-top: 30px;
     margin-bottom: 13px;
     width: 420px;
@@ -445,7 +445,7 @@ section#main .row .col h2 {
 	display: block;
 	width: 13px;
 	height: 14px;
-	//background: url(../images/bullets.png) no-repeat;
+	/*background: url(../images/bullets.png) no-repeat;*/
 	text-indent: -9999px;
 	border: 0;
 	margin-right: 10px;
@@ -458,7 +458,7 @@ section#main .row .col h2 {
 	display: block;
 	width: 33px;
 	height: 52px;
-	background: url(../images/arrows.png) no-repeat;
+	/*background: url(../images/arrows.png) no-repeat;*/
 	text-indent: -9999px;
 	border: 0;
 }
