@@ -121,7 +121,7 @@ h3 {
 /* Lists */
 ul, ol {
 	margin-bottom: 25px;
-	padding: 0 20px;
+	padding: 0 40px;
 }
 ul { list-style: disc; }
 ol { list-style: decimal; }
