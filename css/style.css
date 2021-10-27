@@ -540,29 +540,29 @@ section#portfolio ul.folio-list li h3.entry-title {
 /* ------------------------------------------------
     About
 ------------------------------------------------ */
-section#about-us .primary .row .first {
+section#advantages .primary .row .first {
     margin-right: 35px;
 }
-section#about-us .primary ul.the-team {
+section#advantages .primary ul.the-team {
     margin: 25px 0 25px 0;
     padding: 0;
     list-style: none;
 }
-section#about-us .primary ul.the-team li {
+section#advantages .primary ul.the-team li {
     float: left;
     width: 290px;
     height: 150px;
 }
-section#about-us .primary ul.the-team li a {
+section#advantages .primary ul.the-team li a {
     color: #3B3B3B;
 }
-section#about-us .primary ul.the-team li a:hover,
-section#about-us .primary ul.the-team li a:focus,
-section#about-us .primary ul.the-team li a:active {
+section#advantages .primary ul.the-team li a:hover,
+section#advantages .primary ul.the-team li a:focus,
+section#advantages .primary ul.the-team li a:active {
     color: #3f66af;
 }
 
-section#about-us .primary ul.the-team li .thumbnail {
+section#advantages .primary ul.the-team li .thumbnail {
     position: relative;
     float: left;
     background: url(../images/thumb-bg.png) no-repeat;
@@ -570,21 +570,21 @@ section#about-us .primary ul.the-team li .thumbnail {
     height: 150px;
     margin-right: 12px;
 }
-section#about-us .primary ul.the-team li .thumbnail img {
+section#advantages .primary ul.the-team li .thumbnail img {
     position: absolute;
     top: 19px;
     left: 18px;
 }
-section#about-us .primary ul.the-team li p {
+section#advantages .primary ul.the-team li p {
     font-size: 14px;
     line-height: 20px;
     margin: 5px 0 0 0;
 }
-section#about-us .primary ul.the-team li p.mname {
+section#advantages .primary ul.the-team li p.mname {
     font-family: "MerriweatherBold", Serif;
     margin: 10px 0 0 0;
 }
-section#about-us .primary ul.the-team li.odd {
+section#advantages .primary ul.the-team li.odd {
     margin-right: 35px;
 }
 
@@ -595,26 +595,26 @@ section#about-us .primary ul.the-team li.odd {
     width: 100% !important;
 }
 
-section#about-us aside ul.the-team {
+section#advantages aside ul.the-team {
     margin: 25px 0 25px 0;
     padding: 0;
     list-style: none;
 }
-section#about-us aside ul.the-team li {
+section#advantages aside ul.the-team li {
   //  float: left;
     width: 290px;
     height: 120px;
 }
-section#about-us aside ul.the-team li a {
+section#advantages aside ul.the-team li a {
     color: #3B3B3B;
 }
-section#about-us aside ul.the-team li a:hover,
-section#about-us aside ul.the-team li a:focus,
-section#about-us aside ul.the-team li a:active {
+section#advantages aside ul.the-team li a:hover,
+section#advantages aside ul.the-team li a:focus,
+section#advantages aside ul.the-team li a:active {
     color: #3f66af;
 }
 
-section#about-us aside ul.the-team li .thumbnail {
+section#advantages aside ul.the-team li .thumbnail {
     position: relative;
     float: left;
     background: url(../images/thumb-bg.png) no-repeat;
@@ -622,27 +622,27 @@ section#about-us aside ul.the-team li .thumbnail {
     height: 120px;
     margin-right: 12px;
 }
-section#about-us aside ul.the-team li .thumbnail img {
+section#advantages aside ul.the-team li .thumbnail img {
     position: absolute;
     top: 19px;
     left: 18px;
 }
-section#about-us aside ul.the-team li p {
+section#advantages aside ul.the-team li p {
     font-size: 14px;
     line-height: 20px;
     margin: 5px 0 0 0;
 }
-section#about-us aside ul.the-team li p.mname {
+section#advantages aside ul.the-team li p.mname {
     font-family: "MerriweatherBold", Serif;
     margin: 10px 0 0 0;
 }
-section#about-us aside ul.the-team li.odd {
+section#advantages aside ul.the-team li.odd {
     margin-right: 35px;
 }
 
 /*----------- vardas-------- */
 
-section#about-us aside .download-btn {
+section#advantages aside .download-btn {
     background: url(../images/btn-bg.png);
     display: block;
     width: 250px;
