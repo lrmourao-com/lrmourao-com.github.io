@@ -88,7 +88,7 @@ p.intro { font-size: 18px; }
 
 /* links */
 a:link, a:visited {
-    color: #F2F2F2;
+    color: #3f66af;
     text-decoration: none;
     outline: 0;
 }
@@ -381,7 +381,7 @@ header nav ul a:link, header nav ul a:visited {
 }
 header nav ul a:hover,
 header nav ul a:active {
-    color: #3f66af
+    color: #F2F2F2
 }
 
 /* -----------------------------------------
