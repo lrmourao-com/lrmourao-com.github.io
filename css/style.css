@@ -93,7 +93,7 @@ a:link, a:visited {
     outline: 0;
 }
 a:hover, a:focus, a:active {
-    color: #eb9a1a;
+    color: #9e9e9e;
 }
 
 /* Headers */
@@ -192,7 +192,7 @@ mark {
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom-color: #959393;
+    border-bottom-color: #9e9e9e;
     border-bottom-style: solid;
     border-bottom-width: 3px;
 
@@ -381,7 +381,7 @@ header nav ul a:link, header nav ul a:visited {
 }
 header nav ul a:hover,
 header nav ul a:active {
-    color: #F2F2F2
+    color: #9e9e9e
 }
 
 /* -----------------------------------------
