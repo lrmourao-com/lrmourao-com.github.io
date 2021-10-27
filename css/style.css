@@ -591,6 +591,10 @@ section#about-us .primary ul.the-team li.odd {
 
 /* ----------------- vardas------*/
 
+.content-wrap section .row .col .large {
+    width: 100% !important;
+}
+
 section#about-us aside ul.the-team {
     margin: 25px 0 25px 0;
     padding: 0;
