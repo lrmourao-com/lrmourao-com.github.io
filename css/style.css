@@ -591,7 +591,8 @@ section#advantages .primary ul.the-team li.odd {
 
 /* ----------------- vardas------*/
 
-.col.large {
+.col.large,
+.primary.large{
     width: 100% !important;
 }
 
