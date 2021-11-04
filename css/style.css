@@ -838,7 +838,12 @@ header nav ul {
 
 h2 {
     font-size: 32px;
-}	
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 30px;
+}
 
 body {
     font-size: 22px;
