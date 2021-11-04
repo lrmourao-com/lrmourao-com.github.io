@@ -23,6 +23,19 @@
     font-style: normal;
 }
 
+@media only screen and (min-width: 600px) {
+    .intro.adav {
+        font-size: 30px !important; font-style: italic;
+}
+    
+	
+	header nav ul {
+    font: bold 25px/35px Helvetica, Arial, Sans-serif;
+        font-variant-caps: normal;
+	}
+}
+
+
 /* --------------------------------------
     RESET
 ----------------------------------------*/
@@ -85,6 +98,10 @@ body {
 
 p { margin-bottom: 25px; }
 p.intro { font-size: 18px; }
+
+.intro.adav {
+        font-size: 21px !important; font-style: italic;
+}
 
 /* links */
 a:link, a:visited {
