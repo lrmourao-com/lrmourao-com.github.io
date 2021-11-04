@@ -821,8 +821,12 @@ footer  ul.footer-menu li:first-child a {
 	Mobile Adjusting
 ---------------------------------------------------------- */
 
-@media screen and (max-width: 600px) {
-    .intro.adav {
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+  
+.intro.adav {
         font-size: 30px !important; 
 	font-style: italic;
 }
