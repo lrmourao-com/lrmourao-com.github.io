@@ -828,7 +828,7 @@ footer  ul.footer-menu li:first-child a {
 }
 
 header nav ul {
-    font: bold 25px/35px !important Helvetica, Arial, Sans-serif;
+    font: bold 25px/35px Helvetica, Arial, Sans-serif;
     margin-right: -5px;
     padding: 0;
     list-style: none;
