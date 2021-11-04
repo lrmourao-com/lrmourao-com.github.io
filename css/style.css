@@ -23,17 +23,6 @@
     font-style: normal;
 }
 
-@media only screen and (min-width: 600px) {
-    .intro.adav {
-        font-size: 30px !important; font-style: italic;
-}
-    
-	
-	header nav ul {
-    font: bold 25px/35px Helvetica, Arial, Sans-serif;
-        font-variant-caps: normal;
-	}
-}
 
 
 /* --------------------------------------
@@ -826,5 +815,26 @@ footer  ul.footer-menu li.rss-feed a {
 }
 footer  ul.footer-menu li:first-child a {
     border: none;
+}
+
+/* -------------------------------------------------------
+	Mobile Adjusting
+---------------------------------------------------------- */
+
+@media only screen and (min-width: 600px) {
+    .intro.adav {
+        font-size: 30px !important; 
+	font-style: italic;
+}
+
+header nav ul {
+    font: bold 25px/35px !important Helvetica, Arial, Sans-serif;
+    margin-right: -5px;
+    padding: 0;
+    list-style: none;
+    color: #F2F2F2;
+   font-variant-caps: small-caps;
+}
+	
 }
 
