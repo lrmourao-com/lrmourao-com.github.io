@@ -1,7 +1,7 @@
 /*
 15 years
 */
-div.15years { position: relative; height: 24px; }
+div.15years { position: fixed; height: 24px; }
 div.15years img { height: 24px; position: fixed; right: 0; bottom: 0; }
 
  /* ------------------------------------------------
