@@ -53,27 +53,6 @@ export default function MobileMenu({ lang, navItems, isOpen, onToggle, onNavigat
           top: '125px',
         }}
       >
-        {/* Close Button - Top Right
-        <button
-          onClick={onToggle}
-          className="absolute top-8 right-6 text-white"
-          aria-label="Close menu"
-        >
-          <svg
-            className="w-10 h-10"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button> */}
-
         {/* Menu Content */}
         <nav className="flex flex-col justify-between h-full px-8 py-16">
           {/* Main Navigation */}

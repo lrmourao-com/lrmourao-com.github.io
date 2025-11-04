@@ -17,21 +17,26 @@ export default function PageContent({ lang }: PageContentProps) {
       
       <main className="section-content">
         {/* Main Section */}
-        <section id="main" className="w-[940px] max-w-full mx-auto bg-none">
-          <div className="float-left w-[460px] max-w-[48%] min-h-[300px]">
-            <h1 className="mt-[10px] mb-[15px]">{t.welcome.title}</h1>
-            <p className="intro">{t.welcome.intro}</p>
-            <ul>
-              {t.welcome.services.map((service) => (
-                <li key={service}>{service}</li>
-              ))}
-            </ul>
-            <p className="intro">{t.welcome.cta}</p>
+        <section id="main" className="w-[940px] max-w-full mx-auto bg-none relative">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+            {/* Text Content */}
+            <div className="flex-1 min-w-0">
+              <h1 className="mt-[10px] mb-[15px]">{t.welcome.title}</h1>
+              <p className="intro">{t.welcome.intro}</p>
+              <ul>
+                {t.welcome.services.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
+              <p className="intro">{t.welcome.cta}</p>
+            </div>
+
+            {/* Image Slider */}
+            <div className="flex-1 min-w-0">
+              <ImageSlider images={['/images/slides/slide.png']} />
+            </div>
           </div>
 
-          <ImageSlider images={['/images/slides/slide.png']} />
-
-          <div className="clear-both overflow-hidden mb-0" />
           <BackToTop text={t.backToTop} />
         </section>
 
@@ -45,7 +50,7 @@ export default function PageContent({ lang }: PageContentProps) {
               <div className="flex-1 space-y-6">
                 {/* Welding Service */}
                 <div className="flex flex-col">
-                  <div className="flex items-start gap-3 mb-4">
+                  <div className="flex items-center gap-3 mb-4">
                     <img 
                       src="/images/services/welding.png" 
                       alt={t.services.welding.title}
@@ -72,7 +77,7 @@ export default function PageContent({ lang }: PageContentProps) {
 
                 {/* Coordination Service */}
                 <div className="flex flex-col">
-                  <div className="flex items-start gap-3 mb-4">
+                  <div className="flex items-center gap-3 mb-4">
                     <img 
                       src="/images/services/coord.png" 
                       alt={t.services.coordination.title}
@@ -93,7 +98,7 @@ export default function PageContent({ lang }: PageContentProps) {
               <div className="flex-1 space-y-6">
                 {/* Training Service */}
                 <div className="flex flex-col">
-                  <div className="flex items-start gap-3 mb-4">
+                  <div className="flex items-center gap-3 mb-4">
                     <img 
                       src="/images/services/webdevelopment.png" 
                       alt={t.services.training.title}

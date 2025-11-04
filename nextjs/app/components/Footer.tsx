@@ -49,24 +49,22 @@ export default function Footer({ lang }: FooterProps) {
           {menuItems.map((item, index) => (
             <li 
               key={item.href} 
-              className="float-left"
-              style={{ listStyle: 'none' }}
+              className="float-left list-none"
             >
               <a
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
+                className={`
+                  block px-3 py-px
+                  text-xs leading-none
+                  text-[#3B3B3B] hover:text-[#3f66af]
+                  no-underline
+                  transition-colors
+                  ${index > 0 ? 'border-l border-[#ADADAD]' : ''}
+                `}
                 style={{
-                  display: 'block',
                   fontFamily: 'MerriweatherBold, serif',
-                  fontSize: '0.75em',
-                  lineHeight: '1em',
-                  color: '#3B3B3B',
-                  padding: '1px 12px',
-                  borderLeft: index > 0 ? '1px solid #ADADAD' : 'none',
-                  textDecoration: 'none',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#3f66af')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#3B3B3B')}
               >
                 {item.label}
               </a>
@@ -86,17 +84,15 @@ export default function Footer({ lang }: FooterProps) {
           &nbsp;&nbsp;&nbsp;{' '}
           {lang === 'pt' ? 'Produzido por' : 'Powered by'}{' '}
           <a 
-            href="http://tiago.vardas.ca/" 
-            style={{ color: '#3f66af', textDecoration: 'none' }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#9e9e9e')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#3f66af')}
+            href="http://tiago.vardas.ca/"
+            className="text-[#3f66af] hover:text-[#9e9e9e] no-underline transition-colors"
           >
             Vardas
           </a>
         </p>
       </div>
 
-      <div className="fixed right-0 bottom-0 h-6 z-[99999]">
+      <div className="fixed right-0 bottom-0 h-6 z-99999">
         <Image
           src={lang === 'pt' ? '/images/15.png' : '/images/15en.png'}
           alt="15 years"

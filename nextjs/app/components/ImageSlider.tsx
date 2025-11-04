@@ -19,21 +19,27 @@ export default function ImageSlider({ images }: ImageSliderProps) {
   }, [images.length]);
 
   return (
-    <div className="float-right relative bg-[url('/images/slider.png')] bg-no-repeat mt-20 mb-[13px] w-[420px] h-[234px]">
-      <div className="absolute top-[18px] left-[18.5px] w-[383px] h-[198px] bg-white">
-        {images.map((image, index) => (
-          <Image
-            key={image}
-            src={image}
-            alt={`Slide ${index + 1}`}
-            width={383}
-            height={198}
-            className={`absolute top-0 left-0 w-[383px] h-[198px] transition-opacity duration-500 ${
-              index === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
-            priority={index === 0}
-          />
-        ))}
+    <div className="relative w-full max-w-[520px] mx-auto lg:mx-0">
+      <div 
+        className="relative bg-[url('/images/slider.png')] bg-no-repeat bg-[length:100%_100%] w-full h-0" 
+        style={{ paddingBottom: '55.71%' }}
+      >
+        <div className="absolute inset-0 top-[4.3%] left-[4.4%] right-[4.4%] bottom-[10.7%]">
+          {images.map((image, index) => (
+            <Image
+              key={image}
+              src={image}
+              alt={`Slide ${index + 1}`}
+              fill
+              sizes="(max-width: 520px) 100vw, 520px"
+              style={{ objectFit: 'cover' }}
+              className={`transition-opacity duration-500 ${
+                index === currentIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+              priority={index === 0}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
