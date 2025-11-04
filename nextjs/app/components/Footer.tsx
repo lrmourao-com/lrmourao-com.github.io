@@ -29,17 +29,44 @@ export default function Footer({ lang }: FooterProps) {
   };
 
   return (
-    <footer className="relative w-[940px] max-w-full mx-auto pt-[125px] px-4">
-      <div className="relative w-full top-[-105px]">
-        <ul className="flex list-none float-left mt-5 mb-[5px] ml-[-3px] p-0">
+    <footer 
+      className="relative w-[940px] max-w-full mx-auto pt-[125px] px-4"
+      style={{
+        background: 'url(/images/section-sep.png) repeat-x left 25px'
+      }}
+    >
+      <div className="relative w-[900px] max-w-full" style={{ top: '-105px' }}>
+        <ul 
+          className="flex float-left m-0 p-0" 
+          style={{ 
+            marginTop: '20px', 
+            marginBottom: '5px', 
+            marginLeft: '-3px',
+            listStyle: 'none',
+            listStyleType: 'none'
+          }}
+        >
           {menuItems.map((item, index) => (
-            <li key={item.href} className="float-left">
+            <li 
+              key={item.href} 
+              className="float-left"
+              style={{ listStyle: 'none' }}
+            >
               <a
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className={`block text-xs leading-4 text-[#3B3B3B] px-3 py-[1px] no-underline hover:text-[#3f66af] ${
-                  index > 0 ? 'border-l border-[#ADADAD]' : ''
-                }`}
+                style={{
+                  display: 'block',
+                  fontFamily: 'MerriweatherBold, serif',
+                  fontSize: '0.75em',
+                  lineHeight: '1em',
+                  color: '#3B3B3B',
+                  padding: '1px 12px',
+                  borderLeft: index > 0 ? '1px solid #ADADAD' : 'none',
+                  textDecoration: 'none',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#3f66af')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = '#3B3B3B')}
               >
                 {item.label}
               </a>
@@ -47,11 +74,23 @@ export default function Footer({ lang }: FooterProps) {
           ))}
         </ul>
 
-        <p className="text-xs px-[10px] mb-0 clear-both">
+        <p 
+          className="clear-both mb-0"
+          style={{
+            fontFamily: 'MerriweatherRegular, serif',
+            fontSize: '0.75em',
+            padding: '0 10px'
+          }}
+        >
           {lang === 'pt' ? 'Todos os direitos reservados 2025 LR Mourão.' : 'Copyright 2025 LR Mourão.'}{' '}
           &nbsp;&nbsp;&nbsp;{' '}
           {lang === 'pt' ? 'Produzido por' : 'Powered by'}{' '}
-          <a href="http://tiago.vardas.ca/" className="text-[#3f66af] no-underline hover:text-[#9e9e9e]">
+          <a 
+            href="http://tiago.vardas.ca/" 
+            style={{ color: '#3f66af', textDecoration: 'none' }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#9e9e9e')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#3f66af')}
+          >
             Vardas
           </a>
         </p>

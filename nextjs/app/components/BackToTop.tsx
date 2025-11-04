@@ -10,7 +10,12 @@ export default function BackToTop({ text }: { text: string }) {
     <a
       href="#main"
       onClick={scrollToTop}
-      className="block absolute bottom-[-65px] right-[10px] h-[43px] w-[43px] bg-[url('/images/back-to-top.png')] text-transparent overflow-hidden z-[1000] hover:opacity-80 transition-opacity"
+      className="block absolute bottom-[-65px] right-[10px] h-[43px] w-[43px] z-[1000] hover:opacity-80 transition-opacity"
+      style={{
+        background: 'url(/images/back-to-top.png)',
+        fontSize: 0,
+        color: 'transparent',
+      }}
       aria-label={text}
     >
       {text}

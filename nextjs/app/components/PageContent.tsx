@@ -195,6 +195,8 @@ export default function PageContent({ lang }: PageContentProps) {
         </section>
       </main>
 
+      <div style={{ clear: 'both', marginBottom: '50px' }}></div>
+
       <Footer lang={lang} />
     </>
   );
