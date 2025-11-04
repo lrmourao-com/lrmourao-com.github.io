@@ -1,17 +1,19 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import { Language, content } from '../content';
+import DesktopMenu from './DesktopMenu';
+import MobileMenu from './MobileMenu';
 
 interface HeaderProps {
   lang: Language;
 }
 
 export default function Header({ lang }: HeaderProps) {
-  const pathname = usePathname();
   const t = content[lang];
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const navItems = [
     { label: t.nav.home, href: '#main' },
@@ -27,6 +29,7 @@ export default function Header({ lang }: HeaderProps) {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
+      setMobileMenuOpen(false);
     }
   };
 
@@ -46,61 +49,19 @@ export default function Header({ lang }: HeaderProps) {
           </Link>
         </div>
 
-        <nav className="float-right mt-[55px]">
-          <ul 
-            className="flex m-0 p-0" 
-            style={{ 
-              marginRight: '-5px',
-              listStyle: 'none',
-              listStyleType: 'none'
-            }}
-          >
-            {navItems.map((item) => (
-              <li 
-                key={item.href}
-                style={{ listStyle: 'none' }}
-              >
-                <a
-                  href={item.href}
-                  onClick={(e) => scrollToSection(e, item.href)}
-                  className="block"
-                  style={{
-                    color: '#FFF',
-                    marginRight: '20px',
-                    textDecoration: 'none',
-                    fontFamily: 'Helvetica, Arial, sans-serif',
-                    fontSize: '12px',
-                    lineHeight: '25px',
-                    fontWeight: 'bold',
-                    fontVariantCaps: 'small-caps',
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#9e9e9e')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#FFF')}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-            <li style={{ listStyle: 'none' }}>
-              <Link 
-                href={lang === 'pt' ? '/en/' : '/'}
-                className="flex items-center"
-                style={{
-                  color: '#FFF',
-                  textDecoration: 'none',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  fontSize: '24px',
-                  fontWeight: 'bold',
-                }}
-                title={lang === 'pt' ? 'English' : 'Português'}
-              >
-                <span>{lang === 'pt' ? '🇬🇧' : '🇵🇹'}</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <DesktopMenu 
+          lang={lang}
+          navItems={navItems}
+          onNavigate={scrollToSection}
+        />
+
+        <MobileMenu
+          lang={lang}
+          navItems={navItems}
+          isOpen={mobileMenuOpen}
+          onToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onNavigate={scrollToSection}
+        />
       </header>
     </div>
   );
