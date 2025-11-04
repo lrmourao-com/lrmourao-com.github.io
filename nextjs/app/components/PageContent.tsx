@@ -167,7 +167,7 @@ export default function PageContent({ lang }: PageContentProps) {
         </section>
 
         {/* Advantages Section */}
-        <section id="advantages" className="clear-both">
+        <section id="advantages" className="clear-both relative">
           <div className="section-content">
             <h1>{t.advantages.title}</h1>
 
@@ -199,7 +199,7 @@ export default function PageContent({ lang }: PageContentProps) {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="clear-both">
+        <section id="contact" className="clear-both relative">
           <div className="section-content">
             <h1>{t.contact.title}</h1>
 

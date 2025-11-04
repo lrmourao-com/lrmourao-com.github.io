@@ -44,18 +44,43 @@ export default function MobileMenu({ lang, navItems, isOpen, onToggle, onNavigat
         </svg>
       </button>
 
-      {/* Mobile Menu - Slide in from right */}
+      {/* Full Screen Mobile Menu */}
       <div
-        className={`lg:hidden fixed top-[125px] right-0 w-64 bg-[#3f66af] transition-transform duration-300 ease-in-out z-[99980] ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`lg:hidden fixed inset-0 bg-[#3f66af] transition-all duration-300 ease-in-out z-[99990] ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         style={{
-          height: 'calc(100vh - 125px)',
-          borderLeft: '2px solid #9e9e9e'
+          top: '125px',
         }}
       >
-        <nav className="flex flex-col p-6">
-          <ul className="flex flex-col space-y-4" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+        {/* Close Button - Top Right
+        <button
+          onClick={onToggle}
+          className="absolute top-8 right-6 text-white"
+          aria-label="Close menu"
+        >
+          <svg
+            className="w-10 h-10"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button> */}
+
+        {/* Menu Content */}
+        <nav className="flex flex-col justify-between h-full px-8 py-16">
+          {/* Main Navigation */}
+          <ul 
+            className="flex flex-col space-y-8" 
+            style={{ listStyle: 'none', padding: 0, margin: 0 }}
+          >
             {navItems.map((item) => (
               <li key={item.href} style={{ listStyle: 'none' }}>
                 <a
@@ -65,46 +90,48 @@ export default function MobileMenu({ lang, navItems, isOpen, onToggle, onNavigat
                     color: '#FFF',
                     textDecoration: 'none',
                     fontFamily: 'Helvetica, Arial, sans-serif',
-                    fontSize: '16px',
+                    fontSize: '36px',
                     fontWeight: 'bold',
-                    fontVariantCaps: 'small-caps',
+                    lineHeight: '1.2',
                     display: 'block',
-                    padding: '8px 0',
+                    transition: 'opacity 0.2s',
                   }}
+                  onMouseDown={(e) => (e.currentTarget.style.opacity = '0.6')}
+                  onMouseUp={(e) => (e.currentTarget.style.opacity = '1')}
+                  onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
                 >
                   {item.label}
                 </a>
               </li>
             ))}
-            <li style={{ listStyle: 'none', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
-              <Link 
-                href={lang === 'pt' ? '/en/' : '/'}
-                className="flex items-center gap-2"
-                style={{
-                  color: '#FFF',
-                  textDecoration: 'none',
-                  fontSize: '16px',
-                  fontWeight: 'bold',
-                }}
-                title={lang === 'pt' ? 'English' : 'Português'}
-                onClick={onToggle}
-              >
-                <span style={{ fontSize: '24px' }}>{lang === 'pt' ? '🇬🇧' : '🇵🇹'}</span>
-                <span>{lang === 'pt' ? 'English' : 'Português'}</span>
-              </Link>
-            </li>
           </ul>
+
+          {/* Language Switcher - Bottom */}
+          <div 
+            style={{ 
+              borderTop: '1px solid rgba(255,255,255,0.3)',
+              paddingTop: '24px',
+            }}
+          >
+            <Link 
+              href={lang === 'pt' ? '/en/' : '/'}
+              className="flex items-center gap-3"
+              style={{
+                color: '#FFF',
+                textDecoration: 'none',
+                fontSize: '18px',
+                fontWeight: 'bold',
+                fontFamily: 'Helvetica, Arial, sans-serif',
+              }}
+              title={lang === 'pt' ? 'English' : 'Português'}
+              onClick={onToggle}
+            >
+              <span style={{ fontSize: '28px' }}>{lang === 'pt' ? '🇬🇧' : '🇵🇹'}</span>
+              <span>{lang === 'pt' ? 'English' : 'Português'}</span>
+            </Link>
+          </div>
         </nav>
       </div>
-
-      {/* Mobile Menu Overlay */}
-      {isOpen && (
-        <div
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-[99970]"
-          style={{ top: '125px' }}
-          onClick={onToggle}
-        />
-      )}
     </>
   );
 }
