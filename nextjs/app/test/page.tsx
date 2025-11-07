@@ -252,7 +252,7 @@ export default function LRMouraoPage() {
       {/* -------------- SERVICES -------------- */}
       <section
         id="services"
-        className="py-32 bg-slate-50 relative overflow-hidden"
+        className="py-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden"
       >
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
@@ -497,25 +497,22 @@ export default function LRMouraoPage() {
       {/* -------------- ADVANTAGES -------------- */}
       <section
         id="advantages"
-        className="py-32 bg-gradient-to-br from-slate-50 via-blue-100/50 to-indigo-100/70 relative overflow-hidden"
+        className="py-32 bg-gradient-to-br from-slate-200 via-blue-200 to-indigo-200 relative overflow-hidden"
       >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-300/30 rounded-full blur-3xl" />
-        </div>
+  
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6">
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-              <span className="text-blue-600 text-sm font-semibold tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-4 py-2 rounded-full mb-6">
+              <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
+              <span className="text-amber-700 text-sm font-semibold tracking-wider uppercase">
                 Porquê Escolher-nos
               </span>
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
-              Vantagens dos <span className="text-blue-600">Nossos Serviços</span>
+              Vantagens dos <span className="text-amber-600">Nossos Serviços</span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
               Mais de 14 anos de experiência no setor da Formação, Certificação e Coordenação em
               soldadura
             </p>
@@ -525,17 +522,17 @@ export default function LRMouraoPage() {
             {/* Stats Bar */}
             <div className="grid grid-cols-3 gap-6 mb-8">
               {[
-                { num: "14+", label: "Anos de Experiência", color: "text-blue-600" },
-                { num: "100%", label: "Certificado", color: "text-emerald-600" },
-                { num: "5+", label: "Normas Certificadas", color: "text-purple-600" },
+                { num: "14+", label: "Anos de Experiência", color: "text-amber-600" },
+                { num: "100%", label: "Certificado", color: "text-orange-600" },
+                { num: "5+", label: "Normas Certificadas", color: "text-rose-600" },
               ].map((s) => (
                 <Card
                   key={s.label}
-                  className="group relative bg-white/80 backdrop-blur-sm border border-slate-200/50 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden hover:scale-105"
+                  className="group relative bg-white/80 backdrop-blur-sm border border-amber-200/50 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105"
                 >
                   <CardContent className="p-6 text-center relative">
                     <div className={`text-4xl font-bold ${s.color} mb-2`}>{s.num}</div>
-                    <div className="text-sm text-slate-600 font-medium">{s.label}</div>
+                    <div className="text-sm text-slate-700 font-medium">{s.label}</div>
                   </CardContent>
                 </Card>
               ))}
@@ -548,7 +545,7 @@ export default function LRMouraoPage() {
                   title: "Cumprimento Normativo",
                   sub: "Processos Certificados",
                   icon: Shield,
-                  color: "from-blue-500 to-blue-600",
+                  color: "from-amber-500 to-orange-500",
                   text: "Cumprimento integral das normas EN ISO 3834, EN 1090, EN ISO 9606 e EN ISO 15614, assegurando processos controlados e rastreáveis.",
                   tags: ["EN ISO 3834", "EN 1090", "EN ISO 9606"],
                 },
@@ -556,7 +553,7 @@ export default function LRMouraoPage() {
                   title: "Equipa Qualificada",
                   sub: "Especialistas Certificados",
                   icon: Award,
-                  color: "from-purple-500 to-purple-600",
+                  color: "from-orange-500 to-rose-500",
                   text: "Acompanhamento direto por Especialista Europeu em Soldadura (EWF/IIW) e Inspetor de Soldadura EWF, garantindo decisões técnicas fundamentadas.",
                   tags: ["EWF/IIW", "Inspetor EWF"],
                 },
@@ -564,7 +561,7 @@ export default function LRMouraoPage() {
                   title: "Experiência Prática",
                   sub: "Conhecimento Aplicado",
                   icon: Users,
-                  color: "from-emerald-500 to-emerald-600",
+                  color: "from-rose-500 to-pink-500",
                   text: "Soldador certificado H-L045 nos três principais processos — TIG, MIG/MAG e MMA — com experiência prática que reforça a qualidade das soluções.",
                   tags: ["TIG", "MIG/MAG", "MMA"],
                 },
@@ -572,21 +569,21 @@ export default function LRMouraoPage() {
                   title: "Foco em Resultados",
                   sub: "Excelência Técnica",
                   icon: Target,
-                  color: "from-amber-500 to-amber-600",
+                  color: "from-amber-500 to-red-500",
                   text: "Foco na eficiência, fiabilidade e redução de custos, sempre com elevado padrão técnico e profissional. Soluções otimizadas para o seu negócio.",
                   tags: [],
                 },
               ].map((c) => (
                 <Card
                   key={c.title}
-                  className="group relative bg-white/80 backdrop-blur-sm border border-slate-200/50 shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden hover:scale-105"
+                  className="group relative bg-white/80 backdrop-blur-sm border border-amber-200/50 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105"
                 >
                   <div
-                    className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${c.color} opacity-10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:opacity-15 transition-all group-hover:scale-150`}
+                    className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${c.color} opacity-10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:opacity-20 transition-all group-hover:scale-150`}
                   />
                   <CardContent className="p-8 relative">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className={`bg-gradient-to-br ${c.color} p-3 rounded-xl shadow-md group-hover:shadow-lg transition-all group-hover:scale-110`}>
+                      <div className={`bg-gradient-to-br ${c.color} p-3 rounded-xl shadow-lg group-hover:shadow-xl transition-all group-hover:scale-110`}>
                         <c.icon className="w-7 h-7 text-white" />
                       </div>
                       <div>
@@ -600,7 +597,7 @@ export default function LRMouraoPage() {
                         {c.tags.map((t) => (
                           <span
                             key={t}
-                            className="bg-slate-100/80 text-slate-700 px-3 py-1 rounded-full text-xs font-medium border border-slate-200/50"
+                            className="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-xs font-medium border border-amber-200"
                           >
                             {t}
                           </span>
@@ -618,8 +615,8 @@ export default function LRMouraoPage() {
         {/* -------------- CONTACT -------------- */}
         <section
           id="contact"
-          className="py-32 bg-slate-50 relative overflow-hidden"
-        >
+          className="py-32 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden"
+          >
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500 rounded-full blur-3xl" />
