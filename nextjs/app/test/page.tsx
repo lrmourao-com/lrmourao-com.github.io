@@ -126,23 +126,23 @@ export default function LRMouraoPage() {
       </header>
 
       {/* Hero Section */}
-      <section id="main" className="relative min-h-screen flex items-center bg-slate-900 pt-20">
+      <section id="main" className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 pt-20">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="/industrial-welding-sparks-and-metal-fabrication-in.jpg"
             alt="Welding"
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-15"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-800/90"></div>
           {/* Accent overlay */}
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-orange-600/10 to-transparent"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-orange-600/20 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-blue-600/20 to-transparent"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10 py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
             {/* Left Content - Main Message */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 px-4 py-2 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 px-4 py-2 rounded-full mb-6">
                 <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
                 <span className="text-orange-400 text-sm font-semibold">Desde 2010</span>
               </div>
@@ -259,7 +259,7 @@ export default function LRMouraoPage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-32 relative overflow-hidden !bg-slate-900">
+      <section id="services" className="py-32 relative overflow-hidden !bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900">
         {/* Background Effects */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
@@ -286,16 +286,16 @@ export default function LRMouraoPage() {
             {/* Grid Layout - Bento Box Style */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Formação - Takes 2 columns on large screens */}
-              <Card className="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 overflow-hidden lg:col-span-2">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+              <Card className="group relative bg-gradient-to-br from-white via-green-50 to-emerald-50 border border-slate-200 hover:border-green-500/50 hover:shadow-xl transition-all duration-300 overflow-hidden lg:col-span-2">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
                 <CardContent className="p-6 relative h-full">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-3 rounded-xl shadow-lg flex-shrink-0">
                       <GraduationCap className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">Formação Profissional</h3>
+                    <h3 className="text-2xl font-bold text-slate-900">Formação Profissional</h3>
                   </div>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
                     Formamos mão-de-obra profissionalizada que suprime as necessidades do mercado nacional e internacional.
                     Cursos dinâmicos, à medida e uma formação de excelência.
                   </p>
@@ -525,7 +525,7 @@ export default function LRMouraoPage() {
       </section>
 
       {/* Advantages Section */}
-      <section id="advantages" className="py-32 !bg-slate-900 text-white relative overflow-hidden">
+      <section id="advantages" className="py-32 !bg-gradient-to-br from-slate-900 via-blue-950 to-slate-800 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
@@ -551,22 +551,22 @@ export default function LRMouraoPage() {
           <div className="max-w-6xl mx-auto">
             {/* Stats Bar */}
             <div className="grid grid-cols-3 gap-6 mb-8">
-              <Card className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 overflow-hidden">
+              <Card className="bg-gradient-to-br from-orange-50 via-white to-orange-50 backdrop-blur-sm border border-slate-200 shadow-md overflow-hidden">
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl font-bold text-orange-400 mb-2">14+</div>
-                  <div className="text-sm text-slate-400">Anos de Experiência</div>
+                  <div className="text-4xl font-bold text-orange-600 mb-2">14+</div>
+                  <div className="text-sm text-slate-600">Anos de Experiência</div>
                 </CardContent>
               </Card>
-              <Card className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 overflow-hidden">
+              <Card className="bg-gradient-to-br from-blue-50 via-white to-blue-50 backdrop-blur-sm border border-slate-200 shadow-md overflow-hidden">
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl font-bold text-orange-400 mb-2">100%</div>
-                  <div className="text-sm text-slate-400">Certificado</div>
+                  <div className="text-4xl font-bold text-orange-600 mb-2">100%</div>
+                  <div className="text-sm text-slate-600">Certificado</div>
                 </CardContent>
               </Card>
-              <Card className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 overflow-hidden">
+              <Card className="bg-gradient-to-br from-purple-50 via-white to-purple-50 backdrop-blur-sm border border-slate-200 shadow-md overflow-hidden">
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl font-bold text-orange-400 mb-2">5+</div>
-                  <div className="text-sm text-slate-400">Normas Certificadas</div>
+                  <div className="text-4xl font-bold text-orange-600 mb-2">5+</div>
+                  <div className="text-sm text-slate-600">Normas Certificadas</div>
                 </CardContent>
               </Card>
             </div>
@@ -574,101 +574,101 @@ export default function LRMouraoPage() {
             {/* Feature Cards */}
             <div className="grid md:grid-cols-2 gap-6">
               {/* Card 1 - Normas */}
-              <Card className="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-orange-500/20 transition-all"></div>
+              <Card className="group relative bg-gradient-to-br from-orange-50 via-white to-orange-50 backdrop-blur-sm border border-slate-200 hover:border-orange-500/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-orange-500/10 transition-all"></div>
                 <CardContent className="p-8 relative">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-3 rounded-xl shadow-lg">
                       <Shield className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Cumprimento Normativo</h3>
-                      <p className="text-xs text-slate-400">Processos Certificados</p>
+                      <h3 className="text-xl font-bold text-slate-900">Cumprimento Normativo</h3>
+                      <p className="text-xs text-slate-600">Processos Certificados</p>
                     </div>
                   </div>
-                  <p className="text-slate-300 leading-relaxed mb-4">
+                  <p className="text-slate-700 leading-relaxed mb-4">
                     Cumprimento integral das normas{" "}
-                    <span className="font-semibold text-white">EN ISO 3834, EN 1090, EN ISO 9606 e EN ISO 15614</span>,
+                    <span className="font-semibold text-slate-900">EN ISO 3834, EN 1090, EN ISO 9606 e EN ISO 15614</span>,
                     assegurando processos controlados e rastreáveis.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
-                    <span className="bg-slate-700/50 text-slate-300 px-2 py-1 rounded text-xs">EN ISO 3834</span>
-                    <span className="bg-slate-700/50 text-slate-300 px-2 py-1 rounded text-xs">EN 1090</span>
-                    <span className="bg-slate-700/50 text-slate-300 px-2 py-1 rounded text-xs">EN ISO 9606</span>
+                    <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs border border-slate-200">EN ISO 3834</span>
+                    <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs border border-slate-200">EN 1090</span>
+                    <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs border border-slate-200">EN ISO 9606</span>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Card 2 - Especialistas */}
-              <Card className="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-blue-500/20 transition-all"></div>
+              <Card className="group relative bg-gradient-to-br from-blue-50 via-white to-cyan-50 backdrop-blur-sm border border-slate-200 hover:border-blue-500/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-blue-500/10 transition-all"></div>
                 <CardContent className="p-8 relative">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-3 rounded-xl shadow-lg">
                       <Award className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Equipa Qualificada</h3>
-                      <p className="text-xs text-slate-400">Especialistas Certificados</p>
+                      <h3 className="text-xl font-bold text-slate-900">Equipa Qualificada</h3>
+                      <p className="text-xs text-slate-600">Especialistas Certificados</p>
                     </div>
                   </div>
-                  <p className="text-slate-300 leading-relaxed mb-4">
+                  <p className="text-slate-700 leading-relaxed mb-4">
                     Acompanhamento direto por{" "}
-                    <span className="font-semibold text-white">Especialista Europeu em Soldadura (EWF/IIW)</span> e{" "}
-                    <span className="font-semibold text-white">Inspetor de Soldadura EWF</span>, garantindo decisões técnicas fundamentadas.
+                    <span className="font-semibold text-slate-900">Especialista Europeu em Soldadura (EWF/IIW)</span> e{" "}
+                    <span className="font-semibold text-slate-900">Inspetor de Soldadura EWF</span>, garantindo decisões técnicas fundamentadas.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
-                    <span className="bg-slate-700/50 text-slate-300 px-2 py-1 rounded text-xs">EWF/IIW</span>
-                    <span className="bg-slate-700/50 text-slate-300 px-2 py-1 rounded text-xs">Inspetor EWF</span>
+                    <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs border border-slate-200">EWF/IIW</span>
+                    <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs border border-slate-200">Inspetor EWF</span>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Card 3 - Experiência Prática */}
-              <Card className="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-green-500/20 transition-all"></div>
+              <Card className="group relative bg-gradient-to-br from-green-50 via-white to-emerald-50 backdrop-blur-sm border border-slate-200 hover:border-green-500/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-green-500/10 transition-all"></div>
                 <CardContent className="p-8 relative">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-3 rounded-xl shadow-lg">
                       <Users className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Experiência Prática</h3>
-                      <p className="text-xs text-slate-400">Conhecimento Aplicado</p>
+                      <h3 className="text-xl font-bold text-slate-900">Experiência Prática</h3>
+                      <p className="text-xs text-slate-600">Conhecimento Aplicado</p>
                     </div>
                   </div>
-                  <p className="text-slate-300 leading-relaxed mb-4">
-                    Soldador certificado <span className="font-semibold text-white">H-L045</span> nos três principais
-                    processos — <span className="font-semibold text-white">TIG, MIG/MAG e MMA</span> — com experiência prática que reforça a qualidade das soluções.
+                  <p className="text-slate-700 leading-relaxed mb-4">
+                    Soldador certificado <span className="font-semibold text-slate-900">H-L045</span> nos três principais
+                    processos — <span className="font-semibold text-slate-900">TIG, MIG/MAG e MMA</span> — com experiência prática que reforça a qualidade das soluções.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
-                    <span className="bg-slate-700/50 text-slate-300 px-2 py-1 rounded text-xs">TIG</span>
-                    <span className="bg-slate-700/50 text-slate-300 px-2 py-1 rounded text-xs">MIG/MAG</span>
-                    <span className="bg-slate-700/50 text-slate-300 px-2 py-1 rounded text-xs">MMA</span>
+                    <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs border border-slate-200">TIG</span>
+                    <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs border border-slate-200">MIG/MAG</span>
+                    <span className="bg-slate-100 text-slate-700 px-2 py-1 rounded text-xs border border-slate-200">MMA</span>
                   </div>
                 </CardContent>
               </Card>
 
               {/* Card 4 - Eficiência */}
-              <Card className="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-purple-500/20 transition-all"></div>
+              <Card className="group relative bg-gradient-to-br from-purple-50 via-white to-pink-50 backdrop-blur-sm border border-slate-200 hover:border-purple-500/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-purple-500/10 transition-all"></div>
                 <CardContent className="p-8 relative">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="bg-gradient-to-br from-purple-500 to-pink-600 p-3 rounded-xl shadow-lg">
                       <Target className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white">Foco em Resultados</h3>
-                      <p className="text-xs text-slate-400">Excelência Técnica</p>
+                      <h3 className="text-xl font-bold text-slate-900">Foco em Resultados</h3>
+                      <p className="text-xs text-slate-600">Excelência Técnica</p>
                     </div>
                   </div>
-                  <p className="text-slate-300 leading-relaxed mb-4">
-                    Foco na <span className="font-semibold text-white">eficiência, fiabilidade e redução de custos</span>,
+                  <p className="text-slate-700 leading-relaxed mb-4">
+                    Foco na <span className="font-semibold text-slate-900">eficiência, fiabilidade e redução de custos</span>,
                     sempre com elevado padrão técnico e profissional. Soluções otimizadas para o seu negócio.
                   </p>
                   <div className="flex items-center gap-2 mt-4">
-                    <CheckCircle2 className="w-4 h-4 text-purple-400" />
-                    <span className="text-slate-300 text-sm">Padrão Técnico Elevado</span>
+                    <CheckCircle2 className="w-4 h-4 text-purple-600" />
+                    <span className="text-slate-700 text-sm">Padrão Técnico Elevado</span>
                   </div>
                 </CardContent>
               </Card>
@@ -678,7 +678,7 @@ export default function LRMouraoPage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-32 !bg-slate-900 relative overflow-hidden">
+      <section id="contact" className="py-32 !bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500 rounded-full blur-3xl"></div>
@@ -704,51 +704,51 @@ export default function LRMouraoPage() {
           {/* Contact Cards */}
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {/* Location - First */}
-            <Card className="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-orange-500/20 transition-all"></div>
+            <Card className="group relative bg-gradient-to-br from-orange-50 via-white to-orange-50 backdrop-blur-sm border border-slate-200 hover:border-orange-500/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-orange-500/10 transition-all"></div>
               <CardContent className="p-8 relative">
                 <div className="bg-gradient-to-br from-orange-500 to-orange-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
                   <MapPin className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Localização</h3>
-                <p className="text-slate-300 font-semibold text-lg mb-2">Leiria, Portugal</p>
-                <p className="text-slate-400 text-sm">Serviços em todo o país</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Localização</h3>
+                <p className="text-slate-700 font-semibold text-lg mb-2">Leiria, Portugal</p>
+                <p className="text-slate-600 text-sm">Serviços em todo o país</p>
               </CardContent>
             </Card>
 
             {/* Phone */}
-            <Card className="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-green-500/20 transition-all"></div>
+            <Card className="group relative bg-gradient-to-br from-green-50 via-white to-emerald-50 backdrop-blur-sm border border-slate-200 hover:border-green-500/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-green-500/5 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-green-500/10 transition-all"></div>
               <CardContent className="p-8 relative">
                 <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
                   <Phone className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Telemóvel</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Telemóvel</h3>
                 <a
                   href="tel:+351916672566"
-                  className="text-slate-300 hover:text-green-400 transition-colors text-lg font-semibold block mb-2"
+                  className="text-slate-700 hover:text-green-600 transition-colors text-lg font-semibold block mb-2"
                 >
                   (+351) 916 672 566
                 </a>
-                <p className="text-slate-400 text-sm">Seg - Sex: 9h - 18h</p>
+                <p className="text-slate-600 text-sm">Seg - Sex: 9h - 18h</p>
               </CardContent>
             </Card>
 
             {/* Email */}
-            <Card className="group relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-blue-500/20 transition-all"></div>
+            <Card className="group relative bg-gradient-to-br from-blue-50 via-white to-cyan-50 backdrop-blur-sm border border-slate-200 hover:border-blue-500/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-blue-500/10 transition-all"></div>
               <CardContent className="p-8 relative">
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-600 w-14 h-14 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
                   <Mail className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Email</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Email</h3>
                 <a
                   href="mailto:geral@lrmourao.com"
-                  className="text-slate-300 hover:text-blue-400 transition-colors font-semibold break-all block mb-2"
+                  className="text-slate-700 hover:text-blue-600 transition-colors font-semibold break-all block mb-2"
                 >
                   geral@lrmourao.com
                 </a>
-                <p className="text-slate-400 text-sm">Resposta em 24h</p>
+                <p className="text-slate-600 text-sm">Resposta em 24h</p>
               </CardContent>
             </Card>
           </div>
