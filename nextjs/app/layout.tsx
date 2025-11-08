@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "LR MOURÃO - soldadura e formação",
   keywords: "LR MOURÃO, formação, soldadura, welding, training",
   authors: [{ name: "Vardas" }],
-  robots: "all",
+  robots: "noindex, nofollow, noarchive, nosnippet, noimageindex",
   verification: {
     google: "GseIwNt2X7uVsHMxRRLBmgWg4VAbArFqR6p8r2yJmcg",
   },
