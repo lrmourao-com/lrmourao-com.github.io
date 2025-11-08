@@ -78,14 +78,6 @@ const HERO_STATS = [
 
 const CONTACT_INFO = [
   {
-    title: "Localização",
-    value: "Leiria, Portugal",
-    sub: "Serviços em todo o país",
-    icon: MapPin,
-    grad: "from-amber-500 to-amber-600",
-    href: null,
-  },
-  {
     title: "Telemóvel",
     value: "(+351) 916 672 566",
     sub: "Seg - Sex: 9h - 18h",
@@ -163,8 +155,8 @@ export default function LRMouraoPage() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? "from-blue-950 via-blue-800 to-blue-950 backdrop-blur-md shadow-2xl shadow-amber-500/10 border-b border-amber-500/30" 
-            : "from-slate-900 via-blue-900 to-slate-900 shadow-lg"
+            ? "bg-gradient-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 backdrop-blur-md shadow-2xl shadow-amber-500/10 border-b border-amber-500/30" 
+            : "bg-transparent"
         }`}
       >
         <div className="container mx-auto px-4 relative">
@@ -301,14 +293,19 @@ export default function LRMouraoPage() {
                       key={item.name}
                       onClick={() => scrollToSection(item.id)}
                       role="button"
-                      className={`group flex items-center gap-4 bg-white/5 hover:bg-white/15 border border-white/10 ${item.hoverBorder} rounded-2xl p-5 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg`}
+                      className={`group flex items-center gap-4 bg-white/5 ${item.id === "service-formacao" ? "bg-white/10 border-blue-400/60 ring-2 ring-blue-300/30 scale-[1.01]" : ""} hover:bg-white/15 border border-white/10 ${item.hoverBorder} rounded-2xl p-5 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg`}
                       style={{ animationDelay: `${i * 100}ms` }}
                     >
-                      <div className={`bg-gradient-to-br ${item.grad} p-3 rounded-xl transition-all duration-300 shadow-lg group-hover:scale-110 group-hover:rotate-6`}>
+                      <div className={`bg-gradient-to-br ${item.grad} p-3 rounded-xl transition-all duration-300 shadow-lg ${item.id === "service-formacao" ? "scale-110 ring-2 ring-blue-300/40" : ""} group-hover:scale-110 group-hover:rotate-6`}>
                         <item.icon className="w-6 h-6 text-white" />
                       </div>
-                      <span className="text-slate-200 group-hover:text-white font-semibold text-base transition-colors">{item.name}</span>
-                      <div className="ml-auto opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-125">
+                      <span className={`font-semibold text-base transition-colors ${item.id === "service-formacao" ? "text-white" : "text-slate-200 group-hover:text-white"}`}>{item.name}</span>
+                      {item.id === "service-formacao" && (
+                        <span className="ml-2 text-[10px] uppercase tracking-wide font-extrabold px-2 py-0.5 rounded-full bg-blue-600 text-white/95 shadow shadow-blue-500/40">
+                          Recomendado
+                        </span>
+                      )}
+                      <div className={`ml-auto transition-all duration-300 group-hover:scale-125 ${item.id === "service-formacao" ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}>
                         <div className={`w-2.5 h-2.5 ${item.dot} rounded-full shadow-lg`} />
                       </div>
                     </div>
@@ -370,7 +367,12 @@ export default function LRMouraoPage() {
 
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card id="service-formacao" className="group relative bg-white/90 backdrop-blur-sm border-2 border-blue-200/50 hover:border-blue-400/70 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 overflow-hidden lg:col-span-2 hover:scale-[1.02] rounded-3xl">
+              <Card id="service-formacao" className="group relative bg-white/90 backdrop-blur-sm border-2 border-blue-300/70 hover:border-blue-400/80 shadow-2xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 overflow-hidden lg:col-span-2 scale-[1.01] hover:scale-[1.03] rounded-3xl ring-2 ring-blue-200/40">
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="px-3 py-2 text-[10px] font-extrabold uppercase tracking-wide rounded-full bg-blue-600 text-white shadow shadow-blue-500/40">
+                    Popular
+                  </span>
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-blue-400/20 transition-all duration-700" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-blue-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
@@ -613,7 +615,7 @@ export default function LRMouraoPage() {
               <span className="text-amber-300 text-sm font-bold tracking-wider uppercase">Porquê Escolher-nos</span>
             </div>
             <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-2xl">
-              Vantagens dos <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 animate-pulse">Nossos Serviços</span>
+              Vantagens dos <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-fuchsia-500 to-rose-500 bg-[length:200%_200%] drop-shadow-[0_0_18px_rgba(251,191,36,0.55)]">Nossos Serviços</span>
             </h2>
             <p className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto font-medium">
               Mais de 14 anos de experiência no setor da Formação, Certificação e Coordenação em soldadura
@@ -633,7 +635,7 @@ export default function LRMouraoPage() {
                   style={{ animationDelay: `${i * 100}ms` }}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${s.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                  <div className="absolute top-0 right-0 text-6xl opacity-5 -mr-4 -mt-2 group-hover:opacity-10 transition-opacity">{s.icon}</div>
+                  <div className="absolute top-2 right-2 text-8xl opacity-10 group-hover:opacity-20 transition-all transform group-hover:scale-105">{s.icon}</div>
                   <CardContent className="p-8 text-center relative">
                     <div className="text-6xl md:text-7xl font-black bg-gradient-to-br from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
                       {s.num}
@@ -714,8 +716,43 @@ export default function LRMouraoPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {CONTACT_INFO.map((c) => (
+          {/* Location Mini Section */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-amber-500 to-orange-600 p-8 text-white">
+                <div className="flex items-center gap-4">
+                  <div className="bg-white/20 w-16 h-16 rounded-xl flex items-center justify-center">
+                    <MapPin className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-1">Localização Principal</h3>
+                    <p className="text-amber-100 text-lg">Leiria, Portugal</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-2 text-lg">Serviços de Coordenação</h4>
+                    <p className="text-slate-600 mb-4">Coordenação técnica e gestão de projetos em todo o território nacional, garantindo a excelência em cada detalhe.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-slate-900 mb-2 text-lg">Consultadoria Especializada</h4>
+                    <p className="text-slate-600 mb-4">Consultoria técnica abrangente disponível em todas as regiões de Portugal, com foco em soluções personalizadas.</p>
+                  </div>
+                </div>
+                <div className="mt-6 pt-6 border-t border-slate-200">
+                  <p className="text-slate-700 font-medium">
+                    📍 <span className="text-slate-900">Base em Leiria</span> • <span className="text-blue-600">Serviços em todo o país</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Methods */}
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {CONTACT_INFO.filter(c => c.title !== "Localização").map((c) => (
                 <Card
                   key={c.title}
                   className="group relative bg-white border border-slate-200 hover:shadow-xl transition-all duration-300 overflow-hidden"
@@ -742,11 +779,11 @@ export default function LRMouraoPage() {
                   </CardContent>
                 </Card>
               ))}
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-      <footer className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-16 border-t-2 border-amber-500/20 overflow-hidden">
+      <footer className="relative bg-gradient-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 text-white py-16 border-t-2 border-amber-500/20 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
