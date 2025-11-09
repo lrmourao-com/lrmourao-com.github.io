@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { PostHogProvider } from './providers'
+import { Suspense } from 'react'
+import { PostHogPageView } from './posthog-pageview'
 
 export const metadata: Metadata = {
   title: "LR MOURÃO - soldadura e formação",
@@ -30,9 +33,14 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link rel="icon" href="/images/animated_favicon.gif" type="image/gif" />
       </head>
-      <body className="antialiased">
-        {children}
-      </body>
+      <PostHogProvider>
+        <body className="antialiased">
+          <Suspense>
+            <PostHogPageView />
+          </Suspense>
+          {children}
+        </body>
+      </PostHogProvider>
     </html>
   );
 }
