@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "LR MOURÃO - soldadura e formação",
   keywords: "LR MOURÃO, formação, soldadura, welding, training",
   authors: [{ name: "Vardas" }],
-  robots: "noindex, nofollow, noarchive, nosnippet, noimageindex",
+  robots: "noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai",
   verification: {
     google: "GseIwNt2X7uVsHMxRRLBmgWg4VAbArFqR6p8r2yJmcg",
   },
@@ -25,6 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+        <meta httpEquiv="X-Robots-Tag" content="noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai" />
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link rel="icon" href="/images/animated_favicon.gif" type="image/gif" />
       </head>

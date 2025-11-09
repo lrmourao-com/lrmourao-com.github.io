@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next build",
+    "build": "next build && sh -c 'mkdir -p out && touch out/.nojekyll'",
+    "export": "next build && sh -c 'mkdir -p out && touch out/.nojekyll'",
     "start": "next start",
     "lint": "eslint"
   },
