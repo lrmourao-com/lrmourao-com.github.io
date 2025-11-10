@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Phone, Mail, Send, CheckCircle, Loader2, MessageCircle, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -30,10 +30,10 @@ const itemVariants = {
   }
 };
 
-const glowVariants = {
+const glowVariants: Variants = {
   animate: {
-    scale: [1, 1.2, 1],
-    opacity: [0.3, 0.5, 0.3],
+    scale: [1, 1.05, 1],
+    opacity: [0.2, 0.3, 0.2],
     transition: {
       duration: 3,
       repeat: Infinity,
