@@ -1,0 +1,19 @@
+# Production-optimized .dockerignore
+node_modules/
+npm-debug.log*
+.env
+.env.*
+!.env.example
+dist/
+.git/
+.gitignore
+*.md
+!README.md
+scripts/
+examples/
+.vscode/
+.idea/
+*.test.ts
+*.spec.ts
+coverage/
+.DS_Store

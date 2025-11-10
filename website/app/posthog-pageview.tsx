@@ -10,7 +10,8 @@ export function PostHogPageView() {
   const posthog = usePostHog()
 
   useEffect(() => {
-    if (pathname && posthog) {
+    // Only track pageviews in production
+    if (pathname && posthog && process.env.NODE_ENV === 'production') {
       let url = window.origin + pathname
       if (searchParams && searchParams.toString()) {
         url = url + `?${searchParams.toString()}`
