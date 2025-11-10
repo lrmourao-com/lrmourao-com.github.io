@@ -165,13 +165,12 @@ export default function LRMouraoPage() {
           </div>
           
           <div className="flex items-center justify-between h-20 relative z-10">
-            <div className="flex flex-col">
-              <h1 className="text-2xl md:text-3xl font-extrabold text-white drop-shadow-lg">
-                LR Mourão
-              </h1>
-              <p className="text-xs md:text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500">
-                soldamos o futuro | welding the future
-              </p>
+            <div className="flex items-center">
+              <img 
+                src="/lrmourao-logo.svg" 
+                alt="LR Mourão - soldamos o futuro | welding the future" 
+                className="h-12 md:h-14 lg:h-16 w-auto drop-shadow-lg"
+              />
             </div>
 
             <nav className="hidden md:flex items-center gap-8">
@@ -237,7 +236,7 @@ export default function LRMouraoPage() {
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight text-balance drop-shadow-2xl">
-                Excelência em <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500">formação e coordenação de soldadura</span>
+                <span className="text-slate-100">Excelência em</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500">formação e coordenação de soldadura</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed text-pretty font-medium">
@@ -783,21 +782,20 @@ export default function LRMouraoPage() {
         </div>
       </section>
 
-      <footer className="relative bg-gradient-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 text-white py-16 border-t-2 border-amber-500/20 overflow-hidden">
+      <footer className="relative bg-gradient-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 text-white py-12 border-t-2 border-amber-500/20 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex flex-col items-center md:items-start gap-4">
-              <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-amber-100 to-white">
-                LR Mourão
-              </h2>
-              <p className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500">
-                soldamos o futuro | welding the future
-              </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center">
+              <img 
+                src="/lrmourao-logo.svg" 
+                alt="LR Mourão - soldamos o futuro | welding the future" 
+                className="h-10 md:h-12 lg:h-14 w-auto drop-shadow-lg"
+              />
             </div>
 
             <nav className="flex flex-wrap justify-center gap-6">
