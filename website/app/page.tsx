@@ -295,9 +295,13 @@ export default function LRMouraoPage() {
                   onClick={() => scrollToSection("contact")}
                   size="lg"
                   variant="outline"
-                  className="relative bg-transparent text-sky-200 border-2 border-sky-400/60 py-7 rounded-md text-lg md:text-xl px-8 hover:text-white hover:bg-gradient-to-r hover:from-indigo-600 hover:via-blue-600 hover:to-sky-500 hover:border-sky-400 transition-all duration-300 hover:scale-110 shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_12px_40px_rgba(99,102,241,0.6)] ring-1 ring-sky-300/30 hover:ring-sky-400/50 animate-[pulse_3s_ease-in-out_infinite] before:absolute before:inset-0 before:rounded-md before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-[shimmer_3s_ease-in-out_infinite] before:-translate-x-full overflow-hidden"
+                  className="relative bg-transparent text-sky-200 border-2 border-sky-400/60 py-7 rounded-xl text-lg md:text-xl px-8 hover:text-white hover:bg-gradient-to-r hover:from-indigo-600 hover:via-blue-600 hover:to-sky-500 hover:border-transparent transition-all duration-300 hover:scale-105 shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_12px_40px_rgba(99,102,241,0.6)] overflow-hidden group"
                 >
-                  Entre em Contacto
+                  <span className="relative z-10">Entre em Contacto</span>
+                  <div className="absolute inset-0 rounded-xl p-0.5 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-[11px] bg-slate-900" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 </Button>
               </div>
             </div>
@@ -469,17 +473,17 @@ export default function LRMouraoPage() {
                         <ul className="space-y-2 text-slate-700">
                           <li className="flex items-start gap-2">
                             <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                            <span className="font-medium">
+                            <span className="text-xs sm:text-sm md:text-base font-medium">
                               MIG/MAG/FF 114/131/135/136/138
                             </span>
                           </li>
                           <li className="flex items-start gap-2">
                             <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                            <span className="font-medium">TIG 141/142</span>
+                            <span className="text-xs sm:text-sm md:text-base font-medium">TIG 141/142</span>
                           </li>
                           <li className="flex items-start gap-2">
                             <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                            <span className="font-medium">SER/MMA 111</span>
+                            <span className="text-xs sm:text-sm md:text-base font-medium">SER/MMA 111</span>
                           </li>
                         </ul>
 
@@ -489,7 +493,7 @@ export default function LRMouraoPage() {
                         <ul className="space-y-2 text-slate-700">
                           <li className="flex items-start gap-2">
                             <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                            <span className="font-medium">
+                            <span className="text-xs sm:text-sm md:text-base font-medium">
                               Aço-carbono, Aço-inox, Alumínio, Cobre
                             </span>
                           </li>
@@ -503,19 +507,19 @@ export default function LRMouraoPage() {
                         <ul className="space-y-2 text-slate-700">
                           <li className="flex items-start gap-2">
                             <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                            <span className="font-medium">
+                            <span className="text-xs sm:text-sm md:text-base font-medium">
                               Horários flexíveis e personalizados
                             </span>
                           </li>
                           <li className="flex items-start gap-2">
                             <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                            <span className="font-medium">
+                            <span className="text-xs sm:text-sm md:text-base font-medium">
                               Formação à medida
                             </span>
                           </li>
                           <li className="flex items-start gap-2">
                             <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                            <span className="font-medium">
+                            <span className="text-xs sm:text-sm md:text-base font-medium">
                               Formação individual disponível
                             </span>
                           </li>
@@ -527,7 +531,7 @@ export default function LRMouraoPage() {
                         <ul className="space-y-2 text-slate-700">
                           <li className="flex items-start gap-2">
                             <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                            <span className="font-medium">
+                            <span className="text-xs sm:text-sm md:text-base font-medium">
                               EN ISO 9606, ASME IX, AWS D1.1
                             </span>
                           </li>
