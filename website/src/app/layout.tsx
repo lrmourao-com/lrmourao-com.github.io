@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { PostHogProvider } from './providers'
+import { PostHogProvider } from '../components/posthog/providers'
 import { Suspense } from 'react'
-import { PostHogPageView } from './posthog-pageview'
+import { PostHogPageView } from '../components/posthog/posthog-pageview'
 
 export const metadata: Metadata = {
   title: "LR MOURÃO - soldadura e formação",
