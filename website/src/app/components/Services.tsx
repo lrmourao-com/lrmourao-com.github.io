@@ -212,7 +212,7 @@ export function Services() {
                     Especialista em coordenação conforme EN 1090 e ISO 3834.
                   </p>
 
-                  <div className="grid xl:grid-cols-2 gap-6">
+                  <div className="flex flex-col gap-6">
                     <div className="bg-emerald-50/50 p-4 rounded-2xl border border-emerald-100">
                       <p className="font-black text-emerald-700 mb-3 text-sm uppercase tracking-wide">
                         Certificação empresarial

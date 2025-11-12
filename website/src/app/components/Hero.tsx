@@ -64,7 +64,7 @@ export function Hero({ scrollToSection }: { scrollToSection: (id: string) => voi
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-5">
+            <div className="flex flex-col items-center justify-center xl:justify-start sm:flex-row gap-5">
               <Button
                 onClick={() => scrollToSection("services")}
                 size="lg"
