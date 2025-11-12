@@ -5,7 +5,7 @@ export function Hero({ scrollToSection }: { scrollToSection: (id: string) => voi
     return (
       <section
       id="main"
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden">
         <img

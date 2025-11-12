@@ -34,7 +34,7 @@ export default function RootLayout({
         <link rel="icon" href="/images/animated_favicon.gif" type="image/gif" />
       </head>
       <PostHogProvider>
-        <body className="antialiased">
+        <body className="antialiased overflow-x-clip">
           <Suspense>
             <PostHogPageView />
           </Suspense>

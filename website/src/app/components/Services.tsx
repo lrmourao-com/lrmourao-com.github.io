@@ -38,7 +38,7 @@ export function Services() {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-row md:flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="flex flex-col gap-8 flex-1">
               <Card
                 id="service-formacao"
@@ -67,7 +67,7 @@ export function Services() {
                     dinâmicos, à medida e uma formação de excelência.
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid xl:grid-cols-2 gap-6">
                     <div className="bg-blue-50/50 p-4 rounded-2xl border border-blue-100">
                       <p className="font-black text-blue-700 mb-3 text-sm uppercase tracking-wide">
                         Processos:
@@ -75,19 +75,19 @@ export function Services() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                          <span className="text-xs sm:text-sm md:text-base font-medium">
+                          <span className="text-sm md:text-base font-medium">
                             MIG/MAG/FF 114/131/135/136/138
                           </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                          <span className="text-xs sm:text-sm md:text-base font-medium">
+                          <span className="text-sm md:text-base font-medium">
                             TIG 141/142
                           </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                          <span className="text-xs sm:text-sm md:text-base font-medium">
+                          <span className="text-sm md:text-base font-medium">
                             SER/MMA 111
                           </span>
                         </li>
@@ -99,7 +99,7 @@ export function Services() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                          <span className="text-xs sm:text-sm md:text-base font-medium">
+                          <span className="text-sm md:text-base font-medium">
                             Aço-carbono, Aço-inox, Alumínio, Cobre
                           </span>
                         </li>
@@ -113,19 +113,19 @@ export function Services() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                          <span className="text-xs sm:text-sm md:text-base font-medium">
+                          <span className="text-sm md:text-base font-medium">
                             Horários flexíveis e personalizados
                           </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                          <span className="text-xs sm:text-sm md:text-base font-medium">
+                          <span className="text-sm md:text-base font-medium">
                             Formação à medida
                           </span>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                          <span className="text-xs sm:text-sm md:text-base font-medium">
+                          <span className="text-sm md:text-base font-medium">
                             Formação individual disponível
                           </span>
                         </li>
@@ -137,7 +137,7 @@ export function Services() {
                       <ul className="space-y-2 text-slate-700">
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                          <span className="text-xs sm:text-sm md:text-base font-medium">
+                          <span className="text-sm md:text-base font-medium">
                             EN ISO 9606, ASME IX, AWS D1.1
                           </span>
                         </li>

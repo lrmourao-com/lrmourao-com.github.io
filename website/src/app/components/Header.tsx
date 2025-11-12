@@ -19,7 +19,7 @@ export function Header({
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 max-w-full overflow-x-hidden",
+        "fixed top-0 left-0 right-0 z-50 w-full overflow-x-clip transition-all duration-300",
         isScrolled
           ? "bg-gradient-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 backdrop-blur-md shadow-2xl shadow-amber-500/10 border-b border-amber-500/30"
           : "bg-transparent"
