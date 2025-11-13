@@ -38,54 +38,58 @@ export function Advantages() {
       </div>
 
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex flex-wrap gap-8 justify-center items-stretch">
           {ADVANTAGES.map((c, i) => (
-            <Card
+            <div
               key={c.title}
-              className="group relative bg-white/95 backdrop-blur-sm border-2 border-amber-300/50 shadow-2xl hover:shadow-amber-500/50 transition-all duration-500 overflow-hidden hover:scale-105"
-              style={{ animationDelay: `${i * 150}ms` }}
+              className="w-full sm:w-auto sm:basis-[280px] md:basis-[320px] lg:basis-[360px]"
             >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${c.color} opacity-5 group-hover:opacity-15 transition-all duration-500`}
-              />
-              <div
-                className={`absolute top-0 right-0 w-48 h-48 bg-gradient-to-br ${c.color} opacity-10 rounded-full blur-3xl -mr-24 -mt-24 group-hover:opacity-30 transition-all group-hover:scale-150 duration-700`}
-              />
-              <div className="absolute top-2 right-2 w-24 h-24 border-2 border-amber-300/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
+              <Card
+                className="group relative h-full flex flex-col bg-white/95 backdrop-blur-sm border-2 border-amber-300/50 shadow-2xl hover:shadow-amber-500/50 transition-all duration-500 overflow-hidden hover:scale-105"
+                style={{ animationDelay: `${i * 150}ms` }}
+              >
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${c.color} opacity-5 group-hover:opacity-15 transition-all duration-500`}
+                />
+                <div
+                  className={`absolute top-0 right-0 w-48 h-48 bg-gradient-to-br ${c.color} opacity-10 rounded-full blur-3xl -mr-24 -mt-24 group-hover:opacity-30 transition-all group-hover:scale-150 duration-700`}
+                />
+                <div className="absolute top-2 right-2 w-24 h-24 border-2 border-amber-300/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
 
-              <CardContent className="p-10 relative">
-                <div className="flex items-center gap-4 mb-6">
-                  <div
-                    className={`bg-gradient-to-br ${c.color} p-4 rounded-2xl shadow-2xl group-hover:shadow-amber-500/50 transition-all group-hover:scale-110 group-hover:rotate-6 duration-500`}
-                  >
-                    <c.icon className="w-8 h-8 text-white" />
+                <CardContent className="p-10 relative">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div
+                      className={`bg-gradient-to-br ${c.color} p-4 rounded-2xl shadow-2xl group-hover:shadow-amber-500/50 transition-all group-hover:scale-110 group-hover:rotate-6 duration-500`}
+                    >
+                      <c.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-black text-slate-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-600 group-hover:to-orange-600 transition-all duration-300">
+                        {c.title}
+                      </h3>
+                      <p className="text-sm text-amber-600 font-bold uppercase tracking-wider">
+                        {c.sub}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-black text-slate-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-600 group-hover:to-orange-600 transition-all duration-300">
-                      {c.title}
-                    </h3>
-                    <p className="text-sm text-amber-600 font-bold uppercase tracking-wider">
-                      {c.sub}
-                    </p>
-                  </div>
-                </div>
-                <p className="text-slate-700 leading-relaxed text-base mb-6 group-hover:text-slate-900 transition-colors font-medium">
-                  {c.text}
-                </p>
-                {c.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {c.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-4 py-2 rounded-full text-sm font-bold border-2 border-amber-300 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+                  <p className="text-slate-700 leading-relaxed text-base mb-6 group-hover:text-slate-900 transition-colors font-medium">
+                    {c.text}
+                  </p>
+                  {c.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {c.tags.map((t) => (
+                        <span
+                          key={t}
+                          className="bg-gradient-to-r from-amber-100 to-orange-100 text-amber-800 px-4 py-2 rounded-full text-sm font-bold border-2 border-amber-300 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </div>
