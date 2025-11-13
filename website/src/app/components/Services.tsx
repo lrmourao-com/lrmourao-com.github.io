@@ -1,5 +1,17 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, CheckCircle2, Target, Users, Shield, Award } from "lucide-react";
+import {
+  Award,
+  CheckCircle2,
+  GraduationCap,
+  Shield,
+  Target,
+  Users,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
+
+// Reusable Tailwind class tokens for lists
+const ulBase = "text-slate-700 text-sm md:text-base";
+const liBase = "flex items-start gap-1.5 pl-4";
 
 export function Services() {
   return (
@@ -52,7 +64,7 @@ export function Services() {
                 <div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-blue-400/20 transition-all duration-700" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-blue-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                <CardContent className="p-8 md:p-10 relative h-full">
+                <CardContent className="p-6 md:p-10 relative h-full">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-linear-to-br from-blue-500 to-blue-600 group-hover:from-blue-600 group-hover:to-blue-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
                       <GraduationCap className="w-7 h-7 text-white" />
@@ -68,36 +80,30 @@ export function Services() {
                   </p>
 
                   <div className="grid xl:grid-cols-2 gap-6">
-                    <div className="bg-blue-50/50 p-4 rounded-2xl border border-blue-100">
+                    <div className="bg-blue-50/50 p-3 md:p-4 rounded-2xl border border-blue-100">
                       <p className="font-black text-blue-700 mb-3 text-sm uppercase tracking-wide">
                         Processos:
                       </p>
-                      <ul className="space-y-2 text-slate-700">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                          <span className="text-sm md:text-base font-medium">
-                            MIG/MAG/FF 114/131/135/136/138
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                          <span className="text-sm md:text-base font-medium">
-                            TIG 141/142
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                          <span className="text-sm md:text-base font-medium">
-                            SER/MMA 111
-                          </span>
-                        </li>
+                      <ul className={cn("space-y-2", ulBase)}>
+                        {[
+                          "MIG/MAG/FF 114/131/135/136/138",
+                          "TIG 141/142",
+                          "SER/MMA 111",
+                        ].map((t) => (
+                          <li className={liBase}>
+                            <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
+                            <span className="text-sm md:text-base font-medium">
+                              {t}
+                            </span>
+                          </li>
+                        ))}
                       </ul>
 
                       <p className="font-black text-blue-700 mb-3 mt-4 text-sm uppercase tracking-wide">
                         Nas ligas:
                       </p>
-                      <ul className="space-y-2 text-slate-700">
-                        <li className="flex items-start gap-2">
+                      <ul className={cn("space-y-2", ulBase)}>
+                        <li className={liBase}>
                           <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
                           <span className="text-sm md:text-base font-medium">
                             Aço-carbono, Aço-inox, Alumínio, Cobre
@@ -106,36 +112,30 @@ export function Services() {
                       </ul>
                     </div>
 
-                    <div className="bg-indigo-50/50 p-4 rounded-2xl border border-indigo-100">
+                    <div className="bg-indigo-50/50 p-3 md:p-4 rounded-2xl border border-indigo-100">
                       <p className="font-black text-indigo-700 mb-3 text-sm uppercase tracking-wide">
                         Curso/Formações:
                       </p>
-                      <ul className="space-y-2 text-slate-700">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                          <span className="text-sm md:text-base font-medium">
-                            Horários flexíveis e personalizados
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                          <span className="text-sm md:text-base font-medium">
-                            Formação à medida
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
-                          <span className="text-sm md:text-base font-medium">
-                            Formação individual disponível
-                          </span>
-                        </li>
+                      <ul className={cn("space-y-2", ulBase)}>
+                        {[
+                          "Horários flexíveis e personalizados",
+                          "Formação à medida",
+                          "Formação individual disponível",
+                        ].map((t) => (
+                          <li className={liBase} key={t}>
+                            <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
+                            <span className="text-sm md:text-base font-medium">
+                              {t}
+                            </span>
+                          </li>
+                        ))}
                       </ul>
 
                       <p className="font-black text-indigo-700 mb-3 mt-4 text-sm uppercase tracking-wide">
                         Certificação:
                       </p>
-                      <ul className="space-y-2 text-slate-700">
-                        <li className="flex items-start gap-2">
+                      <ul className={cn("space-y-2", ulBase)}>
+                        <li className={liBase}>
                           <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
                           <span className="text-sm md:text-base font-medium">
                             EN ISO 9606, ASME IX, AWS D1.1
@@ -154,7 +154,7 @@ export function Services() {
                 <div className="absolute inset-0 bg-linear-to-br from-purple-50 to-pink-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                 <div className="absolute top-0 right-0 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-purple-400/20 transition-all duration-700" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-purple-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                <CardContent className="p-8 md:p-10 relative h-full">
+                <CardContent className="p-6 md:p-10 relative h-full">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-linear-to-br from-purple-500 to-pink-600 group-hover:from-purple-600 group-hover:to-pink-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shrink-0">
                       <Target className="w-7 h-7 text-white" />
@@ -167,7 +167,7 @@ export function Services() {
                     Aconselhamento para evolução empresarial em todas as áreas
                     técnicas e normativas.
                   </p>
-              <ul className="space-y-2.5 text-slate-700 text-sm md:text-base">
+                  <ul className={cn("space-y-2.5", ulBase)}>
                     {[
                       "Normas ISO 3834 e EN 1090",
                       "Aquisição de equipamentos",
@@ -180,7 +180,12 @@ export function Services() {
                     ].map((t) => (
                       <li
                         key={t}
-                        className="flex items-start gap-2 bg-purple-50/50 p-2.5 rounded-xl border border-purple-100"
+                        className={cn(
+                          "bg-purple-50/50 p-2.5",
+                          "rounded-xl border",
+                          "border-purple-100",
+                          liBase,
+                        )}
                       >
                         <CheckCircle2 className="w-4 h-4 text-purple-600 mt-0.5 shrink-0" />
                         <span className="font-medium">{t}</span>
@@ -199,7 +204,7 @@ export function Services() {
                 <div className="absolute inset-0 bg-linear-to-br from-emerald-50 to-green-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                 <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-emerald-400/20 transition-all duration-700" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-emerald-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                <CardContent className="p-8 md:p-10 relative h-full">
+                <CardContent className="p-6 md:p-10 relative h-full">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-linear-to-br from-emerald-500 to-green-600 group-hover:from-emerald-600 group-hover:to-green-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shrink-0">
                       <Users className="w-7 h-7 text-white" />
@@ -213,72 +218,43 @@ export function Services() {
                   </p>
 
                   <div className="flex flex-col gap-6">
-                    <div className="bg-emerald-50/50 p-4 rounded-2xl border border-emerald-100">
+                    <div className="bg-emerald-50/50 p-3 md:p-4 rounded-2xl border border-emerald-100">
                       <p className="font-black text-emerald-700 mb-3 text-sm uppercase tracking-wide">
                         Certificação empresarial
                       </p>
-                      <ul className="space-y-2 text-slate-700 text-sm md:text-base">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">EN ISO 3834</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">EN ISO 9606</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">EN 1090</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">EN 15614</span>
-                        </li>
+                      <ul className={cn("space-y-2", ulBase)}>
+                        {[
+                          "EN ISO 3834",
+                          "EN ISO 9606",
+                          "EN 1090",
+                          "EN 15614",
+                        ].map((t) => (
+                          <li key={t} className={liBase}>
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+                            <span className="font-medium">{t}</span>
+                          </li>
+                        ))}
                       </ul>
                     </div>
-                    <div className="bg-emerald-50/50 p-4 rounded-2xl border border-emerald-100">
+                    <div className="bg-emerald-50/50 p-3 md:p-4 rounded-2xl border border-emerald-100">
                       <p className="font-black text-emerald-700 mb-3 text-sm uppercase tracking-wide">
                         Responsabilidades Técnicas
                       </p>
-                      <ul className="space-y-2 text-slate-700 text-sm md:text-base">
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">Realização de RQPS e EPS's</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">
-                            Selecionar e/ou aprovar processos de soldadura adequados ao material e aplicação (TIG, MAG, MMA, etc.).
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">
-                            Validar e controlar WPS (Especificações de Procedimentos de Soldadura).
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">
-                            Definir e supervisionar a qualificação de procedimentos (WPQR) e de soldadores/operadores.
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">
-                            Escolher materiais de base e de adição (ver EN ISO 15608, 2560, 14341, etc.).
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">
-                            Determinar gases de proteção, polaridades, posições de soldadura, parâmetros elétricos e tratamentos térmicos.
-                          </span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
-                          <span className="font-medium">Aprovar planos de inspeção e ensaio (ITP).</span>
-                        </li>
+                      <ul className={cn("space-y-2", ulBase)}>
+                        {[
+                          "Realização de RQPS e EPS's",
+                          "Selecionar e/ou aprovar processos de soldadura adequados ao material e aplicação (TIG, MAG, MMA, etc.).",
+                          "Validar e controlar WPS (Especificações de Procedimentos de Soldadura).",
+                          "Definir e supervisionar a qualificação de procedimentos (WPQR) e de soldadores/operadores.",
+                          "Escolher materiais de base e de adição (ver EN ISO 15608, 2560, 14341, etc.).",
+                          "Determinar gases de proteção, polaridades, posições de soldadura, parâmetros elétricos e tratamentos térmicos.",
+                          "Aprovar planos de inspeção e ensaio (ITP).",
+                        ].map((t) => (
+                          <li key={t} className={liBase}>
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
+                            <span className="font-medium">{t}</span>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -292,7 +268,7 @@ export function Services() {
                 <div className="absolute inset-0 bg-linear-to-br from-red-50 to-rose-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                 <div className="absolute top-0 right-0 w-64 h-64 bg-red-400/10 rounded-full blur-3xl -mr-32 -mt-32 group-hover:bg-red-400/20 transition-all duration-700" />
                 <div className="absolute bottom-0 left-0 w-48 h-48 border-2 border-red-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                <CardContent className="p-8 relative h-full flex flex-col">
+                <CardContent className="p-6 md:p-10 relative h-full flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-linear-to-br from-red-500 to-rose-600 group-hover:from-red-600 group-hover:to-rose-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shrink-0">
                       <Shield className="w-7 h-7 text-white" />
@@ -305,7 +281,7 @@ export function Services() {
                     Garantia de qualidade através de inspeções rigorosas e
                     controlo de processos.
                   </p>
-                  <ul className="space-y-2.5 text-slate-700 text-sm md:text-base">
+                  <ul className={cn("space-y-2.5", ulBase)}>
                     {[
                       "Inspeção visual EN ISO 17637 e ISO 5817",
                       "Controlo dimensional e conformidade",
@@ -316,7 +292,12 @@ export function Services() {
                     ].map((t) => (
                       <li
                         key={t}
-                        className="flex items-start gap-2 bg-red-50/50 p-2.5 rounded-xl border border-red-100"
+                        className={cn(
+                          "bg-red-50/50 p-2.5",
+                          "rounded-xl border",
+                          "border-red-100",
+                          liBase,
+                        )}
                       >
                         <CheckCircle2 className="w-4 h-4 text-red-600 mt-0.5 shrink-0" />
                         <span className="font-medium">{t}</span>
@@ -335,7 +316,7 @@ export function Services() {
             <div className="absolute inset-0 bg-linear-to-br from-amber-50 to-orange-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-amber-400/20 transition-all duration-700" />
             <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-amber-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
-            <CardContent className="p-8 md:p-10 relative h-full flex flex-col">
+            <CardContent className="p-6 md:p-10 relative h-full flex flex-col">
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-linear-to-br from-amber-500 to-orange-600 group-hover:from-amber-600 group-hover:to-orange-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shrink-0">
                   <Award className="w-7 h-7 text-white" />
@@ -348,37 +329,19 @@ export function Services() {
                 Apoio completo na obtenção e manutenção de certificações
                 essenciais.
               </p>
-              <ul className="grid md:grid-cols-2 gap-6 mt-auto text-slate-700 text-sm md:text-base">
-                <li className="flex items-start gap-2 bg-amber-50/50 p-3 rounded-xl border border-amber-100">
-                  <CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
-                  <span className="font-medium">
-                    Certificação empresas EN 1090, EN ISO 9606, ISO 3834 e EN 15614
-                  </span>
-                </li>
-                <li className="flex items-start gap-2 bg-amber-50/50 p-3 rounded-xl border border-amber-100">
-                  <CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
-                  <span className="font-medium">
-                    Certificação soldadores EN ISO 9606, ASME IX, AWS D1.1
-                  </span>
-                </li>
-                <li className="flex items-start gap-2 bg-amber-50/50 p-3 rounded-xl border border-amber-100">
-                  <CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
-                  <span className="font-medium">
-                    Processo completo: preparação até auditoria
-                  </span>
-                </li>
-                <li className="flex items-start gap-2 bg-orange-50/50 p-3 rounded-xl border border-orange-100">
-                  <CheckCircle2 className="w-4 h-4 text-orange-600 mt-0.5 shrink-0" />
-                  <span className="font-medium">
-                    Renovação e manutenção de certificações
-                  </span>
-                </li>
-                <li className="flex items-start gap-2 bg-orange-50/50 p-3 rounded-xl border border-orange-100">
-                  <CheckCircle2 className="w-4 h-4 text-orange-600 mt-0.5 shrink-0" />
-                  <span className="font-medium">
-                    Preparação de documentação técnica
-                  </span>
-                </li>
+              <ul className={cn("grid md:grid-cols-2 gap-6 mt-auto", ulBase)}>
+                {[
+                  "Certificação empresas EN 1090, EN ISO 9606, ISO 3834 e EN 15614",
+                  "Certificação soldadores EN ISO 9606, ASME IX, AWS D1.1",
+                  "Processo completo: preparação até auditoria",
+                  "Renovação e manutenção de certificações",
+                  "Preparação de documentação técnica",
+                ].map((t) => (
+                  <li key={t} className={liBase}>
+                    <CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
+                    <span className="font-medium">{t}</span>
+                  </li>
+                ))}
               </ul>
             </CardContent>
           </Card>
