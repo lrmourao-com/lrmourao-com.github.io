@@ -42,7 +42,7 @@ export function Advantages() {
           {ADVANTAGES.map((c, i) => (
             <div
               key={c.title}
-              className="w-full sm:w-auto sm:basis-[280px] md:basis-[320px] lg:basis-[360px]"
+              className="flex-none w-full sm:w-auto sm:flex-none sm:basis-[260px] md:basis-[300px] lg:basis-[340px] xl:basis-[340px]"
             >
               <Card
                 className="group relative h-full flex flex-col bg-white/95 backdrop-blur-sm border-2 border-amber-300/50 shadow-2xl hover:shadow-amber-500/50 transition-all duration-500 overflow-hidden hover:scale-105"
@@ -56,7 +56,7 @@ export function Advantages() {
                 />
                 <div className="absolute top-2 right-2 w-24 h-24 border-2 border-amber-300/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
 
-                <CardContent className="p-10 relative">
+                <CardContent className="p-10 relative flex-1 flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div
                       className={`bg-gradient-to-br ${c.color} p-4 rounded-2xl shadow-2xl group-hover:shadow-amber-500/50 transition-all group-hover:scale-110 group-hover:rotate-6 duration-500`}

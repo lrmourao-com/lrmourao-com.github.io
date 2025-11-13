@@ -24,7 +24,7 @@ export const ADVANTAGES = [
     icon: Users,
     color: "from-rose-500 to-pink-500",
     text:
-      "Soldador certificado H-L045 nos três principais processos — TIG, MIG/MAG e MMA — com experiência prática que reforça a qualidade das soluções.",
+      "Soldador certificado H-L045 nos três principais processos (TIG, MIG/MAG e MMA) com experiência prática que reforça a qualidade das soluções.",
     tags: ["TIG", "MIG/MAG", "MMA"],
   },
   {
