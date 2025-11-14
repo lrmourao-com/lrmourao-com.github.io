@@ -80,7 +80,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .intro {
@@ -254,4 +254,36 @@ section {
   * {
     @apply border-border outline-ring/50;
   }
+}
+
+/* Phone input styling */
+.react-international-phone-country-selector-button {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding-right: 8px !important;
+}
+.react-international-phone-input-container {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+.react-international-phone-input {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: rgb(15 23 42) !important;
+  font-size: inherit !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+.react-international-phone-input:focus {
+  outline: none !important;
+}
+.react-international-phone-country-selector-button:hover {
+  background: transparent !important;
 }
