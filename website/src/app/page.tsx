@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Contact from "./components/ContactUs";
+import Contact from "./components/ContactUs/ContactUs";
 import { Header } from "./components/Header";
 import { Advantages } from "./components/Advantages";
 import { Footer } from "./components/Footer";

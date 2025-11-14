@@ -50,11 +50,11 @@ export function Services() {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-8">
-            <div className="flex flex-col gap-8 flex-1">
+          <div className="flex flex-col md:flex-row gap-8 md:items-start">
+            <div className="flex flex-col gap-8 flex-1 md:h-auto">
               <Card
                 id="service-formacao"
-                className="group relative bg-white/90 backdrop-blur-sm border-2 border-blue-300/70 hover:border-blue-400/80 shadow-2xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 overflow-hidden scale-[1.01] hover:scale-[1.03] rounded-3xl ring-2 ring-blue-200/40"
+                className="group relative pb-0 bg-white/90 backdrop-blur-sm border-2 border-blue-300/70 hover:border-blue-400/80 shadow-2xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 overflow-hidden scale-[1.01] hover:scale-[1.03] rounded-3xl ring-2 ring-blue-200/40 flex-[3] min-h-0"
               >
                 <div className="absolute top-4 right-4 z-10">
                   <span className="px-3 py-2 text-[10px] font-extrabold uppercase tracking-wide rounded-full bg-blue-600 text-white shadow shadow-blue-500/40">
@@ -64,7 +64,7 @@ export function Services() {
                 <div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-blue-400/20 transition-all duration-700" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-blue-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                <CardContent className="p-6 md:p-10 relative h-full">
+                <CardContent className="p-6 md:p-10 relative h-full flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-linear-to-br from-blue-500 to-blue-600 group-hover:from-blue-600 group-hover:to-blue-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
                       <GraduationCap className="w-7 h-7 text-white" />
@@ -149,12 +149,12 @@ export function Services() {
 
               <Card
                 id="service-consultadoria"
-                className="group relative bg-white/90 backdrop-blur-sm border-2 border-purple-200/50 hover:border-purple-400/70 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-3xl"
+                className="group relative bg-white/90 backdrop-blur-sm border-2 border-purple-200/50 hover:border-purple-400/70 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-3xl flex-[2] min-h-0"
               >
                 <div className="absolute inset-0 bg-linear-to-br from-purple-50 to-pink-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                 <div className="absolute top-0 right-0 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-purple-400/20 transition-all duration-700" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-purple-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                <CardContent className="p-6 md:p-10 relative h-full">
+                <CardContent className="p-6 md:p-10 relative h-full flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-linear-to-br from-purple-500 to-pink-600 group-hover:from-purple-600 group-hover:to-pink-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shrink-0">
                       <Target className="w-7 h-7 text-white" />
@@ -196,15 +196,15 @@ export function Services() {
               </Card>
             </div>
 
-            <div className="flex flex-col gap-8 flex-1">
+            <div className="flex flex-col gap-8 flex-1 md:h-auto">
               <Card
                 id="service-coordenacao"
-                className="group relative bg-white/90 backdrop-blur-sm border-2 border-emerald-200/50 hover:border-emerald-400/70 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-3xl"
+                className="group relative pt-0 pb-5 bg-white/90 backdrop-blur-sm border-2 border-emerald-200/50 hover:border-emerald-400/70 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-3xl flex-[2] min-h-0"
               >
                 <div className="absolute inset-0 bg-linear-to-br from-emerald-50 to-green-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                 <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-emerald-400/20 transition-all duration-700" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 border-2 border-emerald-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                <CardContent className="p-6 md:p-10 relative h-full">
+                <CardContent className="p-6 md:p-10 md:pb-5 relative h-full flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-linear-to-br from-emerald-500 to-green-600 group-hover:from-emerald-600 group-hover:to-green-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shrink-0">
                       <Users className="w-7 h-7 text-white" />
@@ -218,11 +218,11 @@ export function Services() {
                   </p>
 
                   <div className="flex flex-col gap-6">
-                    <div className="bg-emerald-50/50 p-3 md:p-4 rounded-2xl border border-emerald-100">
+                    <div className="bg-emerald-50/50 p-3 md:p-4 md:pb-0 rounded-2xl border border-emerald-100">
                       <p className="font-black text-emerald-700 mb-3 text-sm uppercase tracking-wide">
                         Certificação empresarial
                       </p>
-                      <ul className={cn("space-y-2", ulBase)}>
+                      <ul className={cn("space-y-2 mb-3!", ulBase)}>
                         {[
                           "EN ISO 3834",
                           "EN ISO 9606",
@@ -236,11 +236,11 @@ export function Services() {
                         ))}
                       </ul>
                     </div>
-                    <div className="bg-emerald-50/50 p-3 md:p-4 rounded-2xl border border-emerald-100">
+                    <div className="bg-emerald-50/50 p-3 md:p-4 md:pb-0 rounded-2xl border border-emerald-100">
                       <p className="font-black text-emerald-700 mb-3 text-sm uppercase tracking-wide">
                         Responsabilidades Técnicas
                       </p>
-                      <ul className={cn("space-y-2", ulBase)}>
+                      <ul className={cn("space-y-2 mb-3!", ulBase)}>
                         {[
                           "Realização de RQPS e EPS's",
                           "Selecionar e/ou aprovar processos de soldadura adequados ao material e aplicação (TIG, MAG, MMA, etc.).",
@@ -263,12 +263,12 @@ export function Services() {
 
               <Card
                 id="service-inspecao"
-                className="group relative bg-white/90 backdrop-blur-sm border-2 border-red-200/50 hover:border-red-400/70 shadow-lg hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-3xl"
+                className="group relative py-0 bg-white/90 backdrop-blur-sm border-2 border-red-200/50 hover:border-red-400/70 shadow-lg hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-3xl flex-[3] min-h-0"
               >
                 <div className="absolute inset-0 bg-linear-to-br from-red-50 to-rose-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
                 <div className="absolute top-0 right-0 w-64 h-64 bg-red-400/10 rounded-full blur-3xl -mr-32 -mt-32 group-hover:bg-red-400/20 transition-all duration-700" />
                 <div className="absolute bottom-0 left-0 w-48 h-48 border-2 border-red-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
-                <CardContent className="p-6 md:p-10 relative h-full flex flex-col">
+                <CardContent className="p-6 md:p-10 md:pb-5 relative h-full flex flex-col">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="bg-linear-to-br from-red-500 to-rose-600 group-hover:from-red-600 group-hover:to-rose-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shrink-0">
                       <Shield className="w-7 h-7 text-white" />
@@ -311,7 +311,7 @@ export function Services() {
 
           <Card
             id="service-certificacao"
-            className="group relative bg-white/90 backdrop-blur-sm border-2 border-amber-200/50 hover:border-amber-400/70 shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-3xl mt-8"
+            className="group relative pb-0 bg-white/90 backdrop-blur-sm border-2 border-amber-200/50 hover:border-amber-400/70 shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-3xl mt-8"
           >
             <div className="absolute inset-0 bg-linear-to-br from-amber-50 to-orange-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
             <div className="absolute top-0 right-0 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-amber-400/20 transition-all duration-700" />
