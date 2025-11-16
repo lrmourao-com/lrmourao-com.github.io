@@ -1,0 +1,52 @@
+import { CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import { CheckCircle2, Shield } from "lucide-react";
+
+export function InspecaoCard({liBase, ulBase}: {liBase: string, ulBase: string}) {
+  return (
+    <>
+      <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
+        <div className="absolute inset-0 bg-linear-to-br from-red-50 to-rose-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-red-400/10 rounded-full blur-3xl -mr-32 -mt-32 group-hover:bg-red-400/20 transition-all duration-700" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 border-2 border-red-200/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
+      </div>
+      <CardContent className="p-6 md:p-10 relative h-full flex flex-col">
+        <div className="flex items-center gap-4 mb-6">
+          <div className="bg-linear-to-br from-red-500 to-rose-600 group-hover:from-red-600 group-hover:to-rose-700 p-4 rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shrink-0">
+            <Shield className="w-7 h-7 text-white" />
+          </div>
+          <h3 className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-linear-to-r from-red-700 to-rose-700 group-hover:from-red-600 group-hover:to-rose-600 transition-all duration-300">
+            Inspeção e Controlo
+          </h3>
+        </div>
+        <p className="text-slate-700 text-base leading-relaxed mb-3! font-medium">
+          Garantia de qualidade através de inspeções rigorosas e controlo de
+          processos.
+        </p>
+        <ul className={cn("space-y-2.5 mb-0!", ulBase,)}>
+          {[
+            "Inspeção visual EN ISO 17637 e ISO 5817",
+            "Controlo dimensional e conformidade",
+            "Supervisão em obra e fábrica",
+            "Relatórios técnicos detalhados",
+            "Implementação de planos de controlo de qualidade",
+            "Verificação WPQR e EPS's",
+          ].map((t) => (
+            <li
+              key={t}
+              className={cn(
+                "bg-red-50/50 p-2.5",
+                "rounded-xl border",
+                "border-red-100",
+                liBase,
+              )}
+            >
+              <CheckCircle2 className="w-4 h-4 text-red-600 mt-0.5 shrink-0" />
+              <span className="font-medium">{t}</span>
+            </li>
+          ))}
+        </ul>
+      </CardContent>
+    </>
+  );
+}

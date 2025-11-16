@@ -6,7 +6,7 @@ import { Header } from "./components/Header";
 import { Advantages } from "./components/Advantages";
 import { Footer } from "./components/Footer";
 import Hero from "./components/Hero";
-import Services from "./components/Services";
+import { Services } from "./components/Services/Services";
 import { WhatsAppButton } from "./components/WhatsAppButton";
 
 export default function LRMouraoPage() {
@@ -19,7 +19,6 @@ export default function LRMouraoPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -27,7 +26,6 @@ export default function LRMouraoPage() {
       setIsMenuOpen(false);
     }
   };
-
 
   return (
     <div className="min-h-screen bg-white">
