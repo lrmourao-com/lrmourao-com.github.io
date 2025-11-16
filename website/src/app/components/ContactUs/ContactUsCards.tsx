@@ -1,46 +1,24 @@
-import { motion, Variants } from "framer-motion";
-import { Clock, Mail, Phone, Sparkles } from "lucide-react";
+"use client";
+import { Clock, Mail, Phone, Sparkles, Copy, Check } from "lucide-react";
 import Image from "next/image";
-
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-    },
-  },
-};
-
-const glowVariants: Variants = {
-  animate: {
-    scale: [1, 1.05, 1],
-    opacity: [0.2, 0.3, 0.2],
-    transition: {
-      duration: 3,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-  },
-};
+import { useState } from "react";
 
 function ContactUsCards() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const copyEmail = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText("geral@lrmourao.com");
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
+
+  const openEmailClient = () => {
+    window.location.href = "mailto:geral@lrmourao.com";
+  };
+
   return (
-    <motion.div variants={itemVariants} className="space-y-6">
+    <div className="space-y-6">
       <div>
         <h2 className="text-3xl font-bold text-slate-900 mb-6">
           Fale connosco
@@ -49,11 +27,7 @@ function ContactUsCards() {
         {/* Contact Cards - redesigned layout */}
         <div className="space-y-4">
           {/* WhatsApp Card - redesigned */}
-          <motion.div
-            className="group relative bg-white/90 backdrop-blur-sm border-2 border-emerald-500 hover:border-emerald-400/70 shadow-lg transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-2xl"
-            whileHover={{ scale: 1.02, borderColor: "#059669" }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
+          <div className="group relative bg-white/90 backdrop-blur-sm border-2 border-emerald-500 hover:border-emerald-400/70 hover:scale-[1.02] shadow-lg transition-all duration-300 ease-out rounded-2xl overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500 rounded-full blur-3xl opacity-20 transition-opacity" />
 
             <a
@@ -92,15 +66,11 @@ function ContactUsCards() {
                 </div>
               </div>
             </a>
-          </motion.div>
+          </div>
 
           {/* Phone Card - redesigned */}
-          <motion.div
-            className="group relative bg-white/90 backdrop-blur-sm border-2 border-cyan-200/50 hover:border-cyan-400/70 shadow-lg transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-2xl"
-            whileHover={{ scale: 1.02, borderColor: "#0879b6" }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity" />
+          <div className="group relative bg-white/90 backdrop-blur-sm border-2 border-cyan-200/50 hover:border-cyan-400/70 hover:scale-[1.02] shadow-lg transition-all duration-300 ease-out rounded-2xl">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity pointer-events-none" />
 
             <div className="relative p-6">
               <a
@@ -132,50 +102,63 @@ function ContactUsCards() {
                 </div>
               </a>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Email Card - redesigned */}
-          <motion.div
-            className="group relative bg-white/90 backdrop-blur-sm border-2 border-indigo-200/50 hover:border-indigo-400/70 shadow-lg transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-2xl"
-            whileHover={{ scale: 1.02, borderColor: "#3B82F6" }}
-            transition={{ type: "spring", stiffness: 300 }}
+          {/* Email Card - click to open, icon to copy */}
+          <button
+            onClick={openEmailClient}
+            className="group relative isolate bg-white/90 backdrop-blur-sm border-2 border-indigo-200/50 hover:border-indigo-400/70 hover:scale-[1.02] shadow-lg transition-all duration-300 ease-out rounded-2xl w-full text-left cursor-pointer transform-gpu backface-hidden"
           >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity" />
+            <div className="absolute inset-0 overflow-hidden rounded-2xl -z-10">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity" />
+            </div>
 
-            <a
-              href="mailto:geral@lrmourao.com"
-              className="relative p-6 block"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-linear-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <div className="relative p-6">
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center gap-4 flex-1 min-w-0">
+                  <div className="w-14 h-14 bg-linear-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
                     <Mail className="w-7 h-7 text-white" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="text-xl font-bold text-slate-900">
                       Email
                     </h3>
-                    <p className="text-slate-700 text-lg font-semibold">
-                      geral@lrmourao.com
-                    </p>
+                    <div className="flex items-center gap-2">
+                      <p className="text-slate-700 text-lg font-semibold truncate">
+                        geral@lrmourao.com
+                      </p>
+                      <button
+                        onClick={copyEmail}
+                        className={`shrink-0 p-1 rounded-md transition-all duration-200 active:scale-95 ${
+                          emailCopied
+                            ? "bg-emerald-500 text-white"
+                            : "hover:bg-indigo-100 text-indigo-600 hover:text-indigo-900"
+                        }`}
+                        title={emailCopied ? "Copiado!" : "Copiar email"}
+                      >
+                        {emailCopied ? (
+                          <Check className="w-4 h-4" />
+                        ) : (
+                          <Copy className="w-4 h-4" />
+                        )}
+                      </button>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center justify-center self-center">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-white/60 px-3 py-1.5 text-xs font-medium text-slate-700 ring-1 ring-emerald-400/20 shadow-sm backdrop-blur-sm">
+                <div className="flex items-center gap-2 self-center shrink-0">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-white/60 px-3 py-1.5 text-xs font-medium text-slate-700 ring-1 ring-indigo-400/20 shadow-sm backdrop-blur-sm">
                     <Clock className="w-3.5 h-3.5 text-blue-600" />
                     Resposta
                     <span className="mx-1.5 text-slate-300">•</span>
-                    <span className="text-blue-700 font-semibold">
-                      24h
-                    </span>
+                    <span className="text-blue-700 font-semibold">24h</span>
                   </span>
                 </div>
               </div>
-            </a>
-          </motion.div>
+            </div>
+          </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
