@@ -24,7 +24,7 @@ export function FormacaoCard({liBase, ulBase}: {liBase: string, ulBase: string})
             Formação de Soldadura
           </h3>
         </div>
-        <p className="text-slate-700 text-base leading-relaxed mb-6 font-medium">
+        <p className="text-slate-700 text-base leading-relaxed font-medium mb-3!">
           Formamos mão-de-obra profissionalizada que suprime as necessidades do
           mercado nacional e internacional. Cursos dinâmicos, à medida e uma
           formação de excelência.
