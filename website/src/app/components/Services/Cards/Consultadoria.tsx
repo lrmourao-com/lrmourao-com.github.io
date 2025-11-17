@@ -1,10 +1,15 @@
-import { CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { Target, CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Target } from "lucide-react";
 
-export function Consultadoria({liBase, ulBase}: {liBase: string, ulBase: string}) {
+export function Consultadoria(
+  { liBase, ulBase }: { liBase: string; ulBase: string },
+) {
   return (
-    <>
+    <Card
+      id="service-consultadoria"
+      className="flex-1 flex group py-0 relative bg-white/90 backdrop-blur-sm border-2 border-purple-200/50 hover:border-purple-400/70 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.02] rounded-3xl"
+    >
       <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
         <div className="absolute inset-0 bg-linear-to-br from-purple-50 to-pink-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-purple-400/20 transition-all duration-700" />
@@ -37,9 +42,7 @@ export function Consultadoria({liBase, ulBase}: {liBase: string, ulBase: string}
             <li
               key={t}
               className={cn(
-                "bg-purple-50/50 p-2.5",
-                "rounded-xl border",
-                "border-purple-100",
+                "bg-purple-50/50 p-2.5 rounded-xl border border-purple-100",
                 liBase,
               )}
             >
@@ -49,6 +52,6 @@ export function Consultadoria({liBase, ulBase}: {liBase: string, ulBase: string}
           ))}
         </ul>
       </CardContent>
-    </>
+    </Card>
   );
 }

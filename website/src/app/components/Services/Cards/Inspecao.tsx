@@ -1,10 +1,15 @@
-import { CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { CheckCircle2, Shield } from "lucide-react";
 
-export function InspecaoCard({liBase, ulBase}: {liBase: string, ulBase: string}) {
+export function InspecaoCard(
+  { liBase, ulBase }: { liBase: string; ulBase: string },
+) {
   return (
-    <>
+    <Card
+      id="service-inspecao"
+      className="flex-1 flex group relative py-0 bg-white/90 backdrop-blur-sm border-2 border-red-200/50 hover:border-red-400/70 shadow-lg hover:shadow-2xl hover:shadow-red-500/20 transition-all duration-500 hover:scale-[1.02] rounded-3xl"
+    >
       <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
         <div className="absolute inset-0 bg-linear-to-br from-red-50 to-rose-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
         <div className="absolute top-0 right-0 w-64 h-64 bg-red-400/10 rounded-full blur-3xl -mr-32 -mt-32 group-hover:bg-red-400/20 transition-all duration-700" />
@@ -23,7 +28,7 @@ export function InspecaoCard({liBase, ulBase}: {liBase: string, ulBase: string})
           Garantia de qualidade através de inspeções rigorosas e controlo de
           processos.
         </p>
-        <ul className={cn("space-y-2.5 mb-0!", ulBase,)}>
+        <ul className={cn(ulBase, "space-y-2.5 mb-0!")}>
           {[
             "Inspeção visual EN ISO 17637 e ISO 5817",
             "Controlo dimensional e conformidade",
@@ -35,10 +40,8 @@ export function InspecaoCard({liBase, ulBase}: {liBase: string, ulBase: string})
             <li
               key={t}
               className={cn(
-                "bg-red-50/50 p-2.5",
-                "rounded-xl border",
-                "border-red-100",
                 liBase,
+                "bg-red-50/50 p-2.5 rounded-xl border border-red-100",
               )}
             >
               <CheckCircle2 className="w-4 h-4 text-red-600 mt-0.5 shrink-0" />
@@ -47,6 +50,6 @@ export function InspecaoCard({liBase, ulBase}: {liBase: string, ulBase: string})
           ))}
         </ul>
       </CardContent>
-    </>
+    </Card>
   );
 }

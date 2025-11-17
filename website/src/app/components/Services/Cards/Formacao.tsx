@@ -1,10 +1,15 @@
-import { CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { CheckCircle2, GraduationCap } from "lucide-react";
 
-export function FormacaoCard({liBase, ulBase}: {liBase: string, ulBase: string}) {
+export function FormacaoCard(
+  { liBase, ulBase }: { liBase: string; ulBase: string },
+) {
   return (
-    <>
+    <Card
+      id="service-formacao"
+      className="flex-1 flex group relative pb-0 bg-white/90 backdrop-blur-sm border-2 border-blue-300/70 hover:border-blue-400/80 shadow-2xl hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 scale-[1.01] hover:scale-[1.03] rounded-3xl ring-2 ring-blue-200/40"
+    >
       <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
         <div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-blue-400/20 transition-all duration-700" />
@@ -96,6 +101,6 @@ export function FormacaoCard({liBase, ulBase}: {liBase: string, ulBase: string})
           </div>
         </div>
       </CardContent>
-    </>
+    </Card>
   );
 }
