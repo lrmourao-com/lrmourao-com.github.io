@@ -1,44 +1,9 @@
-import { motion, Variants } from "framer-motion";
-import { Sparkles, Loader2, CheckCircle, Send, Mail } from "lucide-react";
+"use client";
+
+import { Loader2, CheckCircle, Send, Mail } from "lucide-react";
 import { useState } from "react";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
-
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-    },
-  },
-};
-
-const glowVariants: Variants = {
-  animate: {
-    scale: [1, 1.05, 1],
-    opacity: [0.2, 0.3, 0.2],
-    transition: {
-      duration: 3,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-  },
-};
 
 export function ContactUsForm() {
   const [formData, setFormData] = useState({
@@ -81,12 +46,8 @@ export function ContactUsForm() {
     });
   };
   return (
-    <motion.div variants={itemVariants} className="relative">
-      <motion.div
-        className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-20"
-        variants={glowVariants}
-        animate="animate"
-      />
+    <div className="relative opacity-0 animate-fade-in-up animation-delay-300">
+      <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-20 animate-pulse-slow" />
 
       <div className="relative bg-white/90 backdrop-blur-xl border-2 border-blue-200/50 rounded-2xl p-8 shadow-2xl shadow-blue-500/10">
         <div className="flex items-center gap-3 mb-8">
@@ -156,12 +117,10 @@ export function ContactUsForm() {
             />
           </div>
 
-          <motion.button
+          <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-4 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="w-full py-4 px-6 bg-linear-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {isSubmitting
               ? (
@@ -183,7 +142,7 @@ export function ContactUsForm() {
                   Enviar Mensagem
                 </>
               )}
-          </motion.button>
+          </button>
 
           {submitStatus === "error" && (
             <p className="text-red-500 text-center">
@@ -192,7 +151,7 @@ export function ContactUsForm() {
           )}
         </form>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

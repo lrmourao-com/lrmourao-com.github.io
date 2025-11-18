@@ -67,7 +67,7 @@ export function Services() {
         </div>
 
         {/* Mobile View */}
-        <div className="flex flex-col gap-8 block sm:hidden max-w-7xl mx-auto">
+        <div className="flex flex-col gap-8 sm:hidden max-w-7xl mx-auto">
           <FormacaoCard liBase={liBase} ulBase={ulBase} />
           <CoordenacaoCard liBase={liBase} ulBase={ulBase} />
           <Consultadoria liBase={liBase} ulBase={ulBase} />
