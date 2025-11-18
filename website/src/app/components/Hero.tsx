@@ -1,9 +1,12 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { HERO_STATS, SPECIALIZATIONS, CERTIFICATIONS } from "@/app/data/data";
+import { scrollToSection } from "@/lib/scroll";
 
-export function Hero({ scrollToSection }: { scrollToSection: (nav: boolean, id: string) => void }) {
-    return (
-      <section
+export function Hero() {
+  return (
+    <section
       id="main"
       className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 overflow-hidden"
     >
@@ -107,28 +110,25 @@ export function Hero({ scrollToSection }: { scrollToSection: (nav: boolean, id: 
                     key={item.name}
                     onClick={() => scrollToSection(false, item.id)}
                     role="button"
-                    className={`group flex items-center gap-3 bg-white/5 ${
-                      item.id === "service-formacao"
-                        ? "bg-white/10 border-blue-400/60 ring-2 ring-blue-300/30 scale-[1.01]"
-                        : ""
-                    } hover:bg-white/15 border border-white/10 ${item.hoverBorder} rounded-xl p-3 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg`}
+                    className={`group flex items-center gap-3 bg-white/5 ${item.id === "service-formacao"
+                      ? "bg-white/10 border-blue-400/60 ring-2 ring-blue-300/30 scale-[1.01]"
+                      : ""
+                      } hover:bg-white/15 border border-white/10 ${item.hoverBorder} rounded-xl p-3 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg`}
                     style={{ animationDelay: `${i * 100}ms` }}
                   >
                     <div
-                      className={`bg-gradient-to-br ${item.grad} p-2 rounded-lg transition-all duration-300 shadow-lg ${
-                        item.id === "service-formacao"
-                          ? "scale-110 ring-2 ring-blue-300/40"
-                          : ""
-                      } group-hover:scale-110 group-hover:rotate-6`}
+                      className={`bg-gradient-to-br ${item.grad} p-2 rounded-lg transition-all duration-300 shadow-lg ${item.id === "service-formacao"
+                        ? "scale-110 ring-2 ring-blue-300/40"
+                        : ""
+                        } group-hover:scale-110 group-hover:rotate-6`}
                     >
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
                     <span
-                      className={`font-semibold text-sm transition-colors ${
-                        item.id === "service-formacao"
-                          ? "text-white"
-                          : "text-slate-200 group-hover:text-white"
-                      }`}
+                      className={`font-semibold text-sm transition-colors ${item.id === "service-formacao"
+                        ? "text-white"
+                        : "text-slate-200 group-hover:text-white"
+                        }`}
                     >
                       {item.name}
                     </span>
@@ -138,11 +138,10 @@ export function Hero({ scrollToSection }: { scrollToSection: (nav: boolean, id: 
                       </span>
                     )}
                     <div
-                      className={`ml-auto transition-all duration-300 group-hover:scale-125 ${
-                        item.id === "service-formacao"
-                          ? "opacity-100"
-                          : "opacity-0 group-hover:opacity-100"
-                      }`}
+                      className={`ml-auto transition-all duration-300 group-hover:scale-125 ${item.id === "service-formacao"
+                        ? "opacity-100"
+                        : "opacity-0 group-hover:opacity-100"
+                        }`}
                     >
                       <div
                         className={`w-2 h-2 ${item.dot} rounded-full shadow-lg`}
@@ -181,7 +180,5 @@ export function Hero({ scrollToSection }: { scrollToSection: (nav: boolean, id: 
         </div>
       </div>
     </section>
-    )
+  )
 }
-
-export default Hero;

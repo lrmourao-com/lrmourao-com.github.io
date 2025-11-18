@@ -1,0 +1,76 @@
+"use client";
+
+import { Check, Clock, Copy, Mail } from "lucide-react";
+import { useState } from "react";
+
+export function EmailCard() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const copyEmail = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText("geral@lrmourao.com");
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
+
+  const openEmailClient = () => {
+    window.location.href = "mailto:geral@lrmourao.com";
+  };
+
+  return (
+    <div className="group relative isolate bg-white/90 backdrop-blur-sm border-2 border-indigo-200/50 hover:border-indigo-400/70 hover:scale-[1.02] shadow-lg transition-all duration-300 ease-out rounded-xl sm:rounded-2xl w-full cursor-pointer transform-gpu backface-hidden">
+      <div className="absolute inset-0 overflow-hidden rounded-xl sm:rounded-2xl -z-10">
+        <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-indigo-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity" />
+      </div>
+
+      {/* Clickable overlay */}
+      <button
+        onClick={openEmailClient}
+        className="absolute inset-0 z-0"
+        aria-label="Abrir cliente de email"
+      />
+
+      <div className="relative p-4 sm:p-6 z-10 pointer-events-none">
+        <div className="flex flex-col sm:flex-row items-start sm:items-start justify-between gap-3 sm:gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-indigo-500 to-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
+              <Mail className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+            </div>
+            <div className="min-w-0 select-text flex-1">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                Email
+              </h3>
+              <div className="flex items-center gap-2">
+                <p className="text-slate-700 text-sm sm:text-base md:text-lg font-semibold truncate">
+                  geral@lrmourao.com
+                </p>
+                <button
+                  onClick={copyEmail}
+                  className={`shrink-0 p-1 rounded-md transition-all duration-200 active:scale-95 pointer-events-auto relative z-20 ${emailCopied
+                    ? "bg-emerald-500 text-white"
+                    : "hover:bg-indigo-100 text-indigo-600 hover:text-indigo-900"
+                    }`}
+                  title={emailCopied ? "Copiado!" : "Copiar email"}
+                >
+                  {emailCopied ? (
+                    <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  ) : (
+                    <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  )}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 self-start sm:self-center shrink-0 w-full sm:w-auto justify-start sm:justify-center">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/60 px-2.5 py-1 sm:px-3 sm:py-1.5 text-xs font-medium text-slate-700 ring-1 ring-indigo-400/20 shadow-sm backdrop-blur-sm select-text whitespace-nowrap">
+              <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-blue-600 shrink-0" />
+              Resposta
+              <span className="mx-1 sm:mx-1.5 text-slate-300">•</span>
+              <span className="text-blue-700 font-semibold">24h</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

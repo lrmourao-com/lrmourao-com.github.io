@@ -1,8 +1,7 @@
 import { NAV_ITEMS } from "@/app/data/data";
+import { scrollToSection } from "@/lib/scroll";
 
-export function Footer(
-  { scrollToSection }: { scrollToSection: (nav: boolean, id: string) => void },
-) {
+export function Footer() {
   return (
     <footer className="relative bg-linear-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 text-white py-6 border-t-2 border-amber-500/20 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden opacity-20">

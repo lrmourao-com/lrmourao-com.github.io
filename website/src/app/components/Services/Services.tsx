@@ -1,6 +1,4 @@
-"use client";
 
-import { Card } from "@/components/ui/card";
 import { FormacaoCard } from "./Cards/Formacao";
 import { Consultadoria } from "./Cards/Consultadoria";
 import { CoordenacaoCard } from "./Cards/Coordenacao";
@@ -62,7 +60,7 @@ export function Services() {
             {/* Item 1 */}
             <CoordenacaoCard liBase={liBase} ulBase={ulBase} mobile={false} />
             {/* Item 2 */}
-            <InspecaoCard liBase={liBase} ulBase={ulBase} mobile={false}  />
+            <InspecaoCard liBase={liBase} ulBase={ulBase} mobile={false} />
           </div>
         </div>
 

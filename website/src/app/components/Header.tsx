@@ -1,21 +1,26 @@
+"use client";
+
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NAV_ITEMS } from "@/app/data/data";
 import { cn } from "@/lib/utils";
+import { scrollToSection } from "@/lib/scroll";
 
-export function Header({
-  scrollToSection,
-  isMenuOpen,
-  setIsMenuOpen,
-  isScrolled,
-  setIsScrolled,
-}: {
-  scrollToSection: (nav: boolean, id: string) => void;
-  isMenuOpen: boolean;
-  setIsMenuOpen: (isMenuOpen: boolean) => void;
-  isScrolled: boolean;
-  setIsScrolled: (isScrolled: boolean) => void;
-}) {
+export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavClick = (id: string) => {
+    scrollToSection(true, id);
+    setIsMenuOpen(false);
+  };
+
   return (
     <header
       className={cn(
@@ -43,7 +48,7 @@ export function Header({
             {NAV_ITEMS.map(({ id, label }) => (
               <button
                 key={id}
-                onClick={() => scrollToSection(true, id)}
+                onClick={() => handleNavClick(id)}
                 className="text-slate-200 hover:text-amber-400 transition-all duration-300 font-semibold hover:scale-105 relative group"
               >
                 {label}
@@ -66,7 +71,7 @@ export function Header({
             {NAV_ITEMS.map(({ id, label }) => (
               <button
                 key={id}
-                onClick={() => scrollToSection(true, id)}
+                onClick={() => handleNavClick(id)}
                 className="block w-full text-left py-3 px-4 text-slate-200 hover:text-amber-400 hover:bg-white/5 rounded-lg transition-all duration-300 font-semibold"
               >
                 {label}

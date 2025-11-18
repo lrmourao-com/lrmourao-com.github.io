@@ -1,7 +1,7 @@
 import ContactUsForm from "./ContactUsForm";
 import ContactUsCards from "./ContactUsCards";
 
-export default function ContactSection() {
+export function ContactSection() {
   return (
     <section id="contact" className="relative py-16 md:py-24 lg:py-32 bg-linear-to-br from-white via-blue-50 to-indigo-50 overflow-hidden">
       {/* Animated background elements matching the site style */}
