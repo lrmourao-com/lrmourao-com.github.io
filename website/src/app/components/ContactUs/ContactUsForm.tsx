@@ -47,18 +47,18 @@ export function ContactUsForm() {
   };
   return (
     <div className="relative opacity-0 animate-fade-in-up animation-delay-300">
-      <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-20 animate-pulse-slow" />
+      <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-indigo-600 rounded-xl sm:rounded-2xl blur opacity-20 animate-pulse-slow" />
 
-      <div className="relative bg-white/90 backdrop-blur-xl border-2 border-blue-200/50 rounded-2xl p-8 shadow-2xl shadow-blue-500/10">
-        <div className="flex items-center gap-3 mb-8">
-          <Mail className="w-8 h-8 text-blue-600" />
-          <h2 className="text-3xl font-bold text-slate-900" style={{ marginBottom: '2px' }}>
+      <div className="relative bg-white/90 backdrop-blur-xl border-2 border-blue-200/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl shadow-blue-500/10">
+        <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+          <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 shrink-0" />
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900" style={{ marginBottom: '2px' }}>
             Envie-nos uma mensagem
           </h2>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label className="block text-slate-700 text-sm font-medium mb-2">
                 Nome
@@ -69,7 +69,7 @@ export function ContactUsForm() {
                 value={formData.name}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                className="w-full px-3 py-2.5 sm:px-4 sm:py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all text-sm sm:text-base"
                 placeholder="Seu nome"
               />
             </div>
@@ -83,7 +83,7 @@ export function ContactUsForm() {
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full px-4 py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                className="w-full px-3 py-2.5 sm:px-4 sm:py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all text-sm sm:text-base"
                 placeholder="seu@email.com"
               />
             </div>
@@ -93,7 +93,7 @@ export function ContactUsForm() {
             <label className="block text-slate-700 text-sm font-medium mb-2">
               Telefone
             </label>
-            <div className="w-full px-4 py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20 transition-all">
+            <div className="w-full px-3 py-2.5 sm:px-4 sm:py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20 transition-all">
               <PhoneInput
                 value={formData.phone}
                 onChange={(phone) => setFormData({ ...formData, phone })}
@@ -112,7 +112,7 @@ export function ContactUsForm() {
               onChange={handleInputChange}
               required
               rows={5}
-              className="w-full px-4 py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
+              className="w-full px-3 py-2.5 sm:px-4 sm:py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none text-sm sm:text-base"
               placeholder="Como podemos ajudar?"
             />
           </div>
@@ -120,32 +120,32 @@ export function ContactUsForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-4 px-6 bg-linear-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full py-3 sm:py-4 px-4 sm:px-6 bg-linear-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             {isSubmitting
               ? (
                 <>
-                  <Loader2 className="w-5 h-5 animate-spin" />
+                  <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
                   A enviar...
                 </>
               )
               : submitStatus === "success"
               ? (
                 <>
-                  <CheckCircle className="w-5 h-5" />
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                   Enviado com sucesso!
                 </>
               )
               : (
                 <>
-                  <Send className="w-5 h-5" />
+                  <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                   Enviar Mensagem
                 </>
               )}
           </button>
 
           {submitStatus === "error" && (
-            <p className="text-red-500 text-center">
+            <p className="text-red-500 text-center text-sm sm:text-base">
               Erro ao enviar mensagem. Tente novamente.
             </p>
           )}
