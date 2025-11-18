@@ -1,7 +1,7 @@
 import { NAV_ITEMS } from "@/app/data/data";
 
 export function Footer(
-  { scrollToSection }: { scrollToSection: (id: string) => void },
+  { scrollToSection }: { scrollToSection: (nav: boolean, id: string) => void },
 ) {
   return (
     <footer className="relative bg-linear-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 text-white py-6 border-t-2 border-amber-500/20 overflow-hidden">
@@ -24,7 +24,7 @@ export function Footer(
             {NAV_ITEMS.map(({ id, label }) => (
               <button
                 key={id}
-                onClick={() => scrollToSection(id)}
+                onClick={() => scrollToSection(true, id)}
                 className="text-slate-200 hover:text-amber-400 transition-all duration-300 text-sm font-semibold hover:scale-110 relative group"
               >
                 {label}

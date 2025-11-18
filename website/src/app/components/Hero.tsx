@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { HERO_STATS, SPECIALIZATIONS, CERTIFICATIONS } from "@/app/data/data";
 
-export function Hero({ scrollToSection }: { scrollToSection: (id: string) => void }) {
+export function Hero({ scrollToSection }: { scrollToSection: (nav: boolean, id: string) => void }) {
     return (
       <section
       id="main"
@@ -66,14 +66,14 @@ export function Hero({ scrollToSection }: { scrollToSection: (id: string) => voi
 
             <div className="flex flex-col items-center justify-center xl:justify-start sm:flex-row gap-5">
               <Button
-                onClick={() => scrollToSection("services")}
+                onClick={() => scrollToSection(true, "services")}
                 size="lg"
                 className="relative text-white text-lg md:text-xl px-8 py-7 rounded-md bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 shadow-[0_10px_30px_rgba(59,130,246,0.6)] hover:shadow-[0_14px_44px_rgba(99,102,241,0.75)] transition-all duration-300 hover:scale-110 ring-2 ring-blue-300/40 hover:ring-blue-400/60"
               >
                 Explore os Serviços
               </Button>
               <Button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => scrollToSection(true, "contact")}
                 size="lg"
                 variant="outline"
                 className="relative bg-transparent text-sky-200 border-2 border-sky-400/60 py-7 rounded-xl text-lg md:text-xl px-8 hover:text-white hover:bg-gradient-to-r hover:from-indigo-600 hover:via-blue-600 hover:to-sky-500 hover:border-transparent transition-all duration-300 hover:scale-105 shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_12px_40px_rgba(99,102,241,0.6)] overflow-hidden group"
@@ -105,7 +105,7 @@ export function Hero({ scrollToSection }: { scrollToSection: (id: string) => voi
                 {SPECIALIZATIONS.map((item, i) => (
                   <div
                     key={item.name}
-                    onClick={() => scrollToSection(item.id)}
+                    onClick={() => scrollToSection(false, item.id)}
                     role="button"
                     className={`group flex items-center gap-3 bg-white/5 ${
                       item.id === "service-formacao"

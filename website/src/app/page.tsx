@@ -19,10 +19,26 @@ export default function LRMouraoPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (nav: boolean, id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      // Use offset for specific service cards (specializations), simple scroll for main sections
+
+      if (!nav) {
+        const headerOffset = 120; // Account for fixed header height (96px) + some padding
+        const elementPosition = el.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset -
+          headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      } else {
+        // Simple scroll for main navigation sections
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+
       setIsMenuOpen(false);
     }
   };

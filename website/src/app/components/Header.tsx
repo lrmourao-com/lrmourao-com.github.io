@@ -10,7 +10,7 @@ export function Header({
   isScrolled,
   setIsScrolled,
 }: {
-  scrollToSection: (id: string) => void;
+  scrollToSection: (nav: boolean, id: string) => void;
   isMenuOpen: boolean;
   setIsMenuOpen: (isMenuOpen: boolean) => void;
   isScrolled: boolean;
@@ -43,7 +43,7 @@ export function Header({
             {NAV_ITEMS.map(({ id, label }) => (
               <button
                 key={id}
-                onClick={() => scrollToSection(id)}
+                onClick={() => scrollToSection(true, id)}
                 className="text-slate-200 hover:text-amber-400 transition-all duration-300 font-semibold hover:scale-105 relative group"
               >
                 {label}
@@ -66,7 +66,7 @@ export function Header({
             {NAV_ITEMS.map(({ id, label }) => (
               <button
                 key={id}
-                onClick={() => scrollToSection(id)}
+                onClick={() => scrollToSection(true, id)}
                 className="block w-full text-left py-3 px-4 text-slate-200 hover:text-amber-400 hover:bg-white/5 rounded-lg transition-all duration-300 font-semibold"
               >
                 {label}
