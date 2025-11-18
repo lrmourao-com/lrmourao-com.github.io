@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 import { Award, CheckCircle2 } from "lucide-react";
 
 export function CertificacaoCard(
-  { liBase, ulBase }: { liBase: string; ulBase: string },
+  { liBase, ulBase, mobile = false }: { liBase: string; ulBase: string; mobile?: boolean },
 ) {
   return (
     <Card
-      id="service-certificacao"
+      id={mobile ? "service-certificacao-mobile" : "service-certificacao"}
       className="group relative pb-0 bg-white/90 backdrop-blur-sm border-2 border-amber-200/50 hover:border-amber-400/70 shadow-lg hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-500 overflow-hidden hover:scale-[1.02] rounded-3xl mt-8"
     >
       <div className="absolute inset-0 bg-linear-to-br from-amber-50 to-orange-50 opacity-50 group-hover:opacity-70 transition-opacity duration-500" />

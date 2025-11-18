@@ -52,26 +52,26 @@ export function Services() {
           {/* Column 1 */}
           <div className="flex flex-col flex-1 gap-8">
             {/* Item 1 */}
-            <FormacaoCard liBase={liBase} ulBase={ulBase} />
+            <FormacaoCard liBase={liBase} ulBase={ulBase} mobile={false} />
             {/* Item 2 */}
-            <Consultadoria liBase={liBase} ulBase={ulBase} />
+            <Consultadoria liBase={liBase} ulBase={ulBase} mobile={false} />
           </div>
 
           {/* Column 2 */}
           <div className="flex flex-col flex-1 gap-8">
             {/* Item 1 */}
-            <CoordenacaoCard liBase={liBase} ulBase={ulBase} />
+            <CoordenacaoCard liBase={liBase} ulBase={ulBase} mobile={false} />
             {/* Item 2 */}
-            <InspecaoCard liBase={liBase} ulBase={ulBase} />
+            <InspecaoCard liBase={liBase} ulBase={ulBase} mobile={false}  />
           </div>
         </div>
 
         {/* Mobile View */}
         <div className="flex flex-col gap-8 sm:hidden max-w-7xl mx-auto">
-          <FormacaoCard liBase={liBase} ulBase={ulBase} />
-          <CoordenacaoCard liBase={liBase} ulBase={ulBase} />
-          <Consultadoria liBase={liBase} ulBase={ulBase} />
-          <InspecaoCard liBase={liBase} ulBase={ulBase} />
+          <FormacaoCard liBase={liBase} ulBase={ulBase} mobile={true} />
+          <CoordenacaoCard liBase={liBase} ulBase={ulBase} mobile={true} />
+          <Consultadoria liBase={liBase} ulBase={ulBase} mobile={true} />
+          <InspecaoCard liBase={liBase} ulBase={ulBase} mobile={true} />
         </div>
 
         {/* Certificacao Card */}

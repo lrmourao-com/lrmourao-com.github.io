@@ -71,20 +71,20 @@ export const SPECIALIZATIONS = [
     dot: "bg-purple-400",
   },
   {
-    name: "Certificação",
-    icon: Award,
-    id: "service-certificacao",
-    grad: "from-amber-500 to-orange-600",
-    hoverBorder: "hover:border-amber-500/60",
-    dot: "bg-amber-400",
-  },
-  {
     name: "Inspeção e Controlo",
     icon: Shield,
     id: "service-inspecao",
     grad: "from-red-500 to-rose-600",
     hoverBorder: "hover:border-red-500/60",
     dot: "bg-red-400",
+  },
+  {
+    name: "Certificação",
+    icon: Award,
+    id: "service-certificacao",
+    grad: "from-amber-500 to-orange-600",
+    hoverBorder: "hover:border-amber-500/60",
+    dot: "bg-amber-400",
   },
 ];
 

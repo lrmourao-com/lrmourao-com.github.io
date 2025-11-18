@@ -20,7 +20,18 @@ export default function LRMouraoPage() {
   }, []);
 
   const scrollToSection = (nav: boolean, id: string) => {
-    const el = document.getElementById(id);
+    let targetId = id;
+
+    // Check if we are on mobile (Tailwind sm breakpoint is 640px)
+    // And if a mobile specific element exists
+    if (typeof window !== "undefined" && window.innerWidth < 640) {
+      const mobileEl = document.getElementById(`${id}-mobile`);
+      if (mobileEl) {
+        targetId = `${id}-mobile`;
+      }
+    }
+
+    const el = document.getElementById(targetId);
     if (el) {
       // Use offset for specific service cards (specializations), simple scroll for main sections
 

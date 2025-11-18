@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 import { CheckCircle2, Target } from "lucide-react";
 
 export function Consultadoria(
-  { liBase, ulBase }: { liBase: string; ulBase: string },
+  { liBase, ulBase, mobile }: { liBase: string; ulBase: string; mobile: boolean },
 ) {
   return (
     <Card
-      id="service-consultadoria"
+      id={mobile ? "service-consultadoria-mobile" : "service-consultadoria"}
       className="flex-1 flex group py-0 relative bg-white/90 backdrop-blur-sm border-2 border-purple-200/50 hover:border-purple-400/70 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.02] rounded-3xl"
     >
       <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
