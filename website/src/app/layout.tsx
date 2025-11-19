@@ -9,12 +9,14 @@ export const metadata: Metadata = {
   description: "LR MOURÃO - soldadura e formação",
   keywords: "LR MOURÃO, formação, soldadura, welding, training",
   authors: [{ name: "Vardas" }],
-  robots: "noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai",
+  robots: process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true'
+    ? "index, follow"
+    : "noindex, nofollow",
   verification: {
     google: "GseIwNt2X7uVsHMxRRLBmgWg4VAbArFqR6p8r2yJmcg",
   },
   openGraph: {
-    url: "http://lrmourao.com/",
+    url: "https://lrmourao.com/",
     siteName: "LR Mourão",
     description: "Situado na região Centro, em Leiria, LR Mourão oferece serviços de Soldadura, Formação, Certificação, Consultadoria, Inspecção e Planeamento.",
   },
@@ -28,10 +30,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
-        <meta httpEquiv="X-Robots-Tag" content="noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai" />
-        <link rel="shortcut icon" href="/images/favicon.ico" />
-        <link rel="icon" href="/images/animated_favicon.gif" type="image/gif" />
+        <link rel="shortcut icon" href="/lrmourao-logo.svg" />
+        <link rel="icon" href="/lrmourao-logo.svg" />
       </head>
       <PostHogProvider>
         <body className="antialiased overflow-x-clip">
