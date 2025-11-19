@@ -1,8 +1,6 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
-import { HERO_STATS, SPECIALIZATIONS, CERTIFICATIONS } from "@/app/data/data";
-import { scrollToSection } from "@/lib/scroll";
+import { HERO_STATS, CERTIFICATIONS } from "@/app/data/data";
+import { HeroButtons } from "./HeroButtons";
+import { SpecializationsList } from "./SpecializationsList";
 
 export function Hero() {
   return (
@@ -67,27 +65,7 @@ export function Hero() {
               ))}
             </div>
 
-            <div className="flex flex-col items-center justify-center xl:justify-start sm:flex-row gap-5">
-              <Button
-                onClick={() => scrollToSection(true, "services")}
-                size="lg"
-                className="relative text-white text-lg md:text-xl px-8 py-7 rounded-md bg-gradient-to-r from-sky-500 via-blue-600 to-indigo-600 shadow-[0_10px_30px_rgba(59,130,246,0.6)] hover:shadow-[0_14px_44px_rgba(99,102,241,0.75)] transition-all duration-300 hover:scale-110 ring-2 ring-blue-300/40 hover:ring-blue-400/60"
-              >
-                Explore os Serviços
-              </Button>
-              <Button
-                onClick={() => scrollToSection(true, "contact")}
-                size="lg"
-                variant="outline"
-                className="relative bg-transparent text-sky-200 border-2 border-sky-400/60 py-7 rounded-xl text-lg md:text-xl px-8 hover:text-white hover:bg-gradient-to-r hover:from-indigo-600 hover:via-blue-600 hover:to-sky-500 hover:border-transparent transition-all duration-300 hover:scale-105 shadow-[0_8px_24px_rgba(59,130,246,0.35)] hover:shadow-[0_12px_40px_rgba(99,102,241,0.6)] overflow-hidden group"
-              >
-                <span className="relative z-10">Entre em Contacto</span>
-                <div className="absolute inset-0 rounded-xl p-0.5 bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute inset-0 rounded-[11px] bg-slate-900" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-              </Button>
-            </div>
+            <HeroButtons />
           </div>
 
           <div className="relative">
@@ -104,52 +82,7 @@ export function Hero() {
                 </h3>
               </div>
 
-              <div className="space-y-2">
-                {SPECIALIZATIONS.map((item, i) => (
-                  <div
-                    key={item.name}
-                    onClick={() => scrollToSection(false, item.id)}
-                    role="button"
-                    className={`group flex items-center gap-3 bg-white/5 ${item.id === "service-formacao"
-                      ? "bg-white/10 border-blue-400/60 ring-2 ring-blue-300/30 scale-[1.01]"
-                      : ""
-                      } hover:bg-white/15 border border-white/10 ${item.hoverBorder} rounded-xl p-3 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg`}
-                    style={{ animationDelay: `${i * 100}ms` }}
-                  >
-                    <div
-                      className={`bg-gradient-to-br ${item.grad} p-2 rounded-lg transition-all duration-300 shadow-lg ${item.id === "service-formacao"
-                        ? "scale-110 ring-2 ring-blue-300/40"
-                        : ""
-                        } group-hover:scale-110 group-hover:rotate-6`}
-                    >
-                      <item.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <span
-                      className={`font-semibold text-sm transition-colors ${item.id === "service-formacao"
-                        ? "text-white"
-                        : "text-slate-200 group-hover:text-white"
-                        }`}
-                    >
-                      {item.name}
-                    </span>
-                    {item.id === "service-formacao" && (
-                      <span className="ml-1 text-[9px] uppercase tracking-wide font-extrabold px-1.5 py-0.5 rounded-full bg-blue-600 text-white/95 shadow shadow-blue-500/40">
-                        Popular
-                      </span>
-                    )}
-                    <div
-                      className={`ml-auto transition-all duration-300 group-hover:scale-125 ${item.id === "service-formacao"
-                        ? "opacity-100"
-                        : "opacity-0 group-hover:opacity-100"
-                        }`}
-                    >
-                      <div
-                        className={`w-2 h-2 ${item.dot} rounded-full shadow-lg`}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <SpecializationsList />
 
               <div className="mt-6 pt-6 border-t-2 border-white/20">
                 <p className="text-xs text-slate-300 mb-3 font-semibold">

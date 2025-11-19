@@ -46,14 +46,18 @@ export function Header() {
 
           <nav className="hidden md:flex items-center gap-8">
             {NAV_ITEMS.map(({ id, label }) => (
-              <button
+              <a
                 key={id}
-                onClick={() => handleNavClick(id)}
-                className="text-slate-200 hover:text-amber-400 transition-all duration-300 font-semibold hover:scale-105 relative group"
+                href={`#${id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(id);
+                }}
+                className="no-underline text-slate-200 hover:!text-amber-400 transition-all duration-300 font-semibold hover:scale-105 relative group visited:text-slate-200"
               >
                 {label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300" />
-              </button>
+              </a>
             ))}
           </nav>
 
@@ -69,13 +73,17 @@ export function Header() {
         {isMenuOpen && (
           <nav className="md:hidden pb-4 space-y-2 border-t border-white/10 pt-4">
             {NAV_ITEMS.map(({ id, label }) => (
-              <button
+              <a
                 key={id}
-                onClick={() => handleNavClick(id)}
-                className="block w-full text-left py-3 px-4 text-slate-200 hover:text-amber-400 hover:bg-white/5 rounded-lg transition-all duration-300 font-semibold"
+                href={`#${id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(id);
+                }}
+                className="no-underline block w-full text-left py-3 px-4 text-slate-200 hover:!text-amber-400 hover:bg-white/5 rounded-lg transition-all duration-300 font-semibold visited:text-slate-200"
               >
                 {label}
-              </button>
+              </a>
             ))}
           </nav>
         )}

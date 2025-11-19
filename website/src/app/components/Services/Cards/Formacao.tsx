@@ -46,7 +46,7 @@ export function FormacaoCard(
                 "TIG 141/142",
                 "SER/MMA 111",
               ].map((t) => (
-                <li className={liBase}>
+                <li className={liBase} key={t}>
                   <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
                   <span className="text-sm md:text-base font-medium">
                     {t}

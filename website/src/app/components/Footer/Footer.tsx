@@ -1,5 +1,4 @@
-import { NAV_ITEMS } from "@/app/data/data";
-import { scrollToSection } from "@/lib/scroll";
+import { FooterNav } from "./FooterNav";
 
 export function Footer() {
   return (
@@ -18,28 +17,16 @@ export function Footer() {
               className="h-14 md:h-16 lg:h-20 w-auto drop-shadow-lg"
             />
           </div>
+          <FooterNav />
 
-          <nav className="flex flex-wrap justify-center gap-4">
-            {NAV_ITEMS.map(({ id, label }) => (
-              <button
-                key={id}
-                onClick={() => scrollToSection(true, id)}
-                className="text-slate-200 hover:text-amber-400 transition-all duration-300 text-sm font-semibold hover:scale-110 relative group"
-              >
-                {label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300" />
-              </button>
-            ))}
-          </nav>
-
-          <p className="text-slate-300 text-xs text-center font-medium">
+          <p className="text-slate-300 text-xs text-center font-medium self-end">
             © {new Date().getFullYear()}{" "}
             LR Mourão. Todos os direitos reservados.<br />
             Produzido por{" "}
             <a
               href="http://prock.dev/"
               className="text-orange-400! hover:text-orange-300! font-bold transition-colors duration-300"
-              style={{ color: '#fb923c' }}
+              style={{ color: "#fb923c" }}
             >
               Pedro Roque
             </a>{" "}
@@ -47,7 +34,7 @@ export function Footer() {
             <a
               href="http://tiago.vardas.ca/"
               className="text-orange-400! hover:text-orange-300! font-bold transition-colors duration-300"
-              style={{ color: '#fb923c' }}
+              style={{ color: "#fb923c" }}
             >
               Vardas
             </a>
