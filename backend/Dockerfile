@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies (including dev dependencies for TypeScript compilation)
-RUN npm ci
+RUN npm ci || npm install
 
 # Copy source code
 COPY . .
@@ -35,7 +35,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install production dependencies only
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm ci --omit=dev || npm install --omit=dev && npm cache clean --force
 
 # Copy built files from builder stage
 COPY --from=builder --chown=nodejs:nodejs /app/dist ./dist
