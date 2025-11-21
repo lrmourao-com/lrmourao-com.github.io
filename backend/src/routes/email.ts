@@ -1,7 +1,6 @@
-import express, { text, type Request, type Response } from 'express';
+import express, { type Request, type Response } from 'express';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
-import SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 const router = express.Router();
 
