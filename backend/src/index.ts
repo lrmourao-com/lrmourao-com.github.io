@@ -44,7 +44,7 @@ app.get('/health', (_req: Request, res: Response) => {
 });
 
 // Routes
-app.use('/api/posthog', posthogRouter);
+app.use('/api/hog', posthogRouter);
 app.use('/api/email', emailRouter);
 
 // 404 handler
