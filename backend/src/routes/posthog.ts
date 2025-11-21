@@ -1,92 +1,34 @@
-import express, { type Request, type Response } from 'express';
-import axios from 'axios';
+import express from 'express';
+import { createProxyMiddleware, type Options } from 'http-proxy-middleware';
+import type { ClientRequest, IncomingMessage, ServerResponse } from 'http';
+import type { Socket } from 'net';
 
 const router = express.Router();
 
-const POSTHOG_API_URL = process.env.POSTHOG_API_URL || 'https://app.posthog.com';
-const POSTHOG_PROJECT_API_KEY = process.env.POSTHOG_PROJECT_API_KEY;
+const POSTHOG_API_URL = process.env.POSTHOG_API_URL || 'https://eu.posthog.com';
 
-// Proxy all POST requests to PostHog
-router.post('/*', async (req: Request, res: Response) => {
-  try {
-    if (!POSTHOG_PROJECT_API_KEY) {
-      return res.status(500).json({ 
-        error: 'PostHog is not configured. Please set POSTHOG_PROJECT_API_KEY in .env' 
-      });
-    }
-
-    const path = req.params[0] || '';
-    const posthogUrl = `${POSTHOG_API_URL}/${path}`;
-
-    console.log(`Proxying PostHog request to: ${posthogUrl}`);
-
-    // Remove host and content-length headers to avoid SNI issues and body size mismatches
-    const { host, 'content-length': _cl, ...forwardHeaders } = req.headers;
-
-    const response = await axios.post(posthogUrl, req.body, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${POSTHOG_PROJECT_API_KEY}`,
-        ...forwardHeaders
-      },
-      timeout: 10000
-    });
-
-    res.status(response.status).json(response.data);
-  } catch (error: any) {
-    console.error('PostHog proxy error:', error.message);
-    
-    if (error.response) {
-      res.status(error.response.status).json(error.response.data);
-    } else {
-      res.status(500).json({ 
-        error: 'Failed to proxy request to PostHog',
-        details: process.env.NODE_ENV === 'development' ? error.message : undefined
+const proxyOptions: Options = {
+  target: POSTHOG_API_URL,
+  changeOrigin: true,
+  pathRewrite: {
+    '^/api/posthog': '', // Remove /api/posthog prefix
+  },
+  on: {
+    error: (err: Error, req: IncomingMessage, res: ServerResponse | Socket) => {
+      console.error('PostHog proxy error:', err);
+      // We need to cast res to any because ServerResponse doesn't have status/json methods by default
+      // but in Express it does.
+      const expressRes = res as any;
+      expressRes.status(500).json({
+        error: 'PostHog proxy error',
+        message: err.message
       });
     }
   }
-});
+};
 
-// Proxy all GET requests to PostHog (for decide, feature flags, etc.)
-router.get('/*', async (req: Request, res: Response) => {
-  try {
-    if (!POSTHOG_PROJECT_API_KEY) {
-      return res.status(500).json({ 
-        error: 'PostHog is not configured. Please set POSTHOG_PROJECT_API_KEY in .env' 
-      });
-    }
-
-    const path = req.params[0] || '';
-    const posthogUrl = `${POSTHOG_API_URL}/${path}`;
-
-    console.log(`Proxying PostHog request to: ${posthogUrl}`);
-
-    // Remove host and content-length headers to avoid SNI issues and body size mismatches
-    const { host, 'content-length': _cl, ...forwardHeaders } = req.headers;
-
-    const response = await axios.get(posthogUrl, {
-      params: req.query,
-      headers: {
-        'Authorization': `Bearer ${POSTHOG_PROJECT_API_KEY}`,
-        ...forwardHeaders
-      },
-      timeout: 10000
-    });
-
-    res.status(response.status).json(response.data);
-  } catch (error: any) {
-    console.error('PostHog proxy error:', error.message);
-    
-    if (error.response) {
-      res.status(error.response.status).json(error.response.data);
-    } else {
-      res.status(500).json({ 
-        error: 'Failed to proxy request to PostHog',
-        details: process.env.NODE_ENV === 'development' ? error.message : undefined
-      });
-    }
-  }
-});
+// Proxy all requests to PostHog
+router.use('/', createProxyMiddleware(proxyOptions));
 
 export default router;
 
