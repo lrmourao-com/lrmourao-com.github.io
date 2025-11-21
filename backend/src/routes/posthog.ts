@@ -14,7 +14,13 @@ const proxyOptions: Options = {
     '^/api/posthog': '', // Remove /api/posthog prefix
   },
   on: {
-    proxyReq: fixRequestBody,
+    proxyReq: (proxyReq, req, res) => {
+      console.log(`[PostHog Proxy] Request: ${req.method} ${req.url} -> ${POSTHOG_API_URL}${proxyReq.path}`);
+      fixRequestBody(proxyReq, req);
+    },
+    proxyRes: (proxyRes, req, res) => {
+      console.log(`[PostHog Proxy] Response: ${proxyRes.statusCode} ${req.url}`);
+    },
     error: (err: Error, req: IncomingMessage, res: ServerResponse | Socket) => {
       console.error('PostHog proxy error:', err);
       // We need to cast res to any because ServerResponse doesn't have status/json methods by default
