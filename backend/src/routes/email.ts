@@ -122,13 +122,21 @@ router.post('/test', async (req: Request, res: Response) => {
 // POST /api/email/send-test - Send a test email to toopgames@gmail.com
 router.get('/send-test', async (req: Request, res: Response) => {
   try {
+    const { renderEmailTemplate } = await import('../services/email-service.js');
     const transporter = createTransporter();
     
     const testEmail = 'tinipedro@gmail.com';
     const timestamp = new Date().toLocaleString();
     
+    // Render the template with data
+    const html = await renderEmailTemplate('test-email', {
+      subject: `Test Email - ${timestamp}`,
+      environment: process.env.NODE_ENV || 'development',
+      timestamp,
+      emailFrom: process.env.EMAIL_FROM || 'Not configured',
+    });
+    
     const mailOptions: Mail.Options = {
-
       from: '"Your Company Contact Form" <tinipedro@gmail.com>',
       to: testEmail,
       subject: `Test Email - ${timestamp}`,
@@ -140,36 +148,7 @@ Server Information:
 - Timestamp: ${timestamp}
 
 If you received this email, your email configuration is working correctly!`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #2563eb; border-bottom: 3px solid #2563eb; padding-bottom: 10px;">
-            ✅ Test Email Successful
-          </h1>
-          
-          <p style="font-size: 16px; color: #333; line-height: 1.6;">
-            This is a test email sent from your backend server.
-          </p>
-          
-          <div style="background-color: #f3f4f6; border-left: 4px solid #2563eb; padding: 15px; margin: 20px 0;">
-            <h3 style="margin-top: 0; color: #1f2937;">Server Information</h3>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="padding: 5px 0;"><strong>Environment:</strong> ${process.env.NODE_ENV || 'development'}</li>
-              <li style="padding: 5px 0;"><strong>Timestamp:</strong> ${timestamp}</li>
-              <li style="padding: 5px 0;"><strong>From:</strong> ${process.env.EMAIL_FROM}</li>
-            </ul>
-          </div>
-          
-          <p style="color: #16a34a; font-weight: bold; font-size: 18px;">
-            ✅ Your email configuration is working correctly!
-          </p>
-          
-          <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
-          
-          <p style="color: #6b7280; font-size: 14px;">
-            This is an automated test email from your backend server.
-          </p>
-        </div>
-      `
+      html,
     };
     
     console.log(`Sending test email to: ${testEmail}`);
@@ -192,6 +171,114 @@ If you received this email, your email configuration is working correctly!`,
     res.status(500).json({
       error: 'Failed to send test email',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+});
+
+// Example route: Send a welcome email using template
+// POST /api/email/send-welcome
+router.post('/send-welcome', async (req: Request, res: Response) => {
+  try {
+    const { renderEmailTemplate } = await import('../services/email-service.js');
+    const { to, name, features, ctaUrl, ctaText } = req.body;
+    
+    if (!to) {
+      return res.status(400).json({ error: 'Recipient email (to) is required' });
+    }
+    
+    if (!isValidEmail(to)) {
+      return res.status(400).json({ error: `Invalid email address: ${to}` });
+    }
+    
+    const transporter = createTransporter();
+    
+    // Render the welcome email template
+    const html = await renderEmailTemplate('welcome', {
+      name,
+      companyName: 'Your Company',
+      features: features || [
+        'Access to your personalized dashboard',
+        'Connect with our community',
+        'Get personalized recommendations',
+        'Track your progress and achievements',
+      ],
+      ctaUrl,
+      ctaText,
+    });
+    
+    const mailOptions = {
+      from: process.env.EMAIL_FROM,
+      to,
+      subject: 'Welcome to Your Company!',
+      html,
+    };
+    
+    const info = await transporter.sendMail(mailOptions);
+    
+    res.json({
+      success: true,
+      messageId: info.messageId,
+      message: 'Welcome email sent successfully',
+    });
+  } catch (error: any) {
+    console.error('Welcome email sending error:', error);
+    res.status(500).json({
+      error: 'Failed to send welcome email',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined,
+    });
+  }
+});
+
+// Example route: Send a contact form notification using template
+// POST /api/email/send-contact-notification
+router.post('/send-contact-notification', async (req: Request, res: Response) => {
+  try {
+    const { renderEmailTemplate } = await import('../services/email-service.js');
+    const { name, email, phone, company, message } = req.body;
+    
+    if (!name || !email || !message) {
+      return res.status(400).json({ 
+        error: 'Name, email, and message are required' 
+      });
+    }
+    
+    if (!isValidEmail(email)) {
+      return res.status(400).json({ error: `Invalid email address: ${email}` });
+    }
+    
+    const transporter = createTransporter();
+    const timestamp = new Date().toLocaleString();
+    
+    // Render the contact form notification template
+    const html = await renderEmailTemplate('contact-form', {
+      name,
+      email,
+      phone,
+      company,
+      message,
+      timestamp,
+    });
+    
+    const mailOptions = {
+      from: process.env.EMAIL_FROM,
+      to: process.env.CONTACT_NOTIFICATION_EMAIL || process.env.EMAIL_FROM,
+      subject: `New Contact Form Submission from ${name}`,
+      replyTo: email,
+      html,
+    };
+    
+    const info = await transporter.sendMail(mailOptions);
+    
+    res.json({
+      success: true,
+      messageId: info.messageId,
+      message: 'Contact form notification sent successfully',
+    });
+  } catch (error: any) {
+    console.error('Contact notification sending error:', error);
+    res.status(500).json({
+      error: 'Failed to send contact notification',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined,
     });
   }
 });

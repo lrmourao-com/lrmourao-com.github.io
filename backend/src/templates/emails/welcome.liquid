@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to {{ companyName }}</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f5f5f5;">
+  <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div style="background-color: white; border-radius: 8px; padding: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+      
+      <!-- Header -->
+      <h1 style="color: #2563eb; margin-top: 0;">
+        Welcome{% if name %}, {{ name }}{% endif %}! 👋
+      </h1>
+      
+      <!-- Main Content -->
+      <p style="font-size: 16px; color: #333; line-height: 1.6;">
+        Thank you for joining <strong>{{ companyName }}</strong>. We're excited to have you on board!
+      </p>
+      
+      {% if features %}
+      <!-- Features List -->
+      <div style="background-color: #f8fafc; border-radius: 6px; padding: 20px; margin: 20px 0;">
+        <h3 style="margin-top: 0; color: #1f2937;">Here's what you can do:</h3>
+        <ul style="color: #4b5563; line-height: 1.8;">
+          {% for feature in features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      
+      {% if ctaUrl %}
+      <!-- Call to Action Button -->
+      <div style="text-align: center; margin: 30px 0;">
+        <a href="{{ ctaUrl }}" style="display: inline-block; background-color: #2563eb; color: white; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px;">
+          {{ ctaText | default: "Get Started" }}
+        </a>
+      </div>
+      {% endif %}
+      
+      <!-- Footer -->
+      <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
+      
+      <p style="color: #6b7280; font-size: 14px;">
+        If you have any questions, feel free to reply to this email.
+      </p>
+      
+      <p style="color: #9ca3af; font-size: 12px; margin-top: 20px;">
+        © {{ "now" | date: "%Y" }} {{ companyName }}. All rights reserved.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
