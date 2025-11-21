@@ -16,6 +16,23 @@ const proxyOptions: Options = {
   on: {
     proxyReq: (proxyReq, req, res) => {
       console.log(`[PostHog Proxy] Request: ${req.method} ${req.url} -> ${POSTHOG_API_URL}${proxyReq.path}`);
+
+      // Forward original host
+      if (req.headers.host) {
+        proxyReq.setHeader('X-Forwarded-Host', req.headers.host);
+      }
+
+      // Forward client IP
+      const clientIp = req.socket.remoteAddress;
+      if (clientIp) {
+        proxyReq.setHeader('X-Real-IP', clientIp);
+        proxyReq.setHeader('X-Forwarded-For', clientIp);
+      }
+
+      // Remove sensitive or hop-by-hop headers
+      proxyReq.removeHeader('cookie');
+      proxyReq.removeHeader('connection');
+
       fixRequestBody(proxyReq, req);
     },
     proxyRes: (proxyRes, req, res) => {
