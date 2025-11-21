@@ -20,11 +20,14 @@ router.post('/*', async (req: Request, res: Response) => {
 
     console.log(`Proxying PostHog request to: ${posthogUrl}`);
 
+    // Remove host and content-length headers to avoid SNI issues and body size mismatches
+    const { host, 'content-length': _cl, ...forwardHeaders } = req.headers;
+
     const response = await axios.post(posthogUrl, req.body, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${POSTHOG_PROJECT_API_KEY}`,
-        ...req.headers
+        ...forwardHeaders
       },
       timeout: 10000
     });
@@ -58,11 +61,14 @@ router.get('/*', async (req: Request, res: Response) => {
 
     console.log(`Proxying PostHog request to: ${posthogUrl}`);
 
+    // Remove host and content-length headers to avoid SNI issues and body size mismatches
+    const { host, 'content-length': _cl, ...forwardHeaders } = req.headers;
+
     const response = await axios.get(posthogUrl, {
       params: req.query,
       headers: {
         'Authorization': `Bearer ${POSTHOG_PROJECT_API_KEY}`,
-        ...req.headers
+        ...forwardHeaders
       },
       timeout: 10000
     });
