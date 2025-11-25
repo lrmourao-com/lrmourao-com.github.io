@@ -2,11 +2,14 @@
 
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { NAV_ITEMS } from "@/app/data/data";
+import { getNavItems } from "@/app/data/data";
 import { cn } from "@/lib/utils";
 import { scrollToSection } from "@/lib/scroll";
+import { useTranslation } from "@/lib/use-translation";
 
 export function Header() {
+  const { t } = useTranslation();
+  const NAV_ITEMS = getNavItems(t);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -41,7 +44,7 @@ export function Header() {
           <div className="flex items-center">
             <img
               src="/lrmourao-logo.svg"
-              alt="LR Mourão - soldamos o futuro | welding the future"
+              alt={t('footer.logoAlt')}
               className="h-14 md:h-16 lg:h-20 w-auto drop-shadow-lg"
             />
           </div>
@@ -66,7 +69,7 @@ export function Header() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-white hover:text-amber-400 p-2 transition-all duration-300 hover:scale-105"
-            aria-label="Toggle menu"
+            aria-label={t('nav.toggleMenu')}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

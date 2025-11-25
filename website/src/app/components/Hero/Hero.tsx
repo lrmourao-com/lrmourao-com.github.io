@@ -1,8 +1,12 @@
-import { HERO_STATS, CERTIFICATIONS } from "@/app/data/data";
+import { getHeroStats, CERTIFICATIONS } from "@/app/data/data";
 import { HeroButtons } from "./HeroButtons";
 import { SpecializationsList } from "./SpecializationsList";
+import { getServerTranslation } from "@/lib/i18n-server";
 
 export function Hero() {
+  const t = getServerTranslation('pt');
+  const HERO_STATS = getHeroStats(t);
+
   return (
     <section
       id="main"
@@ -32,20 +36,19 @@ export function Hero() {
             <div className="inline-flex items-center gap-2 bg-amber-500/20 border-2 border-amber-500/50 px-6 py-3 rounded-full mb-8 shadow-lg shadow-amber-500/20">
               <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
               <span className="text-amber-300 text-sm font-bold tracking-wider">
-                Desde 2010
+                {t('hero.badge')}
               </span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight text-balance drop-shadow-2xl">
-              <span className="text-slate-100">Excelência em</span>{" "}
+              <span className="text-slate-100">{t('hero.title.part1')}</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500">
-                formação e coordenação de soldadura
+                {t('hero.title.part2')}
               </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-200 mb-10 leading-relaxed text-pretty font-medium">
-              Soluções completas em formação, certificação e coordenação de
-              soldadura para a indústria moderna.
+              {t('hero.subtitle')}
             </p>
 
             <div className="grid grid-cols-3 gap-4 mb-10 pb-10 border-b-2 border-white/20">
@@ -78,7 +81,7 @@ export function Hero() {
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-1 h-8 bg-gradient-to-b from-amber-400 to-orange-500 rounded-full shadow-lg shadow-amber-500/50" />
                 <h3 className="text-xl font-bold text-white">
-                  Áreas de Especialização
+                  {t('hero.specializationsTitle')}
                 </h3>
               </div>
 
@@ -86,7 +89,7 @@ export function Hero() {
 
               <div className="mt-6 pt-6 border-t-2 border-white/20">
                 <p className="text-xs text-slate-300 mb-3 font-semibold">
-                  Certificações e Normas:
+                  {t('hero.certificationsLabel')}
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {CERTIFICATIONS.map((c) => (
@@ -106,7 +109,7 @@ export function Hero() {
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <div className="flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-xs text-slate-300 font-semibold">Scroll</span>
+          <span className="text-xs text-slate-300 font-semibold">{t('hero.scrollText')}</span>
           <div className="w-6 h-10 border-2 border-amber-400/40 rounded-full flex items-start justify-center p-2 shadow-lg shadow-amber-500/20">
             <div className="w-1.5 h-3 bg-gradient-to-b from-amber-400 to-orange-500 rounded-full shadow-lg shadow-amber-400/50" />
           </div>

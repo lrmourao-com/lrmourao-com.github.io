@@ -1,10 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { CheckCircle2, Shield } from "lucide-react";
+import { getServerTranslation } from "@/lib/i18n-server";
 
 export function InspecaoCard(
   { liBase, ulBase, mobile }: { liBase: string; ulBase: string; mobile: boolean },
 ) {
+  const t = getServerTranslation('pt');
+
+  const items = [
+    t('services.inspecao.items.0'),
+    t('services.inspecao.items.1'),
+    t('services.inspecao.items.2'),
+    t('services.inspecao.items.3'),
+    t('services.inspecao.items.4'),
+    t('services.inspecao.items.5'),
+  ];
+
   return (
     <Card
       id={mobile ? "service-inspecao-mobile" : "service-inspecao"}
@@ -21,31 +33,23 @@ export function InspecaoCard(
             <Shield className="w-7 h-7 text-white" />
           </div>
           <h3 className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-linear-to-r from-red-700 to-rose-700 group-hover:from-red-600 group-hover:to-rose-600 transition-all duration-300">
-            Inspeção e Controlo
+            {t('services.inspecao.title')}
           </h3>
         </div>
         <p className="text-slate-700 text-base leading-relaxed mb-3! font-medium">
-          Garantia de qualidade através de inspeções rigorosas e controlo de
-          processos.
+          {t('services.inspecao.description')}
         </p>
         <ul className={cn(ulBase, "space-y-2.5 mb-0!")}>
-          {[
-            "Inspeção visual EN ISO 17637 e ISO 5817",
-            "Controlo dimensional e conformidade",
-            "Supervisão em obra e fábrica",
-            "Relatórios técnicos detalhados",
-            "Implementação de planos de controlo de qualidade",
-            "Verificação WPQR e EPS's",
-          ].map((t) => (
+          {items.map((text) => (
             <li
-              key={t}
+              key={text}
               className={cn(
                 liBase,
                 "bg-red-50/50 p-2.5 rounded-xl border border-red-100",
               )}
             >
               <CheckCircle2 className="w-4 h-4 text-red-600 mt-0.5 shrink-0" />
-              <span className="font-medium">{t}</span>
+              <span className="font-medium">{text}</span>
             </li>
           ))}
         </ul>

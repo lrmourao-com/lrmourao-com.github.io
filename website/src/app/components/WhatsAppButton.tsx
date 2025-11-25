@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "@/lib/use-translation";
 
 interface WhatsAppButtonProps {
   phoneNumber?: string;
@@ -12,6 +13,7 @@ export const WhatsAppButton = ({
   phoneNumber = "351916672566",
   className = ""
 }: WhatsAppButtonProps) => {
+  const { t } = useTranslation();
   const [showWhatsAppMessage, setShowWhatsAppMessage] = useState(false);
 
   // Reusable WhatsApp message content
@@ -27,7 +29,7 @@ export const WhatsAppButton = ({
     const content = (
       <>
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-sm">Fale connosco agora!</span>
+          <span className="font-semibold text-sm">{t('whatsapp.message')}</span>
         </div>
       </>
     );
@@ -72,13 +74,12 @@ export const WhatsAppButton = ({
     <button
       onClick={openWhatsApp}
       className={`fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white w-16 h-16 rounded-full shadow-2xl shadow-green-500/30 flex items-center justify-center transition-all duration-300 hover:scale-110 group ${className}`}
-      aria-label="Contact via WhatsApp"
+      aria-label={t('whatsapp.ariaLabel')}
     >
       <Image src="/images/whatsapp.svg" alt="WhatsApp" width={40} height={40} />
       <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse" />
-      <span className={`absolute right-full mr-3 transition-opacity pointer-events-none ${
-        showWhatsAppMessage ? 'opacity-100 animate-bounce' : 'opacity-0 group-hover:opacity-100'
-      }`}>
+      <span className={`absolute right-full mr-3 transition-opacity pointer-events-none ${showWhatsAppMessage ? 'opacity-100 animate-bounce' : 'opacity-0 group-hover:opacity-100'
+        }`}>
         <WhatsAppMessage iconSize={16} withSpeechBubble={true} />
       </span>
     </button>

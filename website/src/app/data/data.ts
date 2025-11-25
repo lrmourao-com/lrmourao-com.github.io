@@ -7,47 +7,60 @@ import {
   Target,
   Users,
 } from "lucide-react";
+import type { TFunction } from "i18next";
 
-export const ADVANTAGES = [
-  {
-    title: "Equipa Qualificada",
-    sub: "Especialistas Certificados",
-    icon: Award,
-    color: "from-orange-500 to-rose-500",
-    text:
-      "Acompanhamento direto por Especialista Europeu em Soldadura (EWF/IIW) e Inspetor de Soldadura EWF, garantindo decisões técnicas fundamentadas.",
-    tags: ["EWF/IIW", "Inspetor EWF"],
-  },
-  {
-    title: "Experiência Prática",
-    sub: "Conhecimento Aplicado",
-    icon: Users,
-    color: "from-rose-500 to-pink-500",
-    text:
-      "Soldador certificado H-L045 nos três principais processos (TIG, MIG/MAG e MMA) com experiência prática que reforça a qualidade das soluções.",
-    tags: ["TIG", "MIG/MAG", "MMA"],
-  },
-  {
-    title: "Foco em Resultados",
-    sub: "Excelência Técnica",
-    icon: Target,
-    color: "from-amber-500 to-red-500",
-    text:
-      "Foco na eficiência, fiabilidade e redução de custos, sempre com elevado padrão técnico e profissional. Soluções otimizadas para o seu negócio.",
-    tags: [],
-  },
+export const getAdvantages = (t: TFunction) => {
+  // Helper to get tags array safely
+  const getTags = (baseKey: string) => {
+    const tags: string[] = [];
+    let i = 0;
+    while (true) {
+      const tag = t(`${baseKey}.${i}`, { defaultValue: '' });
+      if (!tag) break;
+      tags.push(tag);
+      i++;
+    }
+    return tags;
+  };
+
+  return [
+    {
+      title: t('advantages.list.0.title'),
+      sub: t('advantages.list.0.sub'),
+      icon: Award,
+      color: "from-orange-500 to-rose-500",
+      text: t('advantages.list.0.text'),
+      tags: getTags('advantages.list.0.tags'),
+    },
+    {
+      title: t('advantages.list.1.title'),
+      sub: t('advantages.list.1.sub'),
+      icon: Users,
+      color: "from-rose-500 to-pink-500",
+      text: t('advantages.list.1.text'),
+      tags: getTags('advantages.list.1.tags'),
+    },
+    {
+      title: t('advantages.list.2.title'),
+      sub: t('advantages.list.2.sub'),
+      icon: Target,
+      color: "from-amber-500 to-red-500",
+      text: t('advantages.list.2.text'),
+      tags: getTags('advantages.list.2.tags'),
+    },
+  ];
+};
+
+export const getNavItems = (t: TFunction) => [
+  { id: "main", label: t('nav.home') },
+  { id: "services", label: t('nav.services') },
+  { id: "advantages", label: t('nav.advantages') },
+  { id: "contact", label: t('nav.contact') },
 ];
 
-export const NAV_ITEMS = [
-  { id: "main", label: "Início" },
-  { id: "services", label: "Serviços" },
-  { id: "advantages", label: "Vantagens" },
-  { id: "contact", label: "Contactos" },
-];
-
-export const SPECIALIZATIONS = [
+export const getSpecializations = (t: TFunction) => [
   {
-    name: "Formação de Soldadura",
+    name: t('specializations.formacao'),
     icon: GraduationCap,
     id: "service-formacao",
     grad: "from-blue-500 to-blue-600",
@@ -55,7 +68,7 @@ export const SPECIALIZATIONS = [
     dot: "bg-blue-400",
   },
   {
-    name: "Coordenação de Soldadura",
+    name: t('specializations.coordenacao'),
     icon: Users,
     id: "service-coordenacao",
     grad: "from-emerald-500 to-green-600",
@@ -63,7 +76,7 @@ export const SPECIALIZATIONS = [
     dot: "bg-emerald-400",
   },
   {
-    name: "Consultadoria Técnica",
+    name: t('specializations.consultadoria'),
     icon: Target,
     id: "service-consultadoria",
     grad: "from-purple-500 to-pink-600",
@@ -71,7 +84,7 @@ export const SPECIALIZATIONS = [
     dot: "bg-purple-400",
   },
   {
-    name: "Inspeção e Controlo",
+    name: t('specializations.inspecao'),
     icon: Shield,
     id: "service-inspecao",
     grad: "from-red-500 to-rose-600",
@@ -79,7 +92,7 @@ export const SPECIALIZATIONS = [
     dot: "bg-red-400",
   },
   {
-    name: "Certificação",
+    name: t('specializations.certificacao'),
     icon: Award,
     id: "service-certificacao",
     grad: "from-amber-500 to-orange-600",
@@ -96,28 +109,28 @@ export const CERTIFICATIONS = [
   "AWS D1.1",
 ];
 
-export const HERO_STATS = [
+export const getHeroStats = (t: TFunction) => [
   {
     value: new Date().getFullYear() - 2010 + "+",
-    label: "Anos de Experiência",
+    label: t('hero.stats.experience'),
   },
-  { value: "5", label: "Áreas Especializadas" },
-  { value: "100%", label: "Certificado" },
+  { value: "5", label: t('hero.stats.specializations') },
+  { value: "100%", label: t('hero.stats.certified') },
 ];
 
-export const CONTACT_INFO = [
+export const getContactInfo = (t: TFunction) => [
   {
-    title: "Telemóvel",
-    value: "(+351) 916 672 566",
-    sub: "Seg - Sex: 9h - 18h",
+    title: t('contact.info.phone.title'),
+    value: t('contact.info.phone.value'),
+    sub: t('contact.info.phone.sub'),
     icon: Phone,
     grad: "from-green-500 to-emerald-600",
     href: "tel:+351916672566",
   },
   {
-    title: "Email",
-    value: "geral@lrmourao.com",
-    sub: "Resposta em 24h",
+    title: t('contact.info.email.title'),
+    value: t('contact.info.email.value'),
+    sub: t('contact.info.email.sub'),
     icon: Mail,
     grad: "from-blue-500 to-cyan-600",
     href: "mailto:geral@lrmourao.com",

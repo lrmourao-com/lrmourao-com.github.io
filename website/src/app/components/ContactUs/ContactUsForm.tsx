@@ -4,8 +4,10 @@ import { Loader2, CheckCircle, Send, Mail } from "lucide-react";
 import { useState } from "react";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import { useTranslation } from "@/lib/use-translation";
 
 export function ContactUsForm() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,7 +55,7 @@ export function ContactUsForm() {
         <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
           <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 shrink-0" />
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900" style={{ marginBottom: '2px' }}>
-            Envie-nos uma mensagem
+            {t('contact.form.title')}
           </h2>
         </div>
 
@@ -61,7 +63,7 @@ export function ContactUsForm() {
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label className="block text-slate-700 text-sm font-medium mb-2">
-                Nome
+                {t('contact.form.nameLabel')}
               </label>
               <input
                 type="text"
@@ -70,12 +72,12 @@ export function ContactUsForm() {
                 onChange={handleInputChange}
                 required
                 className="w-full px-3 py-2.5 sm:px-4 sm:py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all text-sm sm:text-base"
-                placeholder="Seu nome"
+                placeholder={t('contact.form.namePlaceholder')}
               />
             </div>
             <div>
               <label className="block text-slate-700 text-sm font-medium mb-2">
-                Email
+                {t('contact.form.emailLabel')}
               </label>
               <input
                 type="email"
@@ -84,14 +86,14 @@ export function ContactUsForm() {
                 onChange={handleInputChange}
                 required
                 className="w-full px-3 py-2.5 sm:px-4 sm:py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all text-sm sm:text-base"
-                placeholder="seu@email.com"
+                placeholder={t('contact.form.emailPlaceholder')}
               />
             </div>
           </div>
 
           <div>
             <label className="block text-slate-700 text-sm font-medium mb-2">
-              Telefone
+              {t('contact.form.phoneLabel')}
             </label>
             <div className="w-full px-3 py-2.5 sm:px-4 sm:py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20 transition-all">
               <PhoneInput
@@ -104,7 +106,7 @@ export function ContactUsForm() {
 
           <div>
             <label className="block text-slate-700 text-sm font-medium mb-2">
-              Mensagem
+              {t('contact.form.messageLabel')}
             </label>
             <textarea
               name="message"
@@ -113,7 +115,7 @@ export function ContactUsForm() {
               required
               rows={5}
               className="w-full px-3 py-2.5 sm:px-4 sm:py-3 bg-white border-2 border-blue-100 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none text-sm sm:text-base"
-              placeholder="Como podemos ajudar?"
+              placeholder={t('contact.form.messagePlaceholder')}
             />
           </div>
 
@@ -126,27 +128,27 @@ export function ContactUsForm() {
               ? (
                 <>
                   <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
-                  A enviar...
+                  {t('contact.form.submittingButton')}
                 </>
               )
               : submitStatus === "success"
-              ? (
-                <>
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Enviado com sucesso!
-                </>
-              )
-              : (
-                <>
-                  <Send className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Enviar Mensagem
-                </>
-              )}
+                ? (
+                  <>
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                    {t('contact.form.successButton')}
+                  </>
+                )
+                : (
+                  <>
+                    <Send className="w-4 h-4 sm:w-5 sm:h-5" />
+                    {t('contact.form.submitButton')}
+                  </>
+                )}
           </button>
 
           {submitStatus === "error" && (
             <p className="text-red-500 text-center text-sm sm:text-base">
-              Erro ao enviar mensagem. Tente novamente.
+              {t('contact.form.errorMessage')}
             </p>
           )}
         </form>

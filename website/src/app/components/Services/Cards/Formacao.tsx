@@ -1,10 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { CheckCircle2, GraduationCap } from "lucide-react";
+import { getServerTranslation } from "@/lib/i18n-server";
 
 export function FormacaoCard(
   { liBase, ulBase, mobile }: { liBase: string; ulBase: string; mobile: boolean },
 ) {
+  const t = getServerTranslation('pt');
+
+  // Access array items directly by index
+  const processes = [
+    t('services.formacao.processes.0'),
+    t('services.formacao.processes.1'),
+    t('services.formacao.processes.2'),
+  ];
+
+  const courses = [
+    t('services.formacao.courses.0'),
+    t('services.formacao.courses.1'),
+    t('services.formacao.courses.2'),
+  ];
+
   return (
     <Card
       id={mobile ? "service-formacao-mobile" : "service-formacao"}
@@ -17,7 +33,7 @@ export function FormacaoCard(
       </div>
       <div className="absolute top-4 right-4 z-10">
         <span className="px-3 py-2 text-[10px] font-extrabold uppercase tracking-wide rounded-full bg-blue-600 text-white shadow shadow-blue-500/40">
-          Popular
+          {t('services.formacao.popular')}
         </span>
       </div>
       <CardContent className="p-6 md:p-10 relative h-full flex flex-col">
@@ -26,43 +42,37 @@ export function FormacaoCard(
             <GraduationCap className="w-7 h-7 text-white" />
           </div>
           <h3 className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-linear-to-r from-blue-700 to-indigo-700 group-hover:from-blue-600 group-hover:to-indigo-600 transition-all duration-300">
-            Formação de Soldadura
+            {t('services.formacao.title')}
           </h3>
         </div>
         <p className="text-slate-700 text-base leading-relaxed font-medium mb-3!">
-          Formamos mão-de-obra profissionalizada que suprime as necessidades do
-          mercado nacional e internacional. Cursos dinâmicos, à medida e uma
-          formação de excelência.
+          {t('services.formacao.description')}
         </p>
 
         <div className="grid xl:grid-cols-2 gap-6">
           <div className="bg-blue-50/50 p-3 md:p-4 rounded-2xl border border-blue-100">
             <p className="font-black text-blue-700 mb-3 text-sm uppercase tracking-wide">
-              Processos:
+              {t('services.formacao.processesTitle')}
             </p>
             <ul className={cn("space-y-2", ulBase)}>
-              {[
-                "MIG/MAG/FF 114/131/135/136/138",
-                "TIG 141/142",
-                "SER/MMA 111",
-              ].map((t) => (
-                <li className={liBase} key={t}>
+              {processes.map((text) => (
+                <li className={liBase} key={text}>
                   <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
                   <span className="text-sm md:text-base font-medium">
-                    {t}
+                    {text}
                   </span>
                 </li>
               ))}
             </ul>
 
             <p className="font-black text-blue-700 mb-3 mt-4 text-sm uppercase tracking-wide">
-              Nas ligas:
+              {t('services.formacao.alloysTitle')}
             </p>
             <ul className={cn("space-y-2", ulBase)}>
               <li className={liBase}>
                 <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
                 <span className="text-sm md:text-base font-medium">
-                  Aço-carbono, Aço-inox, Alumínio, Cobre
+                  {t('services.formacao.alloys')}
                 </span>
               </li>
             </ul>
@@ -70,31 +80,27 @@ export function FormacaoCard(
 
           <div className="bg-indigo-50/50 p-3 md:p-4 rounded-2xl border border-indigo-100">
             <p className="font-black text-indigo-700 mb-3 text-sm uppercase tracking-wide">
-              Curso/Formações:
+              {t('services.formacao.coursesTitle')}
             </p>
             <ul className={cn("space-y-2", ulBase)}>
-              {[
-                "Horários flexíveis e personalizados",
-                "Formação à medida",
-                "Formação individual disponível",
-              ].map((t) => (
-                <li className={liBase} key={t}>
+              {courses.map((text) => (
+                <li className={liBase} key={text}>
                   <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
                   <span className="text-sm md:text-base font-medium">
-                    {t}
+                    {text}
                   </span>
                 </li>
               ))}
             </ul>
 
             <p className="font-black text-indigo-700 mb-3 mt-4 text-sm uppercase tracking-wide">
-              Certificação:
+              {t('services.formacao.certificationTitle')}
             </p>
             <ul className={cn("space-y-2", ulBase)}>
               <li className={liBase}>
                 <CheckCircle2 className="w-4 h-4 text-indigo-600 mt-0.5 shrink-0" />
                 <span className="text-sm md:text-base font-medium">
-                  EN ISO 9606, ASME IX, AWS D1.1
+                  {t('services.formacao.certification')}
                 </span>
               </li>
             </ul>

@@ -1,15 +1,17 @@
-
 import { FormacaoCard } from "./Cards/Formacao";
 import { Consultadoria } from "./Cards/Consultadoria";
 import { CoordenacaoCard } from "./Cards/Coordenacao";
 import { InspecaoCard } from "./Cards/Inspecao";
 import { CertificacaoCard } from "./Cards/Certificacao";
+import { getServerTranslation } from "@/lib/i18n-server";
 
 // Reusable Tailwind class tokens for lists
 const ulBase = "text-slate-700 text-sm md:text-base";
 const liBase = "flex items-start gap-1.5 pl-4";
 
 export function Services() {
+  const t = getServerTranslation('pt');
+
   return (
     <section
       id="services"
@@ -30,18 +32,17 @@ export function Services() {
           <div className="inline-flex items-center gap-2 bg-blue-500/15 border-2 border-blue-500/30 px-6 py-3 rounded-full mb-8 shadow-lg shadow-blue-500/10">
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
             <span className="text-blue-700 text-sm font-bold tracking-wider uppercase">
-              O Que Fazemos
+              {t('services.badge')}
             </span>
           </div>
           <h2 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 drop-shadow-sm">
-            Serviços{" "}
+            {t('services.title')}{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 via-indigo-600 to-blue-600">
-              Especializados
+              {t('services.titleHighlight')}
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-slate-700 max-w-3xl mx-auto font-medium">
-            Soluções completas e certificadas para todas as suas necessidades em
-            soldadura e coordenação industrial
+            {t('services.description')}
           </p>
         </div>
 

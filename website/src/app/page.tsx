@@ -6,13 +6,17 @@ import { Footer } from "./components/Footer/Footer";
 import { Hero } from "./components/Hero/Hero";
 import { Services } from "./components/Services/Services";
 import { WhatsAppButton } from "./components/WhatsAppButton";
+import { getServerTranslation } from "@/lib/i18n-server";
+
+// Get translation function for server components
+const t = getServerTranslation('pt');
 
 export const metadata: Metadata = {
-  title: "LR MOURÃO - Soldadura, Formação e Certificação",
-  description: "Serviços especializados em soldadura, formação técnica, certificação de soldadores e consultoria industrial em Leiria.",
+  title: t('meta.title'),
+  description: t('meta.description'),
   openGraph: {
-    title: "LR MOURÃO - Soldadura, Formação e Certificação",
-    description: "Serviços especializados em soldadura, formação técnica, certificação de soldadores e consultoria industrial em Leiria.",
+    title: t('meta.ogTitle'),
+    description: t('meta.ogDescription'),
     url: "https://lrmourao.com",
     siteName: "LR Mourão",
     images: [
@@ -20,13 +24,13 @@ export const metadata: Metadata = {
         url: "/images/industrial-welding-sparks-and-metal-fabrication-in.jpg",
         width: 1200,
         height: 630,
-        alt: "LR Mourão Soldadura",
+        alt: t('meta.ogImageAlt'),
       },
       {
         url: "/lrmourao-logo.svg",
         width: 800,
         height: 600,
-        alt: "LR Mourão Logo",
+        alt: t('meta.logoAlt'),
       },
     ],
     locale: "pt_PT",
@@ -38,9 +42,9 @@ export default function LRMouraoPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "LR Mourão",
+    "name": t('meta.jsonLd.name'),
     "image": "https://lrmourao.com/lrmourao-logo.svg",
-    "description": "Serviços especializados em soldadura, formação técnica, certificação de soldadores e consultoria industrial.",
+    "description": t('meta.jsonLd.description'),
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Leiria",

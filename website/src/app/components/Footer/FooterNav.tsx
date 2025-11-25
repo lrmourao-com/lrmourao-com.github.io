@@ -1,9 +1,13 @@
 'use client';
 
-import { NAV_ITEMS } from "@/app/data/data";
+import { getNavItems } from "@/app/data/data";
 import { scrollToSection } from "@/lib/scroll";
+import { useTranslation } from "@/lib/use-translation";
 
 export function FooterNav() {
+  const { t } = useTranslation();
+  const NAV_ITEMS = getNavItems(t);
+
   return (
     <nav className="flex flex-wrap justify-center gap-4 h-12 self-end items-center">
       {NAV_ITEMS.map(({ id, label }) => (

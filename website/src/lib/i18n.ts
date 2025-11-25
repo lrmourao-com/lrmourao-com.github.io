@@ -14,11 +14,15 @@ i18n
         translation: pt,
       },
     },
-    lng: 'en', // default language
-    fallbackLng: 'en',
+    lng: 'pt', // Portuguese as default
+    fallbackLng: 'pt',
     interpolation: {
       escapeValue: false,
     },
+    react: {
+      useSuspense: false,
+    },
+    debug: true, // Enable debug to see what's happening
   });
 
 export default i18n;

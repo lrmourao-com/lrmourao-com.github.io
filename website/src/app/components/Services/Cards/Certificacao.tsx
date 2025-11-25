@@ -1,10 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Award, CheckCircle2 } from "lucide-react";
+import { getServerTranslation } from "@/lib/i18n-server";
 
 export function CertificacaoCard(
   { liBase, ulBase, mobile = false }: { liBase: string; ulBase: string; mobile?: boolean },
 ) {
+  const t = getServerTranslation('pt');
+
+  const items = [
+    t('services.certificacao.items.0'),
+    t('services.certificacao.items.1'),
+    t('services.certificacao.items.2'),
+    t('services.certificacao.items.3'),
+    t('services.certificacao.items.4'),
+  ];
+
   return (
     <Card
       id={mobile ? "service-certificacao-mobile" : "service-certificacao"}
@@ -19,11 +30,11 @@ export function CertificacaoCard(
             <Award className="w-7 h-7 text-white" />
           </div>
           <h3 className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-linear-to-r from-amber-700 to-orange-700 group-hover:from-amber-600 group-hover:to-orange-600 transition-all duration-300">
-            Certificação
+            {t('services.certificacao.title')}
           </h3>
         </div>
         <p className="text-slate-700 text-base leading-relaxed mb-3! font-medium flex-1">
-          Apoio completo na obtenção e manutenção de certificações essenciais.
+          {t('services.certificacao.description')}
         </p>
         <ul
           className={cn(
@@ -31,22 +42,16 @@ export function CertificacaoCard(
             "grid md:grid-cols-2 gap-2.5 mt-auto mb-0!",
           )}
         >
-          {[
-            "Certificação empresas EN 1090, EN ISO 9606, ISO 3834 e EN 15614",
-            "Certificação soldadores EN ISO 9606, ASME IX, AWS D1.1",
-            "Processo completo: preparação até auditoria",
-            "Renovação e manutenção de certificações",
-            "Preparação de documentação técnica",
-          ].map((t) => (
+          {items.map((text) => (
             <li
-              key={t}
+              key={text}
               className={cn(
                 liBase,
                 "bg-amber-50/50 p-2.5 rounded-xl border border-amber-100",
               )}
             >
               <CheckCircle2 className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
-              <span className="font-medium">{t}</span>
+              <span className="font-medium">{text}</span>
             </li>
           ))}
         </ul>

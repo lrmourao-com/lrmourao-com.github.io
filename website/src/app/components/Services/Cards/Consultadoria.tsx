@@ -1,10 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { CheckCircle2, Target } from "lucide-react";
+import { getServerTranslation } from "@/lib/i18n-server";
 
 export function Consultadoria(
   { liBase, ulBase, mobile }: { liBase: string; ulBase: string; mobile: boolean },
 ) {
+  const t = getServerTranslation('pt');
+
+  const items = [
+    t('services.consultadoria.items.0'),
+    t('services.consultadoria.items.1'),
+    t('services.consultadoria.items.2'),
+    t('services.consultadoria.items.3'),
+    t('services.consultadoria.items.4'),
+    t('services.consultadoria.items.5'),
+    t('services.consultadoria.items.6'),
+    t('services.consultadoria.items.7'),
+  ];
+
   return (
     <Card
       id={mobile ? "service-consultadoria-mobile" : "service-consultadoria"}
@@ -21,33 +35,23 @@ export function Consultadoria(
             <Target className="w-7 h-7 text-white" />
           </div>
           <h3 className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-linear-to-r from-purple-700 to-pink-700 group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
-            Consultadoria
+            {t('services.consultadoria.title')}
           </h3>
         </div>
         <p className="text-slate-700 text-base leading-relaxed mb-3! font-medium">
-          Aconselhamento para evolução empresarial em todas as áreas técnicas e
-          normativas.
+          {t('services.consultadoria.description')}
         </p>
         <ul className={cn("space-y-2.5 mb-0!", ulBase)}>
-          {[
-            "Normas ISO 3834 e EN 1090",
-            "Aquisição de equipamentos",
-            "Esquematização de processos",
-            "Planeamento laboral e estruturas",
-            "Técnicas e processos",
-            "Inspeção visual de soldadura",
-            "Contratação de soldadores",
-            "Certificação de soldadores",
-          ].map((t) => (
+          {items.map((text) => (
             <li
-              key={t}
+              key={text}
               className={cn(
                 "bg-purple-50/50 p-2.5 rounded-xl border border-purple-100",
                 liBase,
               )}
             >
               <CheckCircle2 className="w-4 h-4 text-purple-600 mt-0.5 shrink-0" />
-              <span className="font-medium">{t}</span>
+              <span className="font-medium">{text}</span>
             </li>
           ))}
         </ul>
