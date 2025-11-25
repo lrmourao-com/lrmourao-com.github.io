@@ -119,7 +119,7 @@ router.post('/test', async (req: Request, res: Response) => {
   }
 });
 
-// POST /api/email/send-test - Send a test email to toopgames@gmail.com
+// POST /api/email/send-test - Send a test email
 router.get('/send-test', async (req: Request, res: Response) => {
   try {
     const { renderEmailTemplate } = await import('../services/email-service.js');
@@ -137,17 +137,9 @@ router.get('/send-test', async (req: Request, res: Response) => {
     });
     
     const mailOptions: Mail.Options = {
-      from: '"Your Company Contact Form" <tinipedro@gmail.com>',
+      from: process.env.EMAIL_FROM,
       to: testEmail,
       subject: `Test Email - ${timestamp}`,
-      replyTo: 'toopgames@gmail.com', 
-      text: `This is a test email sent from your backend server at ${timestamp}.
-
-Server Information:
-- Environment: ${process.env.NODE_ENV || 'development'}
-- Timestamp: ${timestamp}
-
-If you received this email, your email configuration is working correctly!`,
       html,
     };
     
@@ -175,96 +167,48 @@ If you received this email, your email configuration is working correctly!`,
   }
 });
 
-// Example route: Send a welcome email using template
-// POST /api/email/send-welcome
-router.post('/send-welcome', async (req: Request, res: Response) => {
+// POST /api/email/send-template - Generic route to send any email template
+router.post('/send-template', async (req: Request, res: Response) => {
   try {
-    const { renderEmailTemplate } = await import('../services/email-service.js');
-    const { to, name, features, ctaUrl, ctaText } = req.body;
+    const { renderEmailTemplate, templateExists } = await import('../services/email-service.js');
+    const { to, template, data, subject, from, replyTo, cc, bcc } = req.body;
     
+    // Validation
     if (!to) {
       return res.status(400).json({ error: 'Recipient email (to) is required' });
     }
-    
-    if (!isValidEmail(to)) {
-      return res.status(400).json({ error: `Invalid email address: ${to}` });
-    }
-    
-    const transporter = createTransporter();
-    
-    // Render the welcome email template
-    const html = await renderEmailTemplate('welcome', {
-      name,
-      companyName: 'Your Company',
-      features: features || [
-        'Access to your personalized dashboard',
-        'Connect with our community',
-        'Get personalized recommendations',
-        'Track your progress and achievements',
-      ],
-      ctaUrl,
-      ctaText,
-    });
-    
-    const mailOptions = {
-      from: process.env.EMAIL_FROM,
-      to,
-      subject: 'Welcome to Your Company!',
-      html,
-    };
-    
-    const info = await transporter.sendMail(mailOptions);
-    
-    res.json({
-      success: true,
-      messageId: info.messageId,
-      message: 'Welcome email sent successfully',
-    });
-  } catch (error: any) {
-    console.error('Welcome email sending error:', error);
-    res.status(500).json({
-      error: 'Failed to send welcome email',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined,
-    });
-  }
-});
 
-// Example route: Send a contact form notification using template
-// POST /api/email/send-contact-notification
-router.post('/send-contact-notification', async (req: Request, res: Response) => {
-  try {
-    const { renderEmailTemplate } = await import('../services/email-service.js');
-    const { name, email, phone, company, message } = req.body;
-    
-    if (!name || !email || !message) {
-      return res.status(400).json({ 
-        error: 'Name, email, and message are required' 
-      });
+    if (!template) {
+      return res.status(400).json({ error: 'Template name is required' });
     }
     
-    if (!isValidEmail(email)) {
-      return res.status(400).json({ error: `Invalid email address: ${email}` });
+    // Check if template exists
+    const exists = await templateExists(template);
+    if (!exists) {
+      return res.status(400).json({ error: `Template '${template}' not found` });
+    }
+    
+    // Validate email addresses
+    const recipients = Array.isArray(to) ? to : [to];
+    for (const email of recipients) {
+      if (!isValidEmail(email)) {
+        return res.status(400).json({ error: `Invalid email address: ${email}` });
+      }
     }
     
     const transporter = createTransporter();
-    const timestamp = new Date().toLocaleString();
     
-    // Render the contact form notification template
-    const html = await renderEmailTemplate('contact-form', {
-      name,
-      email,
-      phone,
-      company,
-      message,
-      timestamp,
-    });
+    // Render the template with provided data
+    const html = await renderEmailTemplate(template, data || {});
     
     const mailOptions = {
-      from: process.env.EMAIL_FROM,
-      to: process.env.CONTACT_NOTIFICATION_EMAIL || process.env.EMAIL_FROM,
-      subject: `New Contact Form Submission from ${name}`,
-      replyTo: email,
+      from: from || process.env.EMAIL_FROM,
+      to: Array.isArray(to) ? to.join(', ') : to,
+      subject: subject || 'No Subject', // Subject should ideally be passed or we could extract it from template if we parsed frontmatter
       html,
+      replyTo,
+      cc,
+      bcc,
     };
     
     const info = await transporter.sendMail(mailOptions);
@@ -272,12 +216,12 @@ router.post('/send-contact-notification', async (req: Request, res: Response) =>
     res.json({
       success: true,
       messageId: info.messageId,
-      message: 'Contact form notification sent successfully',
+      message: 'Email sent successfully',
     });
   } catch (error: any) {
-    console.error('Contact notification sending error:', error);
+    console.error('Template email sending error:', error);
     res.status(500).json({
-      error: 'Failed to send contact notification',
+      error: 'Failed to send template email',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined,
     });
   }
