@@ -2,8 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { getAdvantages } from "@/app/data/data";
 import { getServerTranslation } from "@/lib/i18n-server";
 
-export function Advantages() {
-  const t = getServerTranslation('pt');
+export function Advantages({ lang }: { lang: string }) {
+  const t = getServerTranslation(lang);
   const ADVANTAGES = getAdvantages(t);
 
   return (

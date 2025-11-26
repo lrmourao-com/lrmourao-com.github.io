@@ -13,6 +13,15 @@ i18n
       pt: {
         translation: pt,
       },
+      es: {
+        translation: pt,
+      },
+      fr: {
+        translation: pt,
+      },
+      de: {
+        translation: pt,
+      },
     },
     lng: 'pt', // Portuguese as default
     fallbackLng: 'pt',

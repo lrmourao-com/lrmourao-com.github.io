@@ -9,8 +9,8 @@ import { getServerTranslation } from "@/lib/i18n-server";
 const ulBase = "text-slate-700 text-sm md:text-base";
 const liBase = "flex items-start gap-1.5 pl-4";
 
-export function Services() {
-  const t = getServerTranslation('pt');
+export function Services({ lang }: { lang: string }) {
+  const t = getServerTranslation(lang);
 
   return (
     <section

@@ -1,8 +1,8 @@
 import { FooterNav } from "./FooterNav";
 import { getServerTranslation } from "@/lib/i18n-server";
 
-export function Footer() {
-  const t = getServerTranslation('pt');
+export function Footer({ lang }: { lang: string }) {
+  const t = getServerTranslation(lang);
 
   return (
     <footer className="relative bg-linear-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 text-white py-6 border-t-2 border-amber-500/20 overflow-hidden">

@@ -3,8 +3,8 @@ import { HeroButtons } from "./HeroButtons";
 import { SpecializationsList } from "./SpecializationsList";
 import { getServerTranslation } from "@/lib/i18n-server";
 
-export function Hero() {
-  const t = getServerTranslation('pt');
+export function Hero({ lang }: { lang: string }) {
+  const t = getServerTranslation(lang);
   const HERO_STATS = getHeroStats(t);
 
   return (

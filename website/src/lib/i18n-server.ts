@@ -13,6 +13,15 @@ i18nServer.init({
     pt: {
       translation: pt,
     },
+    es: {
+      translation: pt,
+    },
+    fr: {
+      translation: pt,
+    },
+    de: {
+      translation: pt,
+    },
   },
   lng: 'pt', // default to Portuguese for server-side
   fallbackLng: 'pt',

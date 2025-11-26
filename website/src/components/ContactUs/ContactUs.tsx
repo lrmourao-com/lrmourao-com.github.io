@@ -2,8 +2,8 @@ import ContactUsForm from "./ContactUsForm";
 import ContactUsCards from "./ContactUsCards";
 import { getServerTranslation } from "@/lib/i18n-server";
 
-export function ContactSection() {
-  const t = getServerTranslation('pt');
+export function ContactSection({ lang }: { lang: string }) {
+  const t = getServerTranslation(lang);
 
   return (
     <section id="contact" className="relative py-16 md:py-24 lg:py-32 bg-linear-to-br from-white via-blue-50 to-indigo-50 overflow-hidden">
