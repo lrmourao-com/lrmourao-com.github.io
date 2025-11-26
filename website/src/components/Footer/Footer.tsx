@@ -51,15 +51,13 @@ export function Footer({ lang }: { lang: string }) {
           </div>
         </div>
 
-        {/* Language Selector */}
         <div className="flex flex-wrap justify-center gap-6 border-t border-white/10 pt-6 mb-2">
           {LANGUAGES.map((l) => (
             <a
               key={l.code}
-              href={`/${l.code}`}
-              className={`text-xs font-semibold uppercase tracking-wider hover:text-amber-400 transition-colors ${
-                lang === l.code ? 'text-amber-400' : 'text-slate-400'
-              }`}
+              href={l.code === 'pt' ? '/' : `/${l.code}`}
+              className={`text-xs font-semibold uppercase tracking-wider hover:text-amber-400 transition-colors ${lang === l.code ? 'text-amber-400' : 'text-slate-400'
+                }`}
             >
               {l.label}
             </a>

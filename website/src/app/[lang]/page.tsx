@@ -10,7 +10,14 @@ import { getServerTranslation } from "@/lib/i18n-server";
 import { LANGUAGE_CODES } from "@/data/constants";
 
 export async function generateStaticParams() {
-  return LANGUAGE_CODES.map((lang) => ({ lang }));
+  // Only generate pages for non-Portuguese languages
+  // Portuguese is served at the root (/)
+  return [
+    { lang: 'en' },
+    { lang: 'es' },
+    { lang: 'fr' },
+    { lang: 'de' },
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {

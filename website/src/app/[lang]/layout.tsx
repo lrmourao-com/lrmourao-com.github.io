@@ -24,11 +24,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     alternates: {
       languages: {
+        'pt': 'https://lrmourao.com/',
         'en': 'https://lrmourao.com/en',
-        'pt': 'https://lrmourao.com/pt',
         'es': 'https://lrmourao.com/es',
         'fr': 'https://lrmourao.com/fr',
         'de': 'https://lrmourao.com/de',
+        'x-default': 'https://lrmourao.com/',
       },
     },
   };
