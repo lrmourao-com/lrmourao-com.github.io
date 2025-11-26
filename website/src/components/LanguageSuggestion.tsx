@@ -86,7 +86,7 @@ export function LanguageSuggestion({ currentLang = 'pt' }: LanguageSuggestionPro
   const handleSwitch = () => {
     if (suggestion) {
       localStorage.setItem('i18nextLng', suggestion);
-      window.location.href = `/${suggestion}`;
+      window.location.href = suggestion === 'pt' ? '/' : `/${suggestion}`;
     }
   };
 

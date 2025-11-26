@@ -97,7 +97,7 @@ export function Header() {
                     {LANGUAGES.map((lang) => (
                       <a
                         key={lang.code}
-                        href={`/${lang.code}`}
+                        href={lang.code === 'pt' ? '/' : `/${lang.code}`}
                         className={cn(
                           "flex items-center gap-3 px-4 py-2.5 text-sm transition-colors hover:bg-white/10",
                           i18n.language === lang.code ? "text-amber-400 font-bold bg-white/5" : "text-slate-200"
@@ -145,7 +145,7 @@ export function Header() {
                 {LANGUAGES.map((lang) => (
                   <a
                     key={lang.code}
-                    href={`/${lang.code}`}
+                    href={lang.code === 'pt' ? '/' : `/${lang.code}`}
                     className={cn(
                       "flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors border border-transparent",
                       i18n.language === lang.code
