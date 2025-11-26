@@ -38,8 +38,10 @@ export function LanguageSuggestion({ currentLang = 'pt' }: LanguageSuggestionPro
           const response = await fetch('https://ipapi.co/json/');
           if (response.ok) {
             const data = await response.json();
-            const country = "US" 
-            // data.country_code; // e.g., 'PT', 'US', 'FR'
+            // const country = "US" 
+            //
+            // 
+            const country =  data.country_code; // e.g., 'PT', 'US', 'FR'
 
             const countryMap: Record<string, LanguageCode> = {
               'PT': 'pt', 'BR': 'pt',

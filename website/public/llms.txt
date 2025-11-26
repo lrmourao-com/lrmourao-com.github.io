@@ -1,0 +1,52 @@
+# LR Mourão - Formação de Soldadura e Coordenação Técnica (Welding Training & Technical Coordination)
+
+## Sobre Nós (About Us)
+O centro **LR Mourão**, situado em Leiria (Região Centro), é especializado em soluções completas de soldadura para a indústria metalomecânica. Desde 2010, oferecemos serviços de excelência que combinam formação profissional de soldadores, coordenação técnica de soldadura e consultoria industrial.
+
+**Core Mission**: Formação profissional, qualificação de procedimentos e certificação industrial.
+
+## Serviços Principais (Core Services)
+
+### 1. Formação de Soldadura (Welding Training)
+Cursos práticos e teóricos adaptados às necessidades do mercado nacional e internacional.
+- **Processos**:
+  - MIG/MAG (131, 135, 136, 138)
+  - TIG (141, 142)
+  - Eletrodo Revestido / MMA (111)
+- **Materiais**: Aço-carbono, Aço-inox, Alumínio, Cobre.
+- **Certificações de Soldadores**: De acordo com **EN ISO 9606**, **ASME IX**, e **AWS D1.1**.
+
+### 2. Coordenação de Soldadura (Welding Coordination)
+Serviços externos de coordenação técnica em conformidade com a norma **EN ISO 14731**.
+- Supervisão de processos de fabrico.
+- Validação de especificações de procedimentos de soldadura (**WPS**).
+- Qualificação de procedimentos de soldadura (**WPQR**).
+
+### 3. Certificação de Empresas (Company Certification)
+Apoio completo para obtenção de certificações industriais críticas:
+- **EN 1090** (Estruturas metálicas)
+- **ISO 3834** (Requisitos de qualidade na soldadura)
+- **EN 15085** (Aplicações ferroviárias - sob consulta)
+
+### 4. Inspeção e Consultoria (Inspection & Consultancy)
+- **Inspeção Visual (VT)**: Inspeção conforme ISO 5817 e EN ISO 17637.
+- **Consultoria**: Otimização de processos, escolha de consumíveis e gases, e implementação de controlo de qualidade em fábrica ou obra.
+
+## Diferenciadores (Why Choose Us)
+- **Equipa Qualificada**: Especialistas Europeus de Soldadura (EWF/IIW) e Inspetores Certificados.
+- **Experiência Real**: Formadores com certificações H-L045 e vasta experiência prática em obra.
+- **Localização Estratégica**: Leiria, no coração da indústria metalomecânica da Região Centro de Portugal.
+
+## Contactos (Contact Information)
+- **Telefone**: (+351) 916 672 566
+- **Email**: geral@lrmourao.com
+- **Morada**: Leiria, Portugal (Região Centro)
+- **Horário**: Segunda a Sexta, 09:00 - 18:00
+
+## Estrutura do Site (Website Structure)
+O site está disponível em 5 idiomas para servir o mercado global:
+- `/`: Português (Principal)
+- `/en`: English
+- `/es`: Español
+- `/fr`: Français
+- `/de`: Deutsch
