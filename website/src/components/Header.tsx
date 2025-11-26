@@ -6,9 +6,10 @@ import { getNavItems } from "@/app/data/data";
 import { cn } from "@/lib/utils";
 import { scrollToSection } from "@/lib/scroll";
 import { useTranslation } from "@/lib/use-translation";
+import { LANGUAGES } from "@/lib/constants";
 
 export function Header() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const NAV_ITEMS = getNavItems(t);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,6 +65,21 @@ export function Header() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
+
+            <div className="flex items-center gap-3 ml-4 border-l pl-4 border-slate-500/30">
+              {LANGUAGES.map((lang) => (
+                <a
+                  key={lang.code}
+                  href={`/${lang.code}`}
+                  className={cn(
+                    "text-sm font-bold transition-colors hover:text-amber-400 hover:scale-110",
+                    i18n.language === lang.code ? "text-amber-400" : "text-slate-300"
+                  )}
+                >
+                  {lang.shortLabel}
+                </a>
+              ))}
+            </div>
           </nav>
 
           <button
@@ -90,6 +106,21 @@ export function Header() {
                 {label}
               </a>
             ))}
+            
+            <div className="flex items-center justify-center gap-6 py-4 border-t border-white/10 mt-2">
+              {LANGUAGES.map((lang) => (
+                <a
+                  key={lang.code}
+                  href={`/${lang.code}`}
+                  className={cn(
+                    "text-base font-bold transition-colors hover:text-amber-400",
+                    i18n.language === lang.code ? "text-amber-400" : "text-slate-300"
+                  )}
+                >
+                  {lang.shortLabel}
+                </a>
+              ))}
+            </div>
           </nav>
         )}
       </div>

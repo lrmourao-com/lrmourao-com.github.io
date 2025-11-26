@@ -7,15 +7,10 @@ import { Hero } from "@/components/Hero/Hero";
 import { Services } from "@/components/Services/Services";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { getServerTranslation } from "@/lib/i18n-server";
+import { LANGUAGE_CODES } from "@/lib/constants";
 
 export async function generateStaticParams() {
-  return [
-    { lang: 'en' },
-    { lang: 'es' },
-    { lang: 'pt' },
-    { lang: 'fr' },
-    { lang: 'de' },
-  ];
+  return LANGUAGE_CODES.map((lang) => ({ lang }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {

@@ -1,5 +1,6 @@
 import { FooterNav } from "./FooterNav";
 import { getServerTranslation } from "@/lib/i18n-server";
+import { LANGUAGES } from "@/lib/constants";
 
 export function Footer({ lang }: { lang: string }) {
   const t = getServerTranslation(lang);
@@ -11,7 +12,7 @@ export function Footer({ lang }: { lang: string }) {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-wrap items-center justify-evenly gap-8">
+        <div className="flex flex-wrap items-center justify-evenly gap-8 mb-6">
           <div className="flex items-center">
             <img
               src="/lrmourao-logo.svg"
@@ -40,6 +41,20 @@ export function Footer({ lang }: { lang: string }) {
           </p>
 
           <FooterNav />
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6 border-t border-white/10 pt-4">
+          {LANGUAGES.map((l) => (
+            <a
+              key={l.code}
+              href={`/${l.code}`}
+              className={`text-xs font-semibold uppercase tracking-wider hover:text-amber-400 transition-colors ${
+                lang === l.code ? 'text-amber-400' : 'text-slate-400'
+              }`}
+            >
+              {l.label}
+            </a>
+          ))}
         </div>
       </div>
     </footer>
