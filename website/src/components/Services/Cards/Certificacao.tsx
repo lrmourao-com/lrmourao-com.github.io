@@ -1,21 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Award, CheckCircle2 } from "lucide-react";
-import { getServerTranslation } from "@/lib/i18n-server";
 
-export function CertificacaoCard(
-  { liBase, ulBase, mobile = false }: { liBase: string; ulBase: string; mobile?: boolean },
-) {
-  const t = getServerTranslation('pt');
+interface CertificacaoCardProps {
+  liBase: string;
+  ulBase: string;
+  mobile?: boolean;
+  content: {
+    title: string;
+    description: string;
+    items: string[];
+  };
+}
 
-  const items = [
-    t('services.certificacao.items.0'),
-    t('services.certificacao.items.1'),
-    t('services.certificacao.items.2'),
-    t('services.certificacao.items.3'),
-    t('services.certificacao.items.4'),
-  ];
-
+export function CertificacaoCard({ liBase, ulBase, mobile = false, content }: CertificacaoCardProps) {
   return (
     <Card
       id={mobile ? "service-certificacao-mobile" : "service-certificacao"}
@@ -30,11 +28,11 @@ export function CertificacaoCard(
             <Award className="w-7 h-7 text-white" />
           </div>
           <h3 className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-linear-to-r from-amber-700 to-orange-700 group-hover:from-amber-600 group-hover:to-orange-600 transition-all duration-300">
-            {t('services.certificacao.title')}
+            {content.title}
           </h3>
         </div>
         <p className="text-slate-700 text-base leading-relaxed mb-3! font-medium flex-1">
-          {t('services.certificacao.description')}
+          {content.description}
         </p>
         <ul
           className={cn(
@@ -42,7 +40,7 @@ export function CertificacaoCard(
             "grid md:grid-cols-2 gap-2.5 mt-auto mb-0!",
           )}
         >
-          {items.map((text) => (
+          {content.items.map((text) => (
             <li
               key={text}
               className={cn(

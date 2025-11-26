@@ -1,11 +1,25 @@
-import { getHeroStats, CERTIFICATIONS } from "@/app/data/data";
 import { HeroButtons } from "./HeroButtons";
 import { SpecializationsList } from "./SpecializationsList";
 import { getServerTranslation } from "@/lib/i18n-server";
 
 export function Hero({ lang }: { lang: string }) {
   const t = getServerTranslation(lang);
-  const HERO_STATS = getHeroStats(t);
+  const HERO_STATS = [
+    {
+      value: new Date().getFullYear() - 2010 + "+",
+      label: t('hero.stats.experience'),
+    },
+    { value: "5", label: t('hero.stats.specializations') },
+    { value: "100%", label: t('hero.stats.certified') },
+  ];
+
+  const CERTIFICATIONS = [
+    "EN 1090",
+    "ISO 3834",
+    "EN ISO 9606",
+    "ASME IX",
+    "AWS D1.1",
+  ];
 
   return (
     <section

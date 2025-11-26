@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { LANGUAGES, LANGUAGE_CODES } from '@/lib/constants';
+import { LANGUAGES, LANGUAGE_CODES } from '@/data/constants';
 
 export default function RootPage() {
   const router = useRouter();

@@ -1,24 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { CheckCircle2, Target } from "lucide-react";
-import { getServerTranslation } from "@/lib/i18n-server";
 
-export function Consultadoria(
-  { liBase, ulBase, mobile }: { liBase: string; ulBase: string; mobile: boolean },
-) {
-  const t = getServerTranslation('pt');
+interface ConsultadoriaProps {
+  liBase: string;
+  ulBase: string;
+  mobile: boolean;
+  content: {
+    title: string;
+    description: string;
+    items: string[];
+  };
+}
 
-  const items = [
-    t('services.consultadoria.items.0'),
-    t('services.consultadoria.items.1'),
-    t('services.consultadoria.items.2'),
-    t('services.consultadoria.items.3'),
-    t('services.consultadoria.items.4'),
-    t('services.consultadoria.items.5'),
-    t('services.consultadoria.items.6'),
-    t('services.consultadoria.items.7'),
-  ];
-
+export function Consultadoria({ liBase, ulBase, mobile, content }: ConsultadoriaProps) {
   return (
     <Card
       id={mobile ? "service-consultadoria-mobile" : "service-consultadoria"}
@@ -35,14 +30,14 @@ export function Consultadoria(
             <Target className="w-7 h-7 text-white" />
           </div>
           <h3 className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-linear-to-r from-purple-700 to-pink-700 group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
-            {t('services.consultadoria.title')}
+            {content.title}
           </h3>
         </div>
         <p className="text-slate-700 text-base leading-relaxed mb-3! font-medium">
-          {t('services.consultadoria.description')}
+          {content.description}
         </p>
         <ul className={cn("space-y-2.5 mb-0!", ulBase)}>
-          {items.map((text) => (
+          {content.items.map((text) => (
             <li
               key={text}
               className={cn(

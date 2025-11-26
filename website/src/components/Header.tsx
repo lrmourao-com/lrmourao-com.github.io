@@ -2,11 +2,11 @@
 
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
-import { getNavItems } from "@/app/data/data";
+import { getNavItems } from "@/data/navigation";
 import { cn } from "@/lib/utils";
 import { scrollToSection } from "@/lib/scroll";
 import { useTranslation } from "@/lib/use-translation";
-import { LANGUAGES } from "@/lib/constants";
+import { LANGUAGES } from "@/data/constants";
 
 export function Header() {
   const { t, i18n } = useTranslation();

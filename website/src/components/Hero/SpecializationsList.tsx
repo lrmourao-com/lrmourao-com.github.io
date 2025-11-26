@@ -1,12 +1,54 @@
 'use client';
 
-import { getSpecializations } from "@/app/data/data";
 import { scrollToSection } from "@/lib/scroll";
 import { useTranslation } from "@/lib/use-translation";
+import { Award, GraduationCap, Shield, Target, Users } from "lucide-react";
 
 export function SpecializationsList() {
   const { t } = useTranslation();
-  const SPECIALIZATIONS = getSpecializations(t);
+  
+  const SPECIALIZATIONS = [
+    {
+      name: t('specializations.formacao'),
+      icon: GraduationCap,
+      id: "service-formacao",
+      grad: "from-blue-500 to-blue-600",
+      hoverBorder: "hover:border-blue-500/60",
+      dot: "bg-blue-400",
+    },
+    {
+      name: t('specializations.coordenacao'),
+      icon: Users,
+      id: "service-coordenacao",
+      grad: "from-emerald-500 to-green-600",
+      hoverBorder: "hover:border-emerald-500/60",
+      dot: "bg-emerald-400",
+    },
+    {
+      name: t('specializations.consultadoria'),
+      icon: Target,
+      id: "service-consultadoria",
+      grad: "from-purple-500 to-pink-600",
+      hoverBorder: "hover:border-purple-500/60",
+      dot: "bg-purple-400",
+    },
+    {
+      name: t('specializations.inspecao'),
+      icon: Shield,
+      id: "service-inspecao",
+      grad: "from-red-500 to-rose-600",
+      hoverBorder: "hover:border-red-500/60",
+      dot: "bg-red-400",
+    },
+    {
+      name: t('specializations.certificacao'),
+      icon: Award,
+      id: "service-certificacao",
+      grad: "from-amber-500 to-orange-600",
+      hoverBorder: "hover:border-amber-500/60",
+      dot: "bg-amber-400",
+    },
+  ];
 
   return (
     <div className="space-y-2">
@@ -58,4 +100,3 @@ export function SpecializationsList() {
     </div>
   );
 }
-

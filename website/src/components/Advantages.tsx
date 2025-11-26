@@ -1,10 +1,36 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { getAdvantages } from "@/app/data/data";
 import { getServerTranslation } from "@/lib/i18n-server";
+import { Award, Target, Users } from "lucide-react";
 
 export function Advantages({ lang }: { lang: string }) {
   const t = getServerTranslation(lang);
-  const ADVANTAGES = getAdvantages(t);
+
+  const ADVANTAGES = [
+    {
+      title: t('advantages.list.0.title'),
+      sub: t('advantages.list.0.sub'),
+      icon: Award,
+      color: "from-orange-500 to-rose-500",
+      text: t('advantages.list.0.text'),
+      tags: [t('advantages.list.0.tags.0'), t('advantages.list.0.tags.1')].filter(Boolean),
+    },
+    {
+      title: t('advantages.list.1.title'),
+      sub: t('advantages.list.1.sub'),
+      icon: Users,
+      color: "from-rose-500 to-pink-500",
+      text: t('advantages.list.1.text'),
+      tags: [t('advantages.list.1.tags.0'), t('advantages.list.1.tags.1')].filter(Boolean),
+    },
+    {
+      title: t('advantages.list.2.title'),
+      sub: t('advantages.list.2.sub'),
+      icon: Target,
+      color: "from-amber-500 to-red-500",
+      text: t('advantages.list.2.text'),
+      tags: [t('advantages.list.2.tags.0'), t('advantages.list.2.tags.1')].filter(Boolean),
+    },
+  ];
 
   return (
     <section

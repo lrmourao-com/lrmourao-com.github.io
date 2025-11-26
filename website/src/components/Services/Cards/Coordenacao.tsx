@@ -1,30 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { CheckCircle2, Users } from "lucide-react";
-import { getServerTranslation } from "@/lib/i18n-server";
 
-export function CoordenacaoCard(
-  { liBase, ulBase, mobile }: { liBase: string; ulBase: string; mobile: boolean },
-) {
-  const t = getServerTranslation('pt');
+interface CoordenacaoCardProps {
+  liBase: string;
+  ulBase: string;
+  mobile: boolean;
+  content: {
+    title: string;
+    description: string;
+    enterpriseCertTitle: string;
+    responsibilitiesTitle: string;
+    enterpriseCert: string[];
+    responsibilities: string[];
+  };
+}
 
-  const enterpriseCert = [
-    t('services.coordenacao.enterpriseCert.0'),
-    t('services.coordenacao.enterpriseCert.1'),
-    t('services.coordenacao.enterpriseCert.2'),
-    t('services.coordenacao.enterpriseCert.3'),
-  ];
-
-  const responsibilities = [
-    t('services.coordenacao.responsibilities.0'),
-    t('services.coordenacao.responsibilities.1'),
-    t('services.coordenacao.responsibilities.2'),
-    t('services.coordenacao.responsibilities.3'),
-    t('services.coordenacao.responsibilities.4'),
-    t('services.coordenacao.responsibilities.5'),
-    t('services.coordenacao.responsibilities.6'),
-  ];
-
+export function CoordenacaoCard({ liBase, ulBase, mobile, content }: CoordenacaoCardProps) {
   return (
     <Card
       id={mobile ? "service-coordenacao-mobile" : "service-coordenacao"}
@@ -41,20 +33,20 @@ export function CoordenacaoCard(
             <Users className="w-7 h-7 text-white" />
           </div>
           <h3 className="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-linear-to-r from-emerald-700 to-green-700 group-hover:from-emerald-600 group-hover:to-green-600 transition-all duration-300">
-            {t('services.coordenacao.title')}
+            {content.title}
           </h3>
         </div>
         <p className="text-slate-700 text-base leading-relaxed font-medium  mb-3!">
-          {t('services.coordenacao.description')}
+          {content.description}
         </p>
 
         <div className="flex flex-col gap-6">
           <div className="bg-emerald-50/50 p-3 md:p-4 md:pb-0 rounded-2xl border border-emerald-100">
             <p className="font-black text-emerald-700 text-sm uppercase tracking-wide mb-2!">
-              {t('services.coordenacao.enterpriseCertTitle')}
+              {content.enterpriseCertTitle}
             </p>
             <ul className={cn("space-y-2 mb-3!", ulBase)}>
-              {enterpriseCert.map((text) => (
+              {content.enterpriseCert.map((text) => (
                 <li key={text} className={liBase}>
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
                   <span className="font-medium">{text}</span>
@@ -64,10 +56,10 @@ export function CoordenacaoCard(
           </div>
           <div className="bg-emerald-50/50 p-3 md:p-4 md:pb-0 rounded-2xl border border-emerald-100">
             <p className="font-black text-emerald-700 text-sm uppercase tracking-wide mb-2!">
-              {t('services.coordenacao.responsibilitiesTitle')}
+              {content.responsibilitiesTitle}
             </p>
             <ul className={cn("space-y-2 mb-3!", ulBase)}>
-              {responsibilities.map((text) => (
+              {content.responsibilities.map((text) => (
                 <li key={text} className={liBase}>
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
                   <span className="font-medium">{text}</span>

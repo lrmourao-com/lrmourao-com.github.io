@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { LANGUAGE_CODES } from '@/lib/constants'
+import { LANGUAGE_CODES } from '@/data/constants'
 
 export const dynamic = 'force-static'
 
