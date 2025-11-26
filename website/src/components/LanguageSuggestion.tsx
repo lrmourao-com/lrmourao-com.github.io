@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { LANGUAGES, LanguageCode } from '@/data/constants';
 
 interface LanguageSuggestionProps {
@@ -8,6 +9,7 @@ interface LanguageSuggestionProps {
 }
 
 export function LanguageSuggestion({ currentLang = 'pt' }: LanguageSuggestionProps) {
+  const { t } = useTranslation();
   const [suggestion, setSuggestion] = useState<LanguageCode | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -100,18 +102,10 @@ export function LanguageSuggestion({ currentLang = 'pt' }: LanguageSuggestionPro
           <span className="text-3xl drop-shadow-lg">{suggestedLang.flag}</span>
           <div className="text-sm">
             <p className="font-bold text-white text-base mb-1">
-              {suggestion === 'en' && "It looks like you're visiting from an English-speaking region."}
-              {suggestion === 'es' && "Parece que nos visitas desde una región de habla hispana."}
-              {suggestion === 'fr' && "Il semble que vous nous rendiez visite depuis une région francophone."}
-              {suggestion === 'de' && "Es sieht so aus, als ob Sie uns aus einer deutschsprachigen Region besuchen."}
-              {suggestion === 'pt' && "Parece que nos visita de uma região de língua portuguesa."}
+              {t('languageSuggestion.message', { lng: suggestion })}
             </p>
             <p className="text-slate-300">
-              {suggestion === 'en' && "Would you like to switch to English?"}
-              {suggestion === 'es' && "¿Te gustaría cambiar a Español?"}
-              {suggestion === 'fr' && "Voulez-vous passer en Français?"}
-              {suggestion === 'de' && "Möchten Sie auf Deutsch wechseln?"}
-              {suggestion === 'pt' && "Gostaria de mudar para Português?"}
+              {t('languageSuggestion.question', { lng: suggestion })}
             </p>
           </div>
         </div>
@@ -121,19 +115,13 @@ export function LanguageSuggestion({ currentLang = 'pt' }: LanguageSuggestionPro
             onClick={handleDismiss}
             className="flex-1 sm:flex-none px-4 py-2.5 text-sm text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors font-medium"
           >
-            {suggestion === 'en' ? 'No, thanks' :
-              suggestion === 'es' ? 'No, gracias' :
-                suggestion === 'fr' ? 'Non, merci' :
-                  suggestion === 'de' ? 'Nein, danke' : 'Não, obrigado'}
+            {t('languageSuggestion.dismiss', { lng: suggestion })}
           </button>
           <button
             onClick={handleSwitch}
             className="flex-1 sm:flex-none px-6 py-2.5 text-sm bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white rounded-lg font-bold shadow-lg shadow-amber-500/20 transition-all hover:scale-105 whitespace-nowrap"
           >
-            {suggestion === 'en' ? 'Switch to English' :
-              suggestion === 'es' ? 'Cambiar a Español' :
-                suggestion === 'fr' ? 'Passer en Français' :
-                  suggestion === 'de' ? 'Auf Deutsch wechseln' : 'Mudar para Português'}
+            {t('languageSuggestion.confirm', { lng: suggestion })}
           </button>
         </div>
       </div>

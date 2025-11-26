@@ -209,5 +209,11 @@
   },
   "common": {
     "year": "{{year}}"
+  },
+  "languageSuggestion": {
+    "message": "It looks like you're visiting from an English-speaking region.",
+    "question": "Would you like to switch to English?",
+    "confirm": "Switch to English",
+    "dismiss": "No, thanks"
   }
 }
