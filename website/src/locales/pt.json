@@ -1,20 +1,21 @@
 {
   "meta": {
     "default": {
-      "title": "LR MOURÃO - Soldadura, Formação e Certificação",
-      "description": "Serviços especializados em soldadura, formação técnica, certificação de soldadores e consultoria industrial em Leiria.",
-      "ogDescription": "Serviços especializados em soldadura, formação técnica, certificação de soldadores e consultoria industrial em Leiria."
+      "title": "LR Mourão | Formação de Soldadores e Coordenação Técnica em Leiria",
+      "description": "Centro especializado em Leiria (Região Centro). Formação de soldadores, qualificação de procedimentos (WPS/WPQR), coordenação de soldadura (ISO 3834, EN 1090) e certificação industrial.",
+      "keywords": "LR Mourão, Formação Soldadura, Coordenação Soldadura, Curso Soldadura Leiria, ISO 3834, EN 1090, Certificação Soldadores, Consultoria, Inspecção, Welding, Região Centro",
+      "ogDescription": "Centro especializado em Leiria. Formação de soldadores, coordenação técnica e certificação industrial (ISO 3834, EN 1090). Soluções completas para a sua empresa."
     },
     "index": {
-      "title": "LR MOURÃO - Soldadura, Formação e Certificação",
-      "description": "Serviços especializados em soldadura, formação técnica, certificação de soldadores e consultoria industrial em Leiria.",
-      "ogTitle": "LR MOURÃO - Soldadura, Formação e Certificação",
-      "ogDescription": "Serviços especializados em soldadura, formação técnica, certificação de soldadores e consultoria industrial em Leiria.",
-      "ogImageAlt": "LR Mourão Soldadura",
-      "logoAlt": "LR Mourão Logo",
+      "title": "LR Mourão | Formação de Soldadores e Coordenação de Soldadura",
+      "description": "Serviços de excelência em Leiria: Formação profissional, Coordenação de Soldadura (EN ISO 14731), Qualificação de Soldadores e Consultoria Técnica para a indústria metalomecânica.",
+      "ogTitle": "LR Mourão | Formação de Soldadores e Coordenação de Soldadura",
+      "ogDescription": "Serviços de excelência em Leiria: Formação profissional, Coordenação de Soldadura, Qualificação de Soldadores e Consultoria Técnica.",
+      "ogImageAlt": "LR Mourão - Serviços de Soldadura Industrial e Formação",
+      "logoAlt": "Logótipo LR Mourão",
       "jsonLd": {
         "name": "LR Mourão",
-        "description": "Serviços especializados em soldadura, formação técnica, certificação de soldadores e consultoria industrial."
+        "description": "Empresa especializada em serviços de soldadura em Leiria: formação técnica, certificação de soldadores, consultoria industrial e coordenação de soldadura."
       }
     }
   },

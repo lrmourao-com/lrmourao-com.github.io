@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: t('meta.default.title'),
     description: t('meta.default.description'),
-    keywords: "LR MOURÃO, formação, soldadura, welding, training",
+    keywords: t('meta.default.keywords'),
     authors: [{ name: "Vardas" }],
     robots: process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true'
       ? "index, follow"
