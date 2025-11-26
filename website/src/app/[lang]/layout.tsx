@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { I18nProvider } from '@/components/I18nProvider'
 import { constructMetadata } from '@/lib/site-metadata'
+import { LanguageSuggestion } from '@/components/LanguageSuggestion';
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -18,6 +19,7 @@ export default async function RootLayout({
   return (
     <I18nProvider lang={lang}>
       {children}
+      <LanguageSuggestion currentLang={lang} />
     </I18nProvider>
   );
 }
