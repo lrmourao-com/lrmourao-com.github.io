@@ -81,7 +81,7 @@ export function Header() {
               </a>
             ))}
 
-            <div className="relative ml-4 border-l pl-4 border-slate-500/30" ref={dropdownRef}>
+            <div className="relative ml-4 border-l pl-6 border-slate-500/30" ref={dropdownRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
                 className="flex items-center gap-2 text-slate-200 hover:text-amber-400 transition-colors font-semibold py-2"
@@ -138,7 +138,7 @@ export function Header() {
                 {label}
               </a>
             ))}
-            
+
             <div className="border-t border-white/10 mt-2 pt-4 px-4">
               <p className="text-xs text-slate-400 font-semibold mb-3 uppercase tracking-wider">Select Language</p>
               <div className="grid grid-cols-2 gap-2">
@@ -148,8 +148,8 @@ export function Header() {
                     href={`/${lang.code}`}
                     className={cn(
                       "flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors border border-transparent",
-                      i18n.language === lang.code 
-                        ? "text-amber-400 bg-white/10 border-amber-500/20 font-bold" 
+                      i18n.language === lang.code
+                        ? "text-amber-400 bg-white/10 border-amber-500/20 font-bold"
                         : "text-slate-300 hover:bg-white/5 hover:text-white"
                     )}
                   >
