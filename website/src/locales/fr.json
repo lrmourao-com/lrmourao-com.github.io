@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "default": {
+      "title": "LR Mourão | Formation de Soudeurs et Coordination Technique à Leiria",
+      "description": "Centre spécialisé à Leiria (Région Centre). Formation de soudeurs, qualification de procédures (WPS/WPQR), coordination de soudage (ISO 3834, EN 1090) et certification industrielle.",
+      "keywords": "LR Mourão, Formation Soudage, Coordination Soudage, Cours Soudage Leiria, ISO 3834, EN 1090, Certification Soudeurs, Conseil, Inspection, Welding, Région Centre",
+      "ogDescription": "Centre spécialisé à Leiria. Formation de soudeurs, coordination technique et certification industrielle (ISO 3834, EN 1090). Solutions complètes pour votre entreprise."
+    },
+    "index": {
+      "title": "LR Mourão | Formation de Soudeurs et Coordination de Soudage",
+      "description": "Services d'excellence à Leiria : Formation professionnelle, Coordination de Soudage (EN ISO 14731), Qualification de Soudeurs et Conseil Technique pour l'industrie métallurgique.",
+      "ogTitle": "LR Mourão | Formation de Soudeurs et Coordination de Soudage",
+      "ogDescription": "Services d'excellence à Leiria : Formation professionnelle, Coordination de Soudage, Qualification de Soudeurs et Conseil Technique.",
+      "ogImageAlt": "LR Mourão - Services de Soudage Industriel et Formation",
+      "logoAlt": "Logo LR Mourão",
+      "jsonLd": {
+        "name": "LR Mourão",
+        "description": "Entreprise spécialisée dans les services de soudage à Leiria : formation technique, certification de soudeurs, conseil industriel et coordination de soudage."
+      }
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "advantages": "Avantages",
+    "contact": "Contact",
+    "toggleMenu": "Basculer le menu"
+  },
+  "hero": {
+    "badge": "Depuis 2010",
+    "title": {
+      "part1": "Excellence en",
+      "part2": "formation et coordination de soudage"
+    },
+    "subtitle": "Solutions complètes en formation, certification et coordination de soudage pour l'industrie moderne.",
+    "stats": {
+      "experience": "Années d'Expérience",
+      "specializations": "Domaines Spécialisés",
+      "certified": "Certifié"
+    },
+    "specializationsTitle": "Domaines de Spécialisation",
+    "certificationsLabel": "Certifications et Normes :",
+    "scrollText": "Défiler"
+  },
+  "heroButtons": {
+    "exploreServices": "Explorer les Services",
+    "contact": "Prendre Contact"
+  },
+  "specializations": {
+    "formacao": "Formation en Soudage",
+    "coordenacao": "Coordination de Soudage",
+    "consultadoria": "Conseil Technique",
+    "inspecao": "Inspection et Contrôle",
+    "certificacao": "Certification",
+    "popular": "Populaire"
+  },
+  "services": {
+    "badge": "Ce Que Nous Faisons",
+    "title": "Services",
+    "titleHighlight": "Spécialisés",
+    "description": "Solutions complètes et certifiées pour tous vos besoins en soudage et coordination industrielle",
+    "formacao": {
+      "title": "Formation en Soudage",
+      "popular": "Populaire",
+      "description": "Nous formons une main-d'œuvre professionnelle répondant aux besoins du marché national et international. Cours dynamiques, sur mesure et une formation d'excellence.",
+      "processesTitle": "Procédés :",
+      "processes": [
+        "MIG/MAG/FF 114/131/135/136/138",
+        "TIG 141/142",
+        "SER/MMA 111"
+      ],
+      "alloysTitle": "Alliages :",
+      "alloys": "Acier au carbone, Acier inoxydable, Aluminium, Cuivre",
+      "coursesTitle": "Cours/Formations :",
+      "courses": [
+        "Horaires flexibles et personnalisés",
+        "Formation sur mesure",
+        "Formation individuelle disponible"
+      ],
+      "certificationTitle": "Certification :",
+      "certification": "EN ISO 9606, ASME IX, AWS D1.1"
+    },
+    "coordenacao": {
+      "title": "Coordination",
+      "description": "Spécialiste en coordination selon EN 1090 et ISO 3834.",
+      "enterpriseCertTitle": "Certification d'entreprise",
+      "enterpriseCert": [
+        "EN ISO 3834",
+        "EN ISO 9606",
+        "EN 1090",
+        "EN 15614"
+      ],
+      "responsibilitiesTitle": "Responsabilités Techniques",
+      "responsibilities": [
+        "Réalisation de WPQR et WPS",
+        "Sélectionner et/ou approuver les procédés de soudage adaptés au matériau et à l'application (TIG, MAG, MMA, etc.).",
+        "Valider et contrôler les WPS (Descriptifs de Mode Opératoire de Soudage).",
+        "Définir et superviser la qualification de procédures (WPQR) et de soudeurs/opérateurs.",
+        "Choisir les matériaux de base et d'apport (voir EN ISO 15608, 2560, 14341, etc.).",
+        "Déterminer les gaz de protection, polarités, positions de soudage, paramètres électriques et traitements thermiques.",
+        "Approuver les plans d'inspection et d'essai (ITP)."
+      ]
+    },
+    "consultadoria": {
+      "title": "Conseil",
+      "description": "Conseils pour l'évolution de l'entreprise dans tous les domaines techniques et normatifs.",
+      "items": [
+        "Normes ISO 3834 et EN 1090",
+        "Acquisition d'équipements",
+        "Schématisation des processus",
+        "Planification du travail et structures",
+        "Techniques et procédés",
+        "Inspection visuelle de soudage",
+        "Recrutement de soudeurs",
+        "Certification de soudeurs"
+      ]
+    },
+    "inspecao": {
+      "title": "Inspection et Contrôle",
+      "description": "Assurance qualité grâce à des inspections rigoureuses et au contrôle des processus.",
+      "items": [
+        "Inspection visuelle EN ISO 17637 et ISO 5817",
+        "Contrôle dimensionnel et conformité",
+        "Supervision sur chantier et en usine",
+        "Rapports techniques détaillés",
+        "Mise en œuvre de plans de contrôle qualité",
+        "Vérification de WPQR et WPS"
+      ]
+    },
+    "certificacao": {
+      "title": "Certification",
+      "description": "Soutien complet pour l'obtention et le maintien des certifications essentielles.",
+      "items": [
+        "Certification entreprises EN 1090, EN ISO 9606, ISO 3834 et EN 15614",
+        "Certification soudeurs EN ISO 9606, ASME IX, AWS D1.1",
+        "Processus complet : de la préparation à l'audit",
+        "Renouvellement et maintien des certifications",
+        "Préparation de la documentation technique"
+      ]
+    }
+  },
+  "advantages": {
+    "badge": "Pourquoi Nous Choisir",
+    "title": "Avantages de",
+    "titleHighlight": "Nos Services",
+    "description": "Plus de 14 ans d'expérience dans le secteur de la Formation, Certification et Coordination en soudage",
+    "list": [
+      {
+        "title": "Équipe Qualifiée",
+        "sub": "Spécialistes Certifiés",
+        "text": "Suivi direct par Spécialiste Européen en Soudage (EWF/IIW) et Inspecteur en Soudage EWF, garantissant des décisions techniques fondées.",
+        "tags": ["EWF/IIW", "Inspecteur EWF"]
+      },
+      {
+        "title": "Expérience Pratique",
+        "sub": "Connaissances Appliquées",
+        "text": "Soudeur certifié H-L045 dans les trois principaux procédés (TIG, MIG/MAG et MMA) avec une expérience pratique renforçant la qualité des solutions.",
+        "tags": ["TIG", "MIG/MAG", "MMA"]
+      },
+      {
+        "title": "Orientation Résultats",
+        "sub": "Excellence Technique",
+        "text": "Focalisation sur l'efficacité, la fiabilité et la réduction des coûts, toujours avec un haut standard technique et professionnel. Solutions optimisées pour votre entreprise.",
+        "tags": []
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Contactez-nous",
+    "title": "Travaillons",
+    "titleHighlight": "ensemble",
+    "description": "Comptez sur LR Mourão chaque fois que vous en avez besoin. Nous sommes là pour soutenir, répondre et fournir des solutions sans complications.",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Votre nom",
+      "emailLabel": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "phoneLabel": "Téléphone",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Comment pouvons-nous aider ?",
+      "submitButton": "Envoyer le Message",
+      "submittingButton": "Envoi en cours...",
+      "successButton": "Envoyé avec succès !",
+      "errorMessage": "Erreur lors de l'envoi du message. Veuillez réessayer."
+    },
+    "info": {
+      "phone": {
+        "title": "Mobile",
+        "value": "(+351) 916 672 566",
+        "sub": "Lun - Ven : 9h - 18h"
+      },
+      "email": {
+        "title": "Email",
+        "value": "geral@lrmourao.com",
+        "sub": "Réponse sous 24h"
+      }
+    }
+  },
+  "footer": {
+    "logoAlt": "LR Mourão - soudons l'avenir | welding the future",
+    "copyright": "LR Mourão. Tous droits réservés.",
+    "producedBy": "Produit par",
+    "withSupport": "avec le soutien de"
+  },
+  "whatsapp": {
+    "message": "Parlez avec nous maintenant !",
+    "ariaLabel": "Contact via WhatsApp"
+  },
+  "common": {
+    "year": "{{year}}"
+  }
+}
+

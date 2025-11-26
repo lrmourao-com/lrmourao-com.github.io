@@ -1,6 +1,9 @@
 import i18next from 'i18next';
 import en from '@/locales/en.json';
 import pt from '@/locales/pt.json';
+import es from '@/locales/es.json';
+import fr from '@/locales/fr.json';
+import de from '@/locales/de.json';
 
 // Create a server-side i18n instance (without React)
 const i18nServer = i18next.createInstance();
@@ -14,13 +17,13 @@ i18nServer.init({
       translation: pt,
     },
     es: {
-      translation: pt,
+      translation: es,
     },
     fr: {
-      translation: pt,
+      translation: fr,
     },
     de: {
-      translation: pt,
+      translation: de,
     },
   },
   lng: 'pt', // default to Portuguese for server-side
