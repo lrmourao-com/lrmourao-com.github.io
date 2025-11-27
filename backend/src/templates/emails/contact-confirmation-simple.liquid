@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We received your message</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #ffffff; color: #333333;">
+  <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+    
+    <!-- Logo (Left Aligned) -->
+    <div style="margin-bottom: 30px;">
+      <img src="https://www.lrmourao.fazerweb.com/lrmourao-logo.svg" alt="LR Mourão" width="150" style="display: block; width: 150px; max-width: 100%; height: auto; border: 0;">
+    </div>
+
+    <!-- Main Content -->
+    <h2 style="color: #111111; margin-top: 0; font-size: 22px; font-weight: 600; margin-bottom: 20px;">
+      Hello {{ name }},
+    </h2>
+
+    <p style="font-size: 16px; color: #444444; line-height: 1.6; margin-bottom: 16px;">
+      Thanks for reaching out! We've received your message and appreciate you contacting us.
+    </p>
+    
+    <p style="font-size: 16px; color: #444444; line-height: 1.6; margin-bottom: 30px;">
+      Our team will review your inquiry and get back to you within the next 24 hours.
+    </p>
+
+    <!-- Button -->
+    <div style="margin-bottom: 40px;">
+      <a href="https://www.lrmourao.fazerweb.com/" style="display: inline-block; background-color: #f59e0b; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 15px;">
+        Visit our Website
+      </a>
+    </div>
+    
+    <!-- Signature -->
+    <p style="font-size: 16px; color: #444444; line-height: 1.6; margin-bottom: 0;">
+      Best regards,<br>
+      <strong>The LR Mourão Team</strong>
+    </p>
+
+    <!-- Footer -->
+    <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #eeeeee;">
+      <p style="color: #999999; font-size: 12px; margin: 0;">
+        © {{ "now" | date: "%Y" }} LR Mourão. All rights reserved.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
