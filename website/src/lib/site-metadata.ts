@@ -24,7 +24,7 @@ export function constructMetadata({
     (pageKey
       ? t(`meta.${pageKey}.description`)
       : t("meta.default.description"));
-  
+
   // Resolve OpenGraph specific fields if they exist in translation
   const ogTitle = pageKey ? t(`meta.${pageKey}.ogTitle`) : undefined;
   const ogDescription = pageKey ? t(`meta.${pageKey}.ogDescription`) : t("meta.default.ogDescription");
@@ -54,7 +54,7 @@ export function constructMetadata({
       siteName: "LR Mourão",
       images: [
         {
-          url: "/images/Logo_original.png",
+          url: "/lrmourao-logo-opengraph.png",
           width: 1200,
           height: 630,
           alt: ogImageAlt || t("meta.index.logoAlt") || "LR Mourão",
