@@ -27,11 +27,6 @@ export function Hero({ lang }: { lang: string }) {
       className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden">
-        <img
-          src="/industrial-welding-sparks-and-metal-fabrication-in.jpg"
-          alt="Welding"
-          className="w-full h-full object-cover opacity-15"
-        />
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDI1MSwgMTkxLCAzNiwgMC4xKSIvPjwvZz48L3N2Zz4=')] opacity-20" />
         <div className="absolute top-20 right-0 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl animate-pulse" />
         <div

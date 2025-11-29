@@ -1,6 +1,12 @@
 import { Metadata } from "next";
 import { getServerTranslation } from "@/lib/i18n-server";
 
+// Base URL - Update this when deploying to different domains
+const BASE_URL = "https://www.lrmourao.fazerweb.com";
+
+// Indexing control - Set to false to prevent search engines from indexing
+const ALLOW_INDEXING = false;
+
 interface MetadataProps {
   lang: string;
   pageKey?: string; // e.g. 'index' to fetch 'meta.index.title'
@@ -30,15 +36,15 @@ export function constructMetadata({
   const ogDescription = pageKey ? t(`meta.${pageKey}.ogDescription`) : t("meta.default.ogDescription");
   const ogImageAlt = pageKey ? t(`meta.${pageKey}.ogImageAlt`) : undefined;
 
-  const baseUrl = "https://lrmourao.com";
-  const currentUrl = lang === "pt" ? baseUrl : `${baseUrl}/${lang}`;
+  const currentUrl = lang === "pt" ? BASE_URL : `${BASE_URL}/${lang}`;
 
   return {
+    metadataBase: new URL(BASE_URL),
     title: resolvedTitle,
     description: resolvedDescription,
     keywords: t("meta.default.keywords"),
     authors: [{ name: "Pedro Roque", url: "https://prock.dev" }],
-    robots: process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true"
+    robots: ALLOW_INDEXING
       ? "index, follow"
       : "noindex, nofollow",
 
@@ -66,12 +72,12 @@ export function constructMetadata({
 
     alternates: {
       languages: {
-        "pt": "https://lrmourao.com/",
-        "en": "https://lrmourao.com/en",
-        "es": "https://lrmourao.com/es",
-        "fr": "https://lrmourao.com/fr",
-        "de": "https://lrmourao.com/de",
-        "x-default": "https://lrmourao.com/",
+        "pt": `${BASE_URL}/`,
+        "en": `${BASE_URL}/en`,
+        "es": `${BASE_URL}/es`,
+        "fr": `${BASE_URL}/fr`,
+        "de": `${BASE_URL}/de`,
+        "x-default": `${BASE_URL}/`,
       },
     },
 
