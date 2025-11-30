@@ -2,6 +2,7 @@ import { type Request, type Response } from 'express';
 import type Mail from 'nodemailer/lib/mailer';
 import path from 'path';
 import { createTransporter, renderEmailTemplate } from '../../services/email-service.js';
+import { getEmailTranslations } from '../../i18n/email-translations.js';
 
 export const sendTestNotificationHandler = async (req: Request, res: Response) => {
   try {
@@ -9,6 +10,9 @@ export const sendTestNotificationHandler = async (req: Request, res: Response) =
 
     const testEmail = 'tinipedro@gmail.com';
     const timestamp = new Date().toLocaleString();
+    const locale = 'pt';
+    
+    const translations = getEmailTranslations(locale);
 
     // Render the template with dummy data
     const html = await renderEmailTemplate('contact-notification', {
@@ -18,6 +22,8 @@ export const sendTestNotificationHandler = async (req: Request, res: Response) =
       company: 'Acme Corp',
       message: 'I am interested in your services. Please contact me.',
       timestamp,
+      locale,
+      admin_reply_subject: translations.admin_reply_subject,
     });
 
     const logoPath = path.resolve(process.cwd(), 'assets/images/lrmourao-logo.png');

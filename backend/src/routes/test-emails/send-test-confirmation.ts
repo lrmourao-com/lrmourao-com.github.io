@@ -2,16 +2,25 @@ import { type Request, type Response } from 'express';
 import type Mail from 'nodemailer/lib/mailer';
 import path from 'path';
 import { createTransporter, renderEmailTemplate } from '../../services/email-service.js';
+import { getEmailTranslations } from '../../i18n/email-translations.js';
 
 export const sendTestConfirmationHandler = async (req: Request, res: Response) => {
   try {
     const transporter = createTransporter();
 
     const testEmail = 'tinipedro@gmail.com';
+    const name = 'Pedro Mourão';
+    const locale = 'pt';
+    
+    const translations = getEmailTranslations(locale);
+    const greeting = translations.greeting.replace('{{ name }}', name);
 
     // Render the template with dummy data
     const html = await renderEmailTemplate('contact-confirmation', {
-      name: 'Pedro Mourão',
+      ...translations,
+      greeting,
+      name,
+      locale,
     });
 
     const logoPath = path.resolve(process.cwd(), 'assets/images/lrmourao-logo.png');
@@ -19,7 +28,7 @@ export const sendTestConfirmationHandler = async (req: Request, res: Response) =
     const mailOptions: Mail.Options = {
       from: process.env.EMAIL_FROM,
       to: testEmail,
-      subject: 'We received your message',
+      subject: translations.title,
       html,
       attachments: [{
         filename: 'lrmourao-logo.png',
