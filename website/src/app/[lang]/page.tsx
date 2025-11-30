@@ -8,6 +8,7 @@ import { Services } from "@/components/Services/Services";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { getServerTranslation } from "@/lib/i18n-server";
 import { constructMetadata, BASE_URL } from "@/lib/site-metadata";
+import { JsonLd } from "@/components/JsonLd";
 
 export async function generateStaticParams() {
   // Only generate pages for non-Portuguese languages
@@ -29,42 +30,9 @@ export default async function LRMouraoPage({ params }: { params: Promise<{ lang:
   const { lang } = await params;
   const t = getServerTranslation(lang);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": t('meta.index.jsonLd.name'),
-    "image": `${BASE_URL}/lrmourao-logo.svg`,
-    "description": t('meta.index.jsonLd.description'),
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Leiria",
-      "addressRegion": "Leiria",
-      "addressCountry": "PT"
-    },
-    "url": BASE_URL,
-    "telephone": "+351916672566", // Matches footer contact
-    "email": "geral@lrmourao.com",
-    "priceRange": "$$",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "09:00",
-      "closes": "18:00"
-    }
-  };
-
   return (
     <div className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd lang={lang} />
       <Header />
       <Hero lang={lang} />
       <Services lang={lang} />
@@ -73,6 +41,6 @@ export default async function LRMouraoPage({ params }: { params: Promise<{ lang:
       <Footer lang={lang} />
 
       <WhatsAppButton />
-    </div>
+    </div >
   );
 }
