@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import posthogRouter from './routes/posthog.js';
-import emailRouter from './routes/email.js';
+import emailRouter from './routes/email/index.js';
 
 // Load environment variables
 dotenv.config();

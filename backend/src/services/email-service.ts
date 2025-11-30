@@ -1,6 +1,7 @@
 import { Liquid } from 'liquidjs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import nodemailer from 'nodemailer';
 import type { EmailTemplateData } from '../types/email-types.js';
 
 // Get __dirname equivalent in ES modules
@@ -15,6 +16,31 @@ const engine = new Liquid({
   strictFilters: false, // Allow filters to fail gracefully
   strictVariables: false, // Allow undefined variables
 });
+
+// Email validation helper
+export function isValidEmail(email: string): boolean {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Create transporter
+export function createTransporter() {
+  const config = {
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT || '587'),
+    secure: process.env.SMTP_SECURE === 'true',
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  };
+
+  if (!config.host || !config.auth.user || !config.auth.pass) {
+    throw new Error('Email configuration is incomplete. Check your .env file.');
+  }
+
+  return nodemailer.createTransport(config);
+}
 
 /**
  * Renders an email template with the provided data
