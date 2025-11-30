@@ -40,6 +40,10 @@ RUN npm ci --omit=dev && npm cache clean --force
 # Copy built files from builder stage
 COPY --from=builder --chown=nodejs:nodejs /app/dist ./dist
 
+# Copy static assets and templates
+COPY --from=builder --chown=nodejs:nodejs /app/assets ./assets
+COPY --from=builder --chown=nodejs:nodejs /app/src/templates ./dist/templates
+
 # Switch to non-root user
 USER nodejs
 
