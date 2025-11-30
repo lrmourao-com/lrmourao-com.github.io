@@ -47,7 +47,7 @@ export const contactHandler = async (req: Request, res: Response) => {
 
     const adminMailOptions: Mail.Options = {
       from: process.env.EMAIL_FROM,
-      to: process.env.EMAIL_FROM, // Send to self/admin
+      to: process.env.CONTACT_NOTIFICATION_EMAIL || process.env.EMAIL_FROM, // Send to configured admin email or fallback to sender
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: notificationHtml,
