@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { getServerTranslation } from "@/lib/i18n-server";
 
 // Base URL - Update this when deploying to different domains
-const BASE_URL = "https://www.lrmourao.fazerweb.com";
+export const BASE_URL = "https://www.lrmourao.fazerweb.com";
 
 // Indexing control - Set to false to prevent search engines from indexing
 const ALLOW_INDEXING = false;
@@ -68,6 +68,13 @@ export function constructMetadata({
       ],
       locale: lang === "pt" ? "pt_PT" : lang,
       type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: ogTitle || resolvedTitle,
+      description: ogDescription || resolvedDescription,
+      images: ["/lrmourao-logo-twitter.png"],
     },
 
     alternates: {

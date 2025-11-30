@@ -7,7 +7,7 @@ import { Hero } from "@/components/Hero/Hero";
 import { Services } from "@/components/Services/Services";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { getServerTranslation } from "@/lib/i18n-server";
-import { constructMetadata } from "@/lib/site-metadata";
+import { constructMetadata, BASE_URL } from "@/lib/site-metadata";
 
 export async function generateStaticParams() {
   // Only generate pages for non-Portuguese languages
@@ -33,7 +33,7 @@ export default async function LRMouraoPage({ params }: { params: Promise<{ lang:
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": t('meta.index.jsonLd.name'),
-    "image": "https://lrmourao.com/lrmourao-logo.svg",
+    "image": `${BASE_URL}/lrmourao-logo.svg`,
     "description": t('meta.index.jsonLd.description'),
     "address": {
       "@type": "PostalAddress",
@@ -41,7 +41,7 @@ export default async function LRMouraoPage({ params }: { params: Promise<{ lang:
       "addressRegion": "Leiria",
       "addressCountry": "PT"
     },
-    "url": "https://lrmourao.com",
+    "url": BASE_URL,
     "telephone": "+351916672566", // Matches footer contact
     "email": "geral@lrmourao.com",
     "priceRange": "$$",
