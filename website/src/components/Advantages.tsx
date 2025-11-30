@@ -62,7 +62,9 @@ export function Advantages({ lang }: { lang: string }) {
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto font-medium">
-            {t('advantages.description')}
+            {t('advantages.description', {
+              years: new Date().getFullYear() - 2010
+            })}
           </p>
         </div>
 

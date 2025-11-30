@@ -143,7 +143,7 @@
     "badge": "Warum Uns Wählen",
     "title": "Vorteile",
     "titleHighlight": "Unserer Dienste",
-    "description": "Über 14 Jahre Erfahrung im Bereich Schweißausbildung, Zertifizierung und Koordination",
+    "description": "Über {{years}} Jahre Erfahrung im Bereich Schweißausbildung, Zertifizierung und Koordination",
     "list": [
       {
         "title": "Qualifiziertes Team",

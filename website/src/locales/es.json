@@ -143,7 +143,7 @@
     "badge": "Por Qué Elegirnos",
     "title": "Ventajas de",
     "titleHighlight": "Nuestros Servicios",
-    "description": "Más de 14 años de experiencia en el sector de la Formación, Certificación y Coordinación en soldadura",
+    "description": "Más de {{years}} años de experiencia en el sector de la Formación, Certificación y Coordinación en soldadura",
     "list": [
       {
         "title": "Equipo Cualificado",

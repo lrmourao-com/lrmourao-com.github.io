@@ -143,7 +143,7 @@
     "badge": "Why Choose Us",
     "title": "Advantages of",
     "titleHighlight": "Our Services",
-    "description": "Over 14 years of experience in the Welding Training, Certification, and Coordination sector",
+    "description": "Over {{years}} years of experience in the Welding Training, Certification, and Coordination sector",
     "list": [
       {
         "title": "Qualified Team",

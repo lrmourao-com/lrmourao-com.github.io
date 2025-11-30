@@ -143,7 +143,7 @@
     "badge": "Pourquoi Nous Choisir",
     "title": "Avantages de",
     "titleHighlight": "Nos Services",
-    "description": "Plus de 14 ans d'expérience dans le secteur de la Formation, Certification et Coordination en soudage",
+    "description": "Plus de {{years}} ans d'expérience dans le secteur de la Formation, Certification et Coordination en soudage",
     "list": [
       {
         "title": "Équipe Qualifiée",
