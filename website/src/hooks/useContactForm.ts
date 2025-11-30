@@ -82,7 +82,7 @@ export function useContactForm() {
     const result = contactFormSchema.safeParse(state.values);
     if (!result.success) {
       const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
-      result.error.errors.forEach((error) => {
+      result.error.issues.forEach((error) => {
         if (error.path[0]) {
           fieldErrors[error.path[0] as keyof ContactFormData] = error.message;
         }
