@@ -58,7 +58,6 @@ test:
 		-e PORT=3001 \
 		-e NODE_ENV=production \
 		-e POSTHOG_API_URL=https://app.posthog.com \
-		-e POSTHOG_PROJECT_API_KEY=test \
 		-e SMTP_HOST=smtp.example.com \
 		-e SMTP_PORT=587 \
 		-e SMTP_USER=test@example.com \

@@ -12,7 +12,6 @@ services:
       - PORT=${PORT:-3001}
       - NODE_ENV=development
       - POSTHOG_API_URL=${POSTHOG_API_URL:-https://app.posthog.com}
-      - POSTHOG_PROJECT_API_KEY=${POSTHOG_PROJECT_API_KEY}
       - SMTP_HOST=${SMTP_HOST}
       - SMTP_PORT=${SMTP_PORT:-587}
       - SMTP_SECURE=${SMTP_SECURE:-false}

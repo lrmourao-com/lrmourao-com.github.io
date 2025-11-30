@@ -16,7 +16,6 @@ services:
       
       # PostHog Configuration
       - POSTHOG_API_URL=${POSTHOG_API_URL:-https://app.posthog.com}
-      - POSTHOG_PROJECT_API_KEY=${POSTHOG_PROJECT_API_KEY}
       
       # Email Configuration
       - SMTP_HOST=${SMTP_HOST}

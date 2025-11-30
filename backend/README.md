@@ -35,7 +35,6 @@ NODE_ENV=development
 
 # PostHog
 POSTHOG_API_URL=https://app.posthog.com
-POSTHOG_PROJECT_API_KEY=your_posthog_key
 
 # Email (Gmail example)
 SMTP_HOST=smtp.gmail.com
