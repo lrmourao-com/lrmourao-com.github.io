@@ -49,8 +49,8 @@ export function constructMetadata({
       : "noindex, nofollow",
 
     icons: {
-      icon: "/lrmourao-logo.svg",
-      shortcut: "/lrmourao-logo.svg",
+      icon: "/icon.png",
+      apple: "/apple-touch-icon.png",
     },
 
     openGraph: {

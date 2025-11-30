@@ -6,8 +6,7 @@ export function Hero({ lang }: { lang: string }) {
   const t = getServerTranslation(lang);
   const HERO_STATS = [
     {
-      value:
-        + "+",
+      value: new Date().getFullYear() - 2010 + "+",
       label: t('hero.stats.experience'),
     },
     { value: "5", label: t('hero.stats.specializations') },
