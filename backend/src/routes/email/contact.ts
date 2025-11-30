@@ -34,22 +34,27 @@ export const contactHandler = async (req: Request, res: Response) => {
     // Use the local backend copy of the logo since the website folder might not be available in production
     const logoPath = path.resolve(process.cwd(), 'assets/images/lrmourao-logo.png');
 
-    // 1. Send notification to admin (Always in English or Portuguese as preferred by admin, keeping default 'en' for now)
-    // Or we could include the user's locale in the notification so admin knows which language to reply in
+    // 1. Send notification to admin
+    // Use the user's locale to determine the language of the notification (or default to 'en')
+    const translations = getEmailTranslations(locale);
+    
+    // Prepare the reply button text with interpolated name
+
     const notificationHtml = await renderEmailTemplate('contact-notification', {
       name,
       email,
       phone,
       message,
       timestamp,
-      locale: locale || 'unknown'
+      locale: locale || 'en',
+      admin_reply_subject: translations.admin_reply_subject, // Only pass the subject translation
     });
 
     const adminMailOptions: Mail.Options = {
       from: process.env.EMAIL_FROM,
       to: process.env.CONTACT_NOTIFICATION_EMAIL || process.env.EMAIL_FROM, // Send to configured admin email or fallback to sender
       replyTo: email,
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `New Contact Form Submission - ${name}`,
       html: notificationHtml,
       attachments: [{
         filename: 'lrmourao-logo.png',
@@ -62,7 +67,7 @@ export const contactHandler = async (req: Request, res: Response) => {
     console.log(`Notification email sent for contact from: ${email}`);
 
     // 2. Send confirmation to user (Localized)
-    const translations = getEmailTranslations(locale);
+    // We already have the translations for the correct locale
     
     // LiquidJS handles {{ name }} interpolation in the template, but our greeting string also has {{ name }}
     // We need to render the greeting string with the name first, OR pass name to template and let template handle it.

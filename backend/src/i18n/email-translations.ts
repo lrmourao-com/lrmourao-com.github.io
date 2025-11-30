@@ -7,6 +7,8 @@ export interface EmailTranslations {
   signature: string;
   team_name: string;
   copyright: string;
+  // Admin notification translations
+  admin_reply_subject: string;
 }
 
 export const emailTranslations: Record<string, EmailTranslations> = {
@@ -19,6 +21,8 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     signature: "Sincerely,",
     team_name: "LR Mourão Team",
     copyright: "LR Mourão. All rights reserved.",
+    // Admin notification
+    admin_reply_subject: "Re: Contact Form Submission",
   },
   pt: {
     title: "Recebemos a sua mensagem",
@@ -29,6 +33,8 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     signature: "Atentamente,",
     team_name: "Equipa LR Mourão",
     copyright: "LR Mourão. Todos os direitos reservados.",
+    // Admin notification
+    admin_reply_subject: "Re: Submissão do Formulário de Contacto",
   },
   es: {
     title: "Hemos recibido su mensaje",
@@ -39,6 +45,8 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     signature: "Atentamente,",
     team_name: "Equipo LR Mourão",
     copyright: "LR Mourão. Todos los derechos reservados.",
+    // Admin notification
+    admin_reply_subject: "Re: Envío del Formulario de Contacto",
   },
   fr: {
     title: "Nous avons bien reçu votre message",
@@ -49,6 +57,8 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     signature: "Cordialement,",
     team_name: "L'équipe LR Mourão",
     copyright: "LR Mourão. Tous droits réservés.",
+    // Admin notification
+    admin_reply_subject: "Re: Soumission du Formulaire de Contact",
   },
   de: {
     title: "Wir haben Ihre Nachricht erhalten",
@@ -59,6 +69,8 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     signature: "Mit freundlichen Grüßen,",
     team_name: "LR Mourão Team",
     copyright: "LR Mourão. Alle Rechte vorbehalten.",
+    // Admin notification
+    admin_reply_subject: "Re: Kontaktformular Einreichung",
   },
 };
 
