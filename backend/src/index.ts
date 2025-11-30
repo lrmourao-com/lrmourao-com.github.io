@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 import posthogRouter from './routes/posthog.js';
 import emailRouter from './routes/email/index.js';
+import testEmailRouter from './routes/test-emails/index.js';
 
 // Load environment variables
 dotenv.config();
@@ -46,6 +47,7 @@ app.get('/health', (_req: Request, res: Response) => {
 // Routes
 app.use('/api/hog', posthogRouter);
 app.use('/api/email', emailRouter);
+app.use('/api/test-email', testEmailRouter);
 
 // 404 handler
 app.use((_req: Request, res: Response) => {
