@@ -2,10 +2,10 @@ import { Metadata } from "next";
 import { getServerTranslation } from "@/lib/i18n-server";
 
 // Base URL - Update this when deploying to different domains
-export const BASE_URL = "https://www.lrmourao.fazerweb.com";
+export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.lrmourao.fazerweb.com";
 
 // Indexing control - Set to false to prevent search engines from indexing
-const ALLOW_INDEXING = false;
+const ALLOW_INDEXING = process.env.NEXT_PUBLIC_ALLOW_INDEXING === 'true';
 
 interface MetadataProps {
   lang: string;
@@ -89,7 +89,7 @@ export function constructMetadata({
     },
 
     verification: {
-      google: "GseIwNt2X7uVsHMxRRLBmgWg4VAbArFqR6p8r2yJmcg",
+      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "GseIwNt2X7uVsHMxRRLBmgWg4VAbArFqR6p8r2yJmcg",
     },
   };
 }

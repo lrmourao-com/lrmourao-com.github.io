@@ -100,7 +100,8 @@ export function useContactForm() {
 
     try {
       const payload = { ...state.values, locale };
-      const response = await fetch("http://localhost:3002/api/email/contact", {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3002";
+      const response = await fetch(`${apiUrl}/api/email/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
