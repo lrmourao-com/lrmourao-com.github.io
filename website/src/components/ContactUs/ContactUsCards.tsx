@@ -116,7 +116,7 @@ function ContactUsCards() {
             <div className="space-y-4 sm:space-y-5">
               {/* Leiria */}
               <div className="flex items-center gap-3 sm:gap-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-rose-500 to-orange-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-red-500 to-rose-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
                   <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
                 <div className="select-text">
@@ -134,7 +134,7 @@ function ContactUsCards() {
 
               {/* National Coverage */}
               <div className="flex items-center gap-3 sm:gap-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-blue-500 to-indigo-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-violet-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
                   <Globe className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
                 <div className="select-text">
