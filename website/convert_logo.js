@@ -21,3 +21,5 @@ sharp(inputPath, { density: 144 })
     process.exit(1);
   });
 
+
+
