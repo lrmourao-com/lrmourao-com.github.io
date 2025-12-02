@@ -1,4 +1,4 @@
-import { Clock, Globe, MapPin, Phone, Sparkles } from "lucide-react";
+import { Clock, Phone, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { EmailCard } from "./EmailCard";
 import { LocationCard } from "./LocationCard";

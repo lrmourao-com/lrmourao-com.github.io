@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { CheckCircle2, GraduationCap } from "lucide-react";
+import { CheckCircle2, GraduationCap, MapPin } from "lucide-react";
 
 interface FormacaoCardProps {
   liBase: string;
@@ -106,6 +106,25 @@ export function FormacaoCard({ liBase, ulBase, mobile, content }: FormacaoCardPr
               </li>
             </ul>
           </div>
+        </div>
+        <div className="mt-6 rounded-2xl border border-blue-100 bg-blue-50/50 p-3 md:p-4">
+          <p className="mb-3 text-sm font-black uppercase tracking-wide text-blue-700">
+            Local da Formação
+          </p>
+          <ul className={cn("space-y-2", ulBase)}>
+            <li className={liBase}>
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+              <span className="text-sm font-medium md:text-base">
+                Formação personalizada nas nossas instalações em Leiria.
+              </span>
+            </li>
+            <li className={liBase}>
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+              <span className="text-sm font-medium md:text-base">
+                Formação dedicada nas instalações do cliente.
+              </span>
+            </li>
+          </ul>
         </div>
       </CardContent>
     </Card>
