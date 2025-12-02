@@ -1,6 +1,7 @@
-import { Clock, Phone, Sparkles, MapPin, Globe } from "lucide-react";
+import { Clock, Globe, MapPin, Phone, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { EmailCard } from "./EmailCard";
+import { LocationCard } from "./LocationCard";
 
 function ContactUsCards() {
   return (
@@ -104,52 +105,8 @@ function ContactUsCards() {
       </div>
 
       {/* Location Section */}
-      <div>
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 px-2 sm:px-0">
-          Onde estamos
-        </h2>
 
-        <div className="group relative bg-white/90 backdrop-blur-sm border-2 border-slate-200 hover:border-slate-300 hover:scale-[1.02] shadow-lg transition-all duration-300 ease-out rounded-xl sm:rounded-2xl overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-slate-200 rounded-full blur-3xl opacity-20 transition-opacity" />
-
-          <div className="relative p-4 sm:p-6 z-10 pointer-events-none">
-            <div className="space-y-4 sm:space-y-5">
-              {/* Leiria */}
-              <div className="flex items-center gap-3 sm:gap-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-red-500 to-rose-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
-                  <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
-                </div>
-                <div className="select-text">
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 leading-tight">
-                    Leiria, Portugal
-                  </h3>
-                  <p className="text-slate-600 font-medium text-sm sm:text-base">
-                    Sede Operacional
-                  </p>
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div className="h-px w-full bg-slate-100" />
-
-              {/* National Coverage */}
-              <div className="flex items-center gap-3 sm:gap-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-br from-violet-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
-                  <Globe className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
-                </div>
-                <div className="select-text">
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 leading-tight">
-                    Cobertura Nacional
-                  </h3>
-                  <p className="text-slate-600 font-medium text-sm sm:text-base">
-                    Serviços em todo o país
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <LocationCard />
     </div>
   );
 }
