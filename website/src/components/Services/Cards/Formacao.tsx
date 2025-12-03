@@ -115,7 +115,7 @@ export function FormacaoCard({ liBase, ulBase, mobile, content }: FormacaoCardPr
             <li className={liBase}>
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
               <span className="text-sm font-medium md:text-base">
-                Formação personalizada nas nossas instalações em Leiria.
+                Formação personalizada em Leiria.
               </span>
             </li>
             <li className={liBase}>
