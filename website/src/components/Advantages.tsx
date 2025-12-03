@@ -28,7 +28,7 @@ export function Advantages({ lang }: { lang: string }) {
       icon: Target,
       color: "from-amber-500 to-red-500",
       text: t('advantages.list.2.text'),
-      tags: [t('advantages.list.2.tags.0'), t('advantages.list.2.tags.1')].filter(Boolean),
+      tags: [t('advantages.list.2.tags.0')].filter(Boolean),
     },
   ];
 

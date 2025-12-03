@@ -8,10 +8,10 @@ export function LocationCard() {
       <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6 px-2 sm:px-0">
         Localização
       </h2>
-      <div className="rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 p-6 text-slate-900 shadow-lg">
+      <div className="rounded-2xl bg-linear-to-br from-slate-50 to-slate-100 border border-slate-200 p-6 text-slate-900 shadow-lg">
         <div className="flex items-start gap-5">
           {/* icon */}
-          <div className="mt-1 shrink-0 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 p-3 text-white shadow-md">
+          <div className="mt-1 shrink-0 rounded-xl bg-linear-to-br from-teal-500 to-emerald-600 p-3 text-white shadow-md">
             <MapPin className="h-6 w-6" />
           </div>
 
