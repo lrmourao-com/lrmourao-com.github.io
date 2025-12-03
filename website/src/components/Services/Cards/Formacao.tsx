@@ -18,6 +18,11 @@ interface FormacaoCardProps {
     certification: string;
     processes: string[];
     courses: string[];
+    locations: {
+      title: string;
+      local1: string;
+      local2: string;
+    };
   };
 }
 
@@ -109,19 +114,19 @@ export function FormacaoCard({ liBase, ulBase, mobile, content }: FormacaoCardPr
         </div>
         <div className="mt-6 rounded-2xl border border-blue-100 bg-blue-50/50 p-3 md:p-4">
           <p className="mb-3 text-sm font-black uppercase tracking-wide text-blue-700">
-            Local da Formação
+            {content.locations.title}
           </p>
           <ul className={cn("space-y-2", ulBase)}>
             <li className={liBase}>
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
               <span className="text-sm font-medium md:text-base">
-                Formação personalizada em Leiria.
+                {content.locations.local1}
               </span>
             </li>
             <li className={liBase}>
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
               <span className="text-sm font-medium md:text-base">
-                Formação dedicada nas instalações do cliente.
+                {content.locations.local2}
               </span>
             </li>
           </ul>

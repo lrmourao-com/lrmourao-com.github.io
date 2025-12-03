@@ -35,7 +35,7 @@ export function Advantages({ lang }: { lang: string }) {
   return (
     <section
       id="advantages"
-      className="py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden"
+      className="py-24 bg-linear-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden"
     >
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDI1MSwgMTkxLCAzNiwgMC4xKSIvPjwvZz48L3N2Zz4=')] opacity-30" />
@@ -87,7 +87,7 @@ export function Advantages({ lang }: { lang: string }) {
                   />
                   <div className="absolute top-2 right-2 w-24 h-24 border-2 border-amber-300/20 rounded-full group-hover:scale-150 transition-transform duration-700" />
 
-                  <CardContent className="p-10 relative flex-1 flex flex-col">
+                  <CardContent className="px-10 py-4 relative flex-1 flex flex-col">
                     <div className="flex items-center gap-4 mb-6">
                       <div
                         className={`bg-gradient-to-br ${c.color} p-4 rounded-2xl shadow-2xl group-hover:shadow-amber-500/50 transition-all group-hover:scale-110 group-hover:rotate-6 duration-500`}

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { EmailCard } from "./EmailCard";
 import { LocationCard } from "./LocationCard";
 
-function ContactUsCards() {
+export function ContactUsCards({ lang }: { lang: string }) {
   return (
     <div className="space-y-4 sm:space-y-6">
       <div>
@@ -106,9 +106,7 @@ function ContactUsCards() {
 
       {/* Location Section */}
 
-      <LocationCard />
+      <LocationCard lang={lang} />
     </div>
   );
 }
-
-export default ContactUsCards;

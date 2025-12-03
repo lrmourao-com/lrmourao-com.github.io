@@ -78,7 +78,12 @@
         "Einzelausbildung verfügbar"
       ],
       "certificationTitle": "Zertifizierung:",
-      "certification": "EN ISO 9606, ASME IX, AWS D1.1"
+      "certification": "EN ISO 9606, ASME IX, AWS D1.1",
+      "locations": {
+        "title": "Schulungsort",
+        "local1": "Maßgeschneiderte Schulung in Leiria.",
+        "local2": "Schulung beim Kunden vor Ort."
+      }
     },
     "coordenacao": {
       "title": "Koordination",
@@ -194,6 +199,12 @@
         "title": "E-Mail",
         "value": "geral@lrmourao.com",
         "sub": "Antwort in 24h"
+      },
+      "location": {
+        "title": "Standort",
+        "address": "Leiria, Portugal",
+        "description": "Wir sind im ganzen Land tätig.",
+        "tag": "Nationale Abdeckung"
       }
     }
   },

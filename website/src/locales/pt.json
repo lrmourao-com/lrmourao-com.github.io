@@ -78,7 +78,12 @@
         "Formação individual disponível"
       ],
       "certificationTitle": "Certificação:",
-      "certification": "EN ISO 9606, ASME IX, AWS D1.1"
+      "certification": "EN ISO 9606, ASME IX, AWS D1.1",
+      "locations": {
+        "title": "Local da Formação",
+        "local1": "Formação à medida em Leiria.",
+        "local2": "Formação nas instalações do cliente."
+      }
     },
     "coordenacao": {
       "title": "Coordenação",
@@ -194,6 +199,12 @@
         "title": "Email",
         "value": "geral@lrmourao.com",
         "sub": "Resposta em 24h"
+      },
+      "location": {
+        "title": "Localização",
+        "address": "Leiria, Portugal",
+        "description": "Operamos por todo o país.",
+        "tag": "Cobertura nacional"
       }
     }
   },

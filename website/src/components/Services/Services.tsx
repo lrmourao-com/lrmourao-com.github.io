@@ -32,6 +32,11 @@ export function Services({ lang }: { lang: string }) {
       t('services.formacao.courses.1'),
       t('services.formacao.courses.2'),
     ],
+    locations: {
+      title: t('services.formacao.locations.title'),
+      local1: t('services.formacao.locations.local1'),
+      local2: t('services.formacao.locations.local2'),
+    },
   };
 
   const consultadoriaContent = {
