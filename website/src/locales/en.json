@@ -1,21 +1,21 @@
 {
   "meta": {
     "default": {
-      "title": "LR Mourão | Welder Training and Technical Coordination in Leiria",
-      "description": "Specialized center in Leiria (Central Region). Welder training, procedure qualification (WPS/WPQR), welding coordination (ISO 3834, EN 1090), and industrial certification.",
+      "title": "LR Mourão | Welding Coordination and Training",
+      "description": "Welding coordination (ISO 3834, EN 1090), Welder training, procedure qualification (WPS/WPQR) and industrial certification. Located in Leiria (Central Region), operating nationwide.",
       "keywords": "LR Mourão, Welding Training, Welding Coordination, Welding Course Leiria, ISO 3834, EN 1090, Welder Certification, Consulting, Inspection, Welding, Central Region",
-      "ogDescription": "Specialized center in Leiria. Welder training, technical coordination, and industrial certification (ISO 3834, EN 1090). Complete solutions for your company."
+      "ogDescription": "Welding coordination (ISO 3834, EN 1090), Welder training, procedure qualification (WPS/WPQR) and industrial certification."
     },
     "index": {
-      "title": "LR Mourão | Welder Training and Welding Coordination",
-      "description": "Excellence services in Leiria: Professional training, Welding Coordination (EN ISO 14731), Welder Qualification, and Technical Consulting for the metalworking industry.",
-      "ogTitle": "LR Mourão | Welder Training and Welding Coordination",
-      "ogDescription": "Excellence services in Leiria: Professional training, Welding Coordination, Welder Qualification, and Technical Consulting.",
+      "title": "LR Mourão | Welding Coordination and Training",
+      "description": "Welding coordination (ISO 3834, EN 1090), Welder training, procedure qualification (WPS/WPQR) and industrial certification. Located in Leiria (Central Region), operating nationwide.",
+      "ogTitle": "LR Mourão | Welding Coordination and Training",
+      "ogDescription": "Welding coordination (ISO 3834, EN 1090), Welder training, procedure qualification (WPS/WPQR) and industrial certification.",
       "ogImageAlt": "LR Mourão - Industrial Welding Services and Training",
       "logoAlt": "LR Mourão Logo",
       "jsonLd": {
-        "name": "LR Mourão - Welding Training & Coordination",
-        "description": "Excellence center in Leiria (Central Region) for Welder Training (TIG, MIG/MAG, MMA), Welding Coordination (EN ISO 14731), and Industrial Certification (EN 1090, ISO 3834)."
+        "name": "LR Mourão - Welding Coordination and Training",
+        "description": "Leaders in welding solutions in Leiria (Central Region). Experts in technical coordination (ISO 3834, EN 1090), personalized and individual welder training (TIG, MIG/MAG, MMA), procedure qualification (WPS/WPQR), and industrial consulting."
       }
     }
   },

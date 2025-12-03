@@ -1,21 +1,21 @@
 {
   "meta": {
     "default": {
-      "title": "LR Mourão | Formação de Soldadores e Coordenação Técnica em Leiria",
-      "description": "Centro especializado em Leiria (Região Centro). Formação de soldadores, qualificação de procedimentos (WPS/WPQR), coordenação de soldadura (ISO 3834, EN 1090) e certificação industrial.",
+      "title": "LR Mourão | Coordenação e Formação de Soldadura",
+      "description": "Coordenação de soldadura (ISO 3834, EN 1090), Formação de soldadores, qualificação de procedimentos (WPS/WPQR) e certificação industrial. Localizados em Leiria (Região Centro), atuamos em todo o território nacional.",
       "keywords": "LR Mourão, Formação Soldadura, Coordenação Soldadura, Curso Soldadura Leiria, ISO 3834, EN 1090, Certificação Soldadores, Consultoria, Inspecção, Welding, Região Centro",
-      "ogDescription": "Centro especializado em Leiria. Formação de soldadores, coordenação técnica e certificação industrial (ISO 3834, EN 1090). Soluções completas para a sua empresa."
+      "ogDescription": "Formação de soldadores, coordenação técnica e certificação industrial (ISO 3834, EN 1090). Soluções completas para a sua empresa. Centro especializado em Leiria. "
     },
     "index": {
-      "title": "LR Mourão | Formação de Soldadores e Coordenação de Soldadura",
-      "description": "Serviços de excelência em Leiria: Formação profissional, Coordenação de Soldadura (EN ISO 14731), Qualificação de Soldadores e Consultoria Técnica para a indústria metalomecânica.",
-      "ogTitle": "LR Mourão | Formação de Soldadores e Coordenação de Soldadura",
-      "ogDescription": "Serviços de excelência em Leiria: Formação profissional, Coordenação de Soldadura, Qualificação de Soldadores e Consultoria Técnica.",
+      "title": "LR Mourão | Coordenação e Formação de Soldadura",
+      "description": "Coordenação de soldadura (ISO 3834, EN 1090), Formação de soldadores, qualificação de procedimentos (WPS/WPQR) e certificação industrial. Localizados em Leiria (Região Centro), atuamos em todo o território nacional.",
+      "ogTitle": "LR Mourão | Coordenação e Formação de Soldadura",
+      "ogDescription": "Coordenação de soldadura (ISO 3834, EN 1090), Formação de soldadores, qualificação de procedimentos (WPS/WPQR) e certificação industrial.",
       "ogImageAlt": "LR Mourão - Serviços de Soldadura Industrial e Formação",
       "logoAlt": "Logótipo LR Mourão",
       "jsonLd": {
-        "name": "LR Mourão - Formação e Coordenação de Soldadura",
-        "description": "Centro de excelência em Leiria (Região Centro) para Formação de Soldadores (TIG, MIG/MAG, MMA), Coordenação de Soldadura (EN ISO 14731) e Certificação Industrial (EN 1090, ISO 3834)."
+        "name": "LR Mourão - Coordenação e Formação de Soldadura",
+        "description": "Líderes em soluções de soldadura em Leiria (Região Centro). Especialistas em coordenação técnica (ISO 3834, EN 1090), formação personalizada e individual de soldadores (TIG, MIG/MAG, MMA), qualificação de procedimentos (WPS/WPQR) e consultoria industrial."
       }
     }
   },

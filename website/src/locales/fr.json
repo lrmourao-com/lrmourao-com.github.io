@@ -1,21 +1,21 @@
 {
   "meta": {
     "default": {
-      "title": "LR Mourão | Formation de Soudeurs et Coordination Technique à Leiria",
-      "description": "Centre spécialisé à Leiria (Région Centre). Formation de soudeurs, qualification de procédures (WPS/WPQR), coordination de soudage (ISO 3834, EN 1090) et certification industrielle.",
+      "title": "LR Mourão | Coordination et Formation en Soudage",
+      "description": "Coordination de soudage (ISO 3834, EN 1090), Formation de soudeurs, qualification de procédures (WPS/WPQR) et certification industrielle. Basés à Leiria (Région Centre), nous intervenons sur tout le territoire national.",
       "keywords": "LR Mourão, Formation Soudage, Coordination Soudage, Cours Soudage Leiria, ISO 3834, EN 1090, Certification Soudeurs, Conseil, Inspection, Welding, Région Centre",
-      "ogDescription": "Centre spécialisé à Leiria. Formation de soudeurs, coordination technique et certification industrielle (ISO 3834, EN 1090). Solutions complètes pour votre entreprise."
+      "ogDescription": "Coordination de soudage (ISO 3834, EN 1090), Formation de soudeurs, qualification de procédures (WPS/WPQR) et certification industrielle."
     },
     "index": {
-      "title": "LR Mourão | Formation de Soudeurs et Coordination de Soudage",
-      "description": "Services d'excellence à Leiria : Formation professionnelle, Coordination de Soudage (EN ISO 14731), Qualification de Soudeurs et Conseil Technique pour l'industrie métallurgique.",
-      "ogTitle": "LR Mourão | Formation de Soudeurs et Coordination de Soudage",
-      "ogDescription": "Services d'excellence à Leiria : Formation professionnelle, Coordination de Soudage, Qualification de Soudeurs et Conseil Technique.",
+      "title": "LR Mourão | Coordination et Formation en Soudage",
+      "description": "Coordination de soudage (ISO 3834, EN 1090), Formation de soudeurs, qualification de procédures (WPS/WPQR) et certification industrielle. Basés à Leiria (Région Centre), nous intervenons sur tout le territoire national.",
+      "ogTitle": "LR Mourão | Coordination et Formation en Soudage",
+      "ogDescription": "Coordination de soudage (ISO 3834, EN 1090), Formation de soudeurs, qualification de procédures (WPS/WPQR) et certification industrielle.",
       "ogImageAlt": "LR Mourão - Services de Soudage Industriel et Formation",
       "logoAlt": "Logo LR Mourão",
       "jsonLd": {
-        "name": "LR Mourão - Formation et Coordination de Soudage",
-        "description": "Centre d'excellence à Leiria (Région Centre) pour la Formation de Soudeurs (TIG, MIG/MAG, MMA), la Coordination de Soudage (EN ISO 14731) et la Certification Industrielle (EN 1090, ISO 3834)."
+        "name": "LR Mourão - Coordination et Formation en Soudage",
+        "description": "Leaders en solutions de soudage à Leiria (Région Centre). Experts en coordination technique (ISO 3834, EN 1090), formation personnalisée et individuelle de soudeurs (TIG, MIG/MAG, MMA), qualification de procédures (WPS/WPQR) et conseil industriel."
       }
     }
   },

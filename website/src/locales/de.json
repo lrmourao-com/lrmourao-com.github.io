@@ -1,21 +1,21 @@
 {
   "meta": {
     "default": {
-      "title": "LR Mourão | Schweißerausbildung und technische Koordination in Leiria",
-      "description": "Spezialisiertes Zentrum in Leiria (Region Mitte). Schweißerausbildung, Verfahrensprüfung (WPS/WPQR), Schweißaufsicht (ISO 3834, EN 1090) und industrielle Zertifizierung.",
+      "title": "LR Mourão | Schweißkoordination und -ausbildung",
+      "description": "Schweißaufsicht (ISO 3834, EN 1090), Schweißerausbildung, Verfahrensprüfung (WPS/WPQR) und industrielle Zertifizierung. Ansässig in Leiria (Region Mitte), landesweit tätig.",
       "keywords": "LR Mourão, Schweißausbildung, Schweißaufsicht, Schweißkurs Leiria, ISO 3834, EN 1090, Schweißerzertifizierung, Beratung, Inspektion, Welding, Region Mitte",
-      "ogDescription": "Spezialisiertes Zentrum in Leiria. Schweißerausbildung, technische Koordination und industrielle Zertifizierung (ISO 3834, EN 1090). Komplettlösungen für Ihr Unternehmen."
+      "ogDescription": "Schweißaufsicht (ISO 3834, EN 1090), Schweißerausbildung, Verfahrensprüfung (WPS/WPQR) und industrielle Zertifizierung."
     },
     "index": {
-      "title": "LR Mourão | Schweißerausbildung und Schweißaufsicht",
-      "description": "Exzellente Dienstleistungen in Leiria: Berufsausbildung, Schweißaufsicht (EN ISO 14731), Schweißerqualifikation und technische Beratung für die Metallindustrie.",
-      "ogTitle": "LR Mourão | Schweißerausbildung und Schweißaufsicht",
-      "ogDescription": "Exzellente Dienstleistungen in Leiria: Berufsausbildung, Schweißaufsicht, Schweißerqualifikation und technische Beratung.",
+      "title": "LR Mourão | Schweißkoordination und -ausbildung",
+      "description": "Schweißaufsicht (ISO 3834, EN 1090), Schweißerausbildung, Verfahrensprüfung (WPS/WPQR) und industrielle Zertifizierung. Ansässig in Leiria (Region Mitte), landesweit tätig.",
+      "ogTitle": "LR Mourão | Schweißkoordination und -ausbildung",
+      "ogDescription": "Schweißaufsicht (ISO 3834, EN 1090), Schweißerausbildung, Verfahrensprüfung (WPS/WPQR) und industrielle Zertifizierung.",
       "ogImageAlt": "LR Mourão - Industrielle Schweißdienstleistungen und Ausbildung",
       "logoAlt": "LR Mourão Logo",
       "jsonLd": {
-        "name": "LR Mourão - Schweißerausbildung und Koordination",
-        "description": "Exzellenzzentrum in Leiria (Region Mitte) für Schweißerausbildung (TIG, MIG/MAG, MMA), Schweißaufsicht (EN ISO 14731) und industrielle Zertifizierung (EN 1090, ISO 3834)."
+        "name": "LR Mourão - Schweißkoordination und -ausbildung",
+        "description": "Führend bei Schweißlösungen in Leiria (Region Mitte). Experten für technische Koordination (ISO 3834, EN 1090), personalisierte und individuelle Schweißerausbildung (TIG, MIG/MAG, MMA), Verfahrensprüfung (WPS/WPQR) und industrielle Beratung."
       }
     }
   },
