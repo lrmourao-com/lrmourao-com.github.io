@@ -2,9 +2,9 @@
   "meta": {
     "default": {
       "title": "LR Mourão | Schweißkoordination und -ausbildung",
-      "description": "Spezialisten für Schweißaufsicht (ISO 3834, EN 1090) und Schweißerausbildung in den Verfahren MIG/MAG, TIG und MMA. Wir bieten auch Verfahrensprüfungen und industrielle Zertifizierung an. Ansässig in Leiria, landesweit tätig.",
-      "keywords": "LR Mourão, Schweißausbildung, Schweißaufsicht, Schweißkurs Leiria, ISO 3834, EN 1090, Schweißerzertifizierung, Beratung, Inspektion, Welding, Region Mitte",
-      "ogDescription": "Spezialisten für Schweißaufsicht (ISO 3834, EN 1090) und Schweißerausbildung in den Verfahren MIG/MAG, TIG und MMA. Wir bieten auch Verfahrensprüfungen und industrielle Zertifizierung an. Ansässig in Leiria, landesweit tätig."
+      "description": "Schweißaufsicht (ISO 3834, EN 1090), Schweißerausbildung, Verfahrensprüfung (WPS/WPQR) und industrielle Zertifizierung. Ansässig in Leiria (Region Mitte), landesweit tätig.",
+      "keywords": "LR Mourão, Leonel Mourão, Leonel Roque Mourão, Schweißausbildung, Schweißaufsicht, Schweißkurs Leiria, ISO 3834, EN 1090, EN ISO 9606, ASME IX, AWS D1.1, Schweißerzertifizierung, Schweißberatung, Schweißinspektion, Welding, Region Mitte, Portugal, MIG/MAG, TIG, MMA, Verfahrensprüfung, WPS, WPQR, EWF, IIW, Europäischer Schweißfachmann, Schweißausbilder",
+      "ogDescription": "Schweißaufsicht (ISO 3834, EN 1090), Schweißerausbildung, Verfahrensprüfung (WPS/WPQR) und industrielle Zertifizierung. Ansässig in Leiria (Region Mitte), landesweit tätig."
     },
     "index": {
       "title": "LR Mourão | Schweißkoordination und -ausbildung",
@@ -15,7 +15,7 @@
       "logoAlt": "LR Mourão Logo",
       "jsonLd": {
         "name": "LR Mourão - Schweißkoordination und -ausbildung",
-        "description": "Führend bei Schweißlösungen in Leiria (Region Mitte). Experten für technische Koordination (ISO 3834, EN 1090), personalisierte und individuelle Schweißerausbildung (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), Verfahrensprüfung (WPS/WPQR) und industrielle Beratung."
+        "description": "Geleitet vom Schweißausbilder und Inspektor Leonel Roque Mourão. Experten für technische Koordination (ISO 3834, EN 1090), personalisierte Schweißerausbildung (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), Verfahrensprüfung (WPS/WPQR) und industrielle Beratung."
       }
     }
   },

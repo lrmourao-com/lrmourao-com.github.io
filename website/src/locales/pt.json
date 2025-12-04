@@ -3,8 +3,8 @@
     "default": {
       "title": "LR Mourão | Coordenação e Formação de Soldadura",
       "description": "Coordenação de soldadura (ISO 3834, EN 1090), Formação de soldadores, qualificação de procedimentos (WPS/WPQR) e certificação industrial. Localizados em Leiria (Região Centro), atuamos em todo o território nacional.",
-      "keywords": "LR Mourão, Formação Soldadura, Coordenação Soldadura, Curso Soldadura Leiria, ISO 3834, EN 1090, Certificação Soldadores, Consultoria, Inspecção, Welding, Região Centro",
-      "ogDescription": "Formação de soldadores, coordenação técnica e certificação industrial (ISO 3834, EN 1090). Soluções completas para a sua empresa. Centro especializado em Leiria. "
+      "keywords": "LR Mourão, Leonel Mourão, Leonel Roque Mourão, Formação Soldadura, Coordenação Soldadura, Curso Soldadura Leiria, ISO 3834, EN 1090, EN ISO 9606, ASME IX, AWS D1.1, Certificação Soldadores, Consultoria Soldadura, Inspeção Soldadura, Welding, Região Centro, Portugal, MIG/MAG, TIG, MMA, Qualificação de Procedimentos, WPS, WPQR, EWF, IIW, Especialista Europeu de Soldadura, Formador Soldadura",
+      "ogDescription": "Formação de soldadores, coordenação técnica e certificação industrial (ISO 3834, EN 1090). Soluções completas para a sua empresa. Centro especializado em Leiria."
     },
     "index": {
       "title": "LR Mourão | Coordenação e Formação de Soldadura",
@@ -15,7 +15,7 @@
       "logoAlt": "Logótipo LR Mourão",
       "jsonLd": {
         "name": "LR Mourão - Coordenação e Formação de Soldadura",
-        "description": "Líderes em soluções de soldadura em Leiria (Região Centro). Especialistas em coordenação técnica (ISO 3834, EN 1090), formação personalizada e individual de soldadores (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), qualificação de procedimentos (WPS/WPQR) e consultoria industrial."
+        "description": "Liderada pelo formador e inspetor Leonel Roque Mourão. Especialistas em coordenação técnica (ISO 3834, EN 1090), formação personalizada de soldadores (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), qualificação de procedimentos (WPS/WPQR) e consultoria industrial."
       }
     }
   },

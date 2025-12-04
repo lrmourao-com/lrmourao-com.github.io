@@ -2,9 +2,9 @@
   "meta": {
     "default": {
       "title": "LR Mourão | Coordination et Formation en Soudage",
-      "description": "Spécialistes en coordination de soudage (ISO 3834, EN 1090) et formation de soudeurs pour les procédés MIG/MAG, TIG et MMA. Nous proposons également la qualification de procédures et la certification industrielle. Basés à Leiria, nous intervenons dans tout le pays.",
-      "keywords": "LR Mourão, Formation Soudage, Coordination Soudage, Cours Soudage Leiria, ISO 3834, EN 1090, Certification Soudeurs, Conseil, Inspection, Welding, Région Centre",
-      "ogDescription": "Spécialistes en coordination de soudage (ISO 3834, EN 1090) et formation de soudeurs pour les procédés MIG/MAG, TIG et MMA. Nous proposons également la qualification de procédures et la certification industrielle. Basés à Leiria, nous intervenons dans tout le pays."
+      "description": "Coordination de soudage (ISO 3834, EN 1090), Formation de soudeurs, qualification de procédures (WPS/WPQR) et certification industrielle. Situés à Leiria (Région Centre), nous intervenons sur tout le territoire national.",
+      "keywords": "LR Mourão, Leonel Mourão, Leonel Roque Mourão, Formation Soudage, Coordination Soudage, Cours Soudage Leiria, ISO 3834, EN 1090, EN ISO 9606, ASME IX, AWS D1.1, Certification Soudeurs, Conseil Soudage, Inspection Soudage, Welding, Région Centre, Portugal, MIG/MAG, TIG, MMA, Qualification de Procédures, WPS, WPQR, EWF, IIW, Spécialiste Européen en Soudage, Formateur Soudage",
+      "ogDescription": "Coordination de soudage (ISO 3834, EN 1090), Formation de soudeurs, qualification de procédures (WPS/WPQR) et certification industrielle. Situés à Leiria (Région Centre), nous intervenons sur tout le territoire national."
     },
     "index": {
       "title": "LR Mourão | Coordination et Formation en Soudage",
@@ -15,7 +15,7 @@
       "logoAlt": "Logo LR Mourão",
       "jsonLd": {
         "name": "LR Mourão - Coordination et Formation en Soudage",
-        "description": "Leaders en solutions de soudage à Leiria (Région Centre). Experts en coordination technique (ISO 3834, EN 1090), formation personnalisée et individuelle de soudeurs (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), qualification de procédures (WPS/WPQR) et conseil industriel."
+        "description": "Dirigée par le formateur en soudage et inspecteur Leonel Roque Mourão. Experts en coordination technique (ISO 3834, EN 1090), formation personnalisée de soudeurs (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), qualification de procédures (WPS/WPQR) et conseil industriel."
       }
     }
   },
