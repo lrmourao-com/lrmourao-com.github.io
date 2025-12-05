@@ -22,7 +22,7 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     team_name: "LR Mourão Team",
     copyright: "LR Mourão. All rights reserved.",
     // Admin notification
-    admin_reply_subject: "Re: Inquiry from LR Mourão Website",
+    admin_reply_subject: "LR Mourão Contact",
   },
   pt: {
     title: "Recebemos a sua mensagem",
@@ -34,7 +34,7 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     team_name: "Equipa LR Mourão",
     copyright: "LR Mourão. Todos os direitos reservados.",
     // Admin notification
-    admin_reply_subject: "Re: Pedido de Informação - LR Mourão",
+    admin_reply_subject: "LR Mourão Contacto",
   },
   es: {
     title: "Hemos recibido su mensaje",
@@ -46,7 +46,7 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     team_name: "Equipo LR Mourão",
     copyright: "LR Mourão. Todos los derechos reservados.",
     // Admin notification
-    admin_reply_subject: "Re: Solicitud de Información - LR Mourão",
+    admin_reply_subject: "LR Mourão Contacto",
   },
   fr: {
     title: "Nous avons bien reçu votre message",
@@ -58,7 +58,7 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     team_name: "L'équipe LR Mourão",
     copyright: "LR Mourão. Tous droits réservés.",
     // Admin notification
-    admin_reply_subject: "Re: Demande d'information - LR Mourão",
+    admin_reply_subject: "LR Mourão Contact",
   },
   de: {
     title: "Wir haben Ihre Nachricht erhalten",
@@ -70,7 +70,7 @@ export const emailTranslations: Record<string, EmailTranslations> = {
     team_name: "LR Mourão Team",
     copyright: "LR Mourão. Alle Rechte vorbehalten.",
     // Admin notification
-    admin_reply_subject: "Re: Ihre Anfrage bei LR Mourão",
+    admin_reply_subject: "LR Mourão Kontakt",
   },
 };
 
@@ -80,4 +80,3 @@ export const getEmailTranslations = (locale: string = 'en'): EmailTranslations =
   const lang = locale.split('-')[0].toLowerCase();
   return emailTranslations[lang] || emailTranslations['en'];
 };
-
