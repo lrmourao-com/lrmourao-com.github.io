@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "default": {
+      "title": "LR Mourão | Welding Coordination and Training",
+      "description": "Welding coordination (ISO 3834, EN 1090), Welder training, procedure qualification (WPS/WPQR), and industrial certification. Located in Leiria (Central Region), operating nationwide.",
+      "keywords": "LR Mourão, Leonel Mourão, Leonel Roque Mourão, Welding Training, Welding Coordination, Welding Course Leiria, ISO 3834, EN 1090, EN ISO 9606, ASME IX, AWS D1.1, Welder Certification, Welding Consulting, Welding Inspection, Welding, Central Region, Portugal, MIG/MAG, TIG, MMA, Procedure Qualification, WPS, WPQR, EWF, IIW, European Welding Specialist, Welding Trainer",
+      "ogDescription": "Welding coordination (ISO 3834, EN 1090), Welder training, procedure qualification (WPS/WPQR), and industrial certification. Located in Leiria (Central Region), operating nationwide."
+    },
+    "index": {
+      "title": "LR Mourão | Welding Coordination and Training",
+      "description": "Specialists in welding coordination (ISO 3834, EN 1090) and welder training in MIG/MAG, TIG, and MMA processes. We also offer procedure qualification and industrial certification. Located in Leiria, operating nationwide.",
+      "ogTitle": "LR Mourão | Welding Coordination and Training",
+      "ogDescription": "Specialists in welding coordination (ISO 3834, EN 1090) and welder training in MIG/MAG, TIG, and MMA processes. We also offer procedure qualification and industrial certification. Located in Leiria, operating nationwide.",
+      "ogImageAlt": "LR Mourão - Industrial Welding Services and Training",
+      "logoAlt": "LR Mourão Logo",
+      "jsonLd": {
+        "name": "LR Mourão - Welding Coordination and Training",
+        "description": "Led by Welding Instructor and Inspector Leonel Roque Mourão. Experts in technical coordination (ISO 3834, EN 1090), personalized welder training (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), procedure qualification (WPS/WPQR), and industrial consulting."
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "advantages": "Advantages",
+    "contact": "Contact",
+    "toggleMenu": "Toggle menu"
+  },
+  "hero": {
+    "badge": "Since 2010",
+    "title": {
+      "part1": "Excellence in",
+      "part2": "welding training and coordination"
+    },
+    "subtitle": "Complete solutions in training, certification, and welding coordination for modern industry.",
+    "stats": {
+      "experience": "Years of Experience",
+      "specializations": "Specialized Areas",
+      "certified": "Certified"
+    },
+    "specializationsTitle": "Areas of Specialization",
+    "certificationsLabel": "Certifications and Standards:",
+    "scrollText": "Scroll"
+  },
+  "heroButtons": {
+    "exploreServices": "Explore Services",
+    "contact": "Get in Touch"
+  },
+  "specializations": {
+    "formacao": "Welding Training",
+    "coordenacao": "Welding Coordination",
+    "consultadoria": "Technical Consulting",
+    "inspecao": "Inspection and Control",
+    "certificacao": "Certification",
+    "popular": "Popular"
+  },
+  "services": {
+    "badge": "What We Do",
+    "title": "Services",
+    "titleHighlight": "Specialized",
+    "description": "Complete and certified solutions for all your welding and industrial coordination needs",
+    "formacao": {
+      "title": "Welding Training",
+      "popular": "Popular",
+      "description": "We train professional workforce that meets the needs of the national and international market. Dynamic, tailored courses and excellence in training.",
+      "processesTitle": "Processes:",
+      "processes": [
+        "MIG/MAG/FF 114/131/135/136/138",
+        "TIG 141/142",
+        "SER/MMA 111"
+      ],
+      "alloysTitle": "Alloys:",
+      "alloys": "Carbon Steel, Stainless Steel, Aluminum, Copper",
+      "coursesTitle": "Courses/Training:",
+      "courses": [
+        "Flexible and personalized schedules",
+        "Tailored training",
+        "Individual training available"
+      ],
+      "certificationTitle": "Certification:",
+      "certification": "EN ISO 9606, ASME IX, AWS D1.1",
+      "locations": {
+        "title": "Training Location",
+        "local1": "Tailored training in Leiria.",
+        "local2": "On-site training at client facilities."
+      }
+    },
+    "coordenacao": {
+      "title": "Coordination",
+      "description": "Specialist in coordination according to EN 1090 and ISO 3834.",
+      "enterpriseCertTitle": "Company Certification",
+      "enterpriseCert": [
+        "EN ISO 3834",
+        "EN ISO 9606",
+        "EN 1090",
+        "EN 15614"
+      ],
+      "responsibilitiesTitle": "Technical Responsibilities",
+      "responsibilities": [
+        "Execution of WPQR and WPS",
+        "Select and/or approve welding processes suitable for material and application (TIG, MAG, MMA, etc.).",
+        "Validate and control WPS (Welding Procedure Specifications).",
+        "Define and supervise procedure qualification (WPQR) and welder/operator qualification.",
+        "Choose base and filler materials (see EN ISO 15608, 2560, 14341, etc.).",
+        "Determine shielding gases, polarities, welding positions, electrical parameters, and heat treatments.",
+        "Approve inspection and test plans (ITP)."
+      ]
+    },
+    "consultadoria": {
+      "title": "Consulting",
+      "description": "Advice for business evolution in all technical and normative areas.",
+      "items": [
+        "ISO 3834 and EN 1090 Standards",
+        "Equipment acquisition",
+        "Process schematization",
+        "Labor planning and structures",
+        "Techniques and processes",
+        "Visual welding inspection",
+        "Welder recruitment",
+        "Welder certification"
+      ]
+    },
+    "inspecao": {
+      "title": "Inspection and Control",
+      "description": "Quality assurance through rigorous inspections and process control.",
+      "items": [
+        "Visual inspection EN ISO 17637 and ISO 5817",
+        "Dimensional control and compliance",
+        "On-site and factory supervision",
+        "Detailed technical reports",
+        "Implementation of quality control plans",
+        "Verification of WPQR and WPS"
+      ]
+    },
+    "certificacao": {
+      "title": "Certification",
+      "description": "Complete support in obtaining and maintaining essential certifications.",
+      "items": [
+        "Company certification EN 1090, EN ISO 9606, ISO 3834, and EN 15614",
+        "Welder certification EN ISO 9606, ASME IX, AWS D1.1",
+        "Complete process: from preparation to audit",
+        "Renewal and maintenance of certifications",
+        "Preparation of technical documentation"
+      ]
+    }
+  },
+  "advantages": {
+    "badge": "Why Choose Us",
+    "title": "Advantages of",
+    "titleHighlight": "Our Services",
+    "description": "Over {{years}} years of experience in the Welding Training, Certification, and Coordination sector",
+    "list": [
+      {
+        "title": "Qualified Team",
+        "sub": "Certified Specialists",
+        "text": "Direct monitoring by European Welding Specialist (EWF/IIW) and EWF Welding Inspector, ensuring grounded technical decisions.",
+        "tags": ["EWF/IIW", "EWF Inspector"]
+      },
+      {
+        "title": "Practical Experience",
+        "sub": "Applied Knowledge",
+        "text": "H-L045 certified welder in the three main processes (TIG, MIG/MAG, and MMA) with practical experience that reinforces solution quality.",
+        "tags": ["TIG", "MIG/MAG", "MMA"]
+      },
+      {
+        "title": "Focus on Results",
+        "sub": "Technical Excellence",
+        "text": "Focus on efficiency, reliability, and cost reduction, always with a high technical and professional standard. Optimized solutions for your business.",
+        "tags": ["Proven Results"]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Let's work",
+    "titleHighlight": "together",
+    "description": "Count on LR Mourão whenever you need. We are here to support, answer, and deliver solutions without complications.",
+    "form": {
+      "title": "Send us a message",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phoneLabel": "Phone",
+      "messageLabel": "Message",
+      "messagePlaceholder": "How can we help?",
+      "submitButton": "Send Message",
+      "submittingButton": "Sending...",
+      "successButton": "Sent successfully!",
+      "errorMessage": "Error sending message. Please try again."
+    },
+    "info": {
+      "phone": {
+        "title": "Mobile",
+        "value": "(+351) 916 672 566",
+        "sub": "Mon - Fri: 9am - 6pm"
+      },
+      "email": {
+        "title": "Email",
+        "value": "geral@lrmourao.com",
+        "sub": "Response in 24h"
+      },
+      "location": {
+        "title": "Location",
+        "address": "Leiria, Portugal",
+        "description": "We operate throughout the country.",
+        "tag": "National coverage"
+      }
+    }
+  },
+  "footer": {
+    "logoAlt": "LR Mourão - welding the future",
+    "copyright": "LR Mourão. All rights reserved.",
+    "producedBy": "Produced by",
+    "withSupport": "with the support of"
+  },
+  "whatsapp": {
+    "message": "Talk to us now!",
+    "ariaLabel": "Contact via WhatsApp"
+  },
+  "common": {
+    "year": "{{year}}"
+  },
+  "languageSuggestion": {
+    "message": "It looks like you're visiting from an English-speaking region.",
+    "question": "Would you like to switch to English?",
+    "confirm": "Switch to English",
+    "dismiss": "No, thanks"
+  }
+}

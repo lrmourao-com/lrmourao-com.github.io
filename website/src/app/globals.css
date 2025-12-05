@@ -1,0 +1,351 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: 'MerriweatherRegular';
+  src: url('/css/fonts/merriweather-regular-webfont.eot');
+  src: url('/css/fonts/merriweather-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/merriweather-regular-webfont.woff') format('woff'),
+       url('/css/fonts/merriweather-regular-webfont.ttf') format('truetype'),
+       url('/css/fonts/merriweather-regular-webfont.svg#MerriweatherRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MerriweatherBold';
+  src: url('/css/fonts/merriweather-bold-webfont.eot');
+  src: url('/css/fonts/merriweather-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/merriweather-bold-webfont.woff') format('woff'),
+       url('/css/fonts/merriweather-bold-webfont.ttf') format('truetype'),
+       url('/css/fonts/merriweather-bold-webfont.svg#MerriweatherBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/* START - Contact Us Animations */
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(100px, -50px) scale(1.05);
+  }
+  66% {
+    transform: translate(-50px, 50px) scale(0.95);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.05);
+  }
+}
+
+.animate-blob {
+  animation: blob 8s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+/* END - Contact Us Animations */
+
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  color: #3B3B3B;
+  background: url(/images/bg.png) left top repeat;
+}
+
+h1 {
+  font-family: Arial, serif;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: -0.9px;
+  color: #3f66af;
+  margin-left: -2px;
+  font-variant-caps: small-caps;
+}
+
+h2 {
+  font-family: Arial, serif;
+  font-size: 22px;
+  line-height: 25px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-family: Arial, serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+.intro {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9e9e9e;
+}
+
+ul, ol {
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 25px 0;
+  padding-left: 40px;
+  padding-right: 30px;
+  background: url(/images/quote.png) no-repeat 3px 0;
+  font-weight: normal;
+  font-size: 18px;
+  font-style: italic;
+}
+
+blockquote cite {
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+section {
+  position: relative;
+  /* Old styles removed - using Tailwind classes in components */
+  /* padding: 125px 0 25px 0; */
+  /* background: url(/images/section-sep.png) repeat-x left 25px; */
+}
+
+.section-content {
+  width: 940px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+}
+
+/* Phone input styling */
+.react-international-phone-country-selector-button {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding-right: 8px !important;
+}
+.react-international-phone-input-container {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+.react-international-phone-input {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  color: rgb(15 23 42) !important;
+  font-size: inherit !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+.react-international-phone-input:focus {
+  outline: none !important;
+}
+.react-international-phone-country-selector-button:hover {
+  background: transparent !important;
+}

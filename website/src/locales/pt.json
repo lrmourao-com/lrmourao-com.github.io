@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "default": {
+      "title": "LR Mourão | Coordenação e Formação de Soldadura",
+      "description": "Coordenação de soldadura (ISO 3834, EN 1090), Formação de soldadores, qualificação de procedimentos (WPS/WPQR) e certificação industrial. Localizados em Leiria (Região Centro), atuamos em todo o território nacional.",
+      "keywords": "LR Mourão, Leonel Mourão, Leonel Roque Mourão, Formação Soldadura, Coordenação Soldadura, Curso Soldadura Leiria, ISO 3834, EN 1090, EN ISO 9606, ASME IX, AWS D1.1, Certificação Soldadores, Consultoria Soldadura, Inspeção Soldadura, Welding, Região Centro, Portugal, MIG/MAG, TIG, MMA, Qualificação de Procedimentos, WPS, WPQR, EWF, IIW, Especialista Europeu de Soldadura, Formador Soldadura",
+      "ogDescription": "Formação de soldadores, coordenação técnica e certificação industrial (ISO 3834, EN 1090). Soluções completas para a sua empresa. Centro especializado em Leiria."
+    },
+    "index": {
+      "title": "LR Mourão | Coordenação e Formação de Soldadura",
+      "description": "Especialistas em coordenação de soldadura (ISO 3834, EN 1090) e formação de soldadores nos processos MIG/MAG, TIG e MMA. Oferecemos também qualificação de procedimentos e certificação industrial. Localizados em Leiria, operamos em todo o país.",
+      "ogTitle": "LR Mourão | Coordenação e Formação de Soldadura",
+      "ogDescription": "Especialistas em coordenação de soldadura (ISO 3834, EN 1090) e formação de soldadores nos processos MIG/MAG, TIG e MMA. Oferecemos também qualificação de procedimentos e certificação industrial. Localizados em Leiria, operamos em todo o país.",
+      "ogImageAlt": "LR Mourão - Serviços de Soldadura Industrial e Formação",
+      "logoAlt": "Logótipo LR Mourão",
+      "jsonLd": {
+        "name": "LR Mourão - Coordenação e Formação de Soldadura",
+        "description": "Liderada pelo formador e inspetor Leonel Roque Mourão. Especialistas em coordenação técnica (ISO 3834, EN 1090), formação personalizada de soldadores (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), qualificação de procedimentos (WPS/WPQR) e consultoria industrial."
+      }
+    }
+  },
+  "nav": {
+    "home": "Início",
+    "services": "Serviços",
+    "advantages": "Vantagens",
+    "contact": "Contactos",
+    "toggleMenu": "Toggle menu"
+  },
+  "hero": {
+    "badge": "Desde 2010",
+    "title": {
+      "part1": "Excelência em",
+      "part2": "formação e coordenação de soldadura"
+    },
+    "subtitle": "Soluções completas em formação, certificação e coordenação de soldadura para a indústria moderna.",
+    "stats": {
+      "experience": "Anos de Experiência",
+      "specializations": "Áreas Especializadas",
+      "certified": "Certificado"
+    },
+    "specializationsTitle": "Áreas de Especialização",
+    "certificationsLabel": "Certificações e Normas:",
+    "scrollText": "Scroll"
+  },
+  "heroButtons": {
+    "exploreServices": "Explore os Serviços",
+    "contact": "Entre em Contacto"
+  },
+  "specializations": {
+    "formacao": "Formação de Soldadura",
+    "coordenacao": "Coordenação de Soldadura",
+    "consultadoria": "Consultadoria Técnica",
+    "inspecao": "Inspeção e Controlo",
+    "certificacao": "Certificação",
+    "popular": "Popular"
+  },
+  "services": {
+    "badge": "O Que Fazemos",
+    "title": "Serviços",
+    "titleHighlight": "Especializados",
+    "description": "Soluções completas e certificadas para todas as suas necessidades em soldadura e coordenação industrial",
+    "formacao": {
+      "title": "Formação de Soldadura",
+      "popular": "Popular",
+      "description": "Formamos mão-de-obra profissionalizada que suprime as necessidades do mercado nacional e internacional. Cursos dinâmicos, à medida e uma formação de excelência.",
+      "processesTitle": "Processos:",
+      "processes": [
+        "MIG/MAG/FF 114/131/135/136/138",
+        "TIG 141/142",
+        "SER/MMA 111"
+      ],
+      "alloysTitle": "Nas ligas:",
+      "alloys": "Aço-carbono, Aço-inox, Alumínio, Cobre",
+      "coursesTitle": "Curso/Formações:",
+      "courses": [
+        "Horários flexíveis e personalizados",
+        "Formação à medida",
+        "Formação individual disponível"
+      ],
+      "certificationTitle": "Certificação:",
+      "certification": "EN ISO 9606, ASME IX, AWS D1.1",
+      "locations": {
+        "title": "Local da Formação",
+        "local1": "Formação à medida em Leiria.",
+        "local2": "Formação nas instalações do cliente."
+      }
+    },
+    "coordenacao": {
+      "title": "Coordenação",
+      "description": "Especialista em coordenação conforme EN 1090 e ISO 3834.",
+      "enterpriseCertTitle": "Certificação empresarial",
+      "enterpriseCert": [
+        "EN ISO 3834",
+        "EN ISO 9606",
+        "EN 1090",
+        "EN 15614"
+      ],
+      "responsibilitiesTitle": "Responsabilidades Técnicas",
+      "responsibilities": [
+        "Realização de RQPS e EPS's",
+        "Selecionar e/ou aprovar processos de soldadura adequados ao material e aplicação (TIG, MAG, MMA, etc.).",
+        "Validar e controlar WPS (Especificações de Procedimentos de Soldadura).",
+        "Definir e supervisionar a qualificação de procedimentos (WPQR) e de soldadores/operadores.",
+        "Escolher materiais de base e de adição (ver EN ISO 15608, 2560, 14341, etc.).",
+        "Determinar gases de proteção, polaridades, posições de soldadura, parâmetros elétricos e tratamentos térmicos.",
+        "Aprovar planos de inspeção e ensaio (ITP)."
+      ]
+    },
+    "consultadoria": {
+      "title": "Consultadoria",
+      "description": "Aconselhamento para evolução empresarial em todas as áreas técnicas e normativas.",
+      "items": [
+        "Normas ISO 3834 e EN 1090",
+        "Aquisição de equipamentos",
+        "Esquematização de processos",
+        "Planeamento laboral e estruturas",
+        "Técnicas e processos",
+        "Inspeção visual de soldadura",
+        "Contratação de soldadores",
+        "Certificação de soldadores"
+      ]
+    },
+    "inspecao": {
+      "title": "Inspeção e Controlo",
+      "description": "Garantia de qualidade através de inspeções rigorosas e controlo de processos.",
+      "items": [
+        "Inspeção visual EN ISO 17637 e ISO 5817",
+        "Controlo dimensional e conformidade",
+        "Supervisão em obra e fábrica",
+        "Relatórios técnicos detalhados",
+        "Implementação de planos de controlo de qualidade",
+        "Verificação WPQR e EPS's"
+      ]
+    },
+    "certificacao": {
+      "title": "Certificação",
+      "description": "Apoio completo na obtenção e manutenção de certificações essenciais.",
+      "items": [
+        "Certificação empresas EN 1090, EN ISO 9606, ISO 3834 e EN 15614",
+        "Certificação soldadores EN ISO 9606, ASME IX, AWS D1.1",
+        "Processo completo: preparação até auditoria",
+        "Renovação e manutenção de certificações",
+        "Preparação de documentação técnica"
+      ]
+    }
+  },
+  "advantages": {
+    "badge": "Porquê Escolher-nos",
+    "title": "Vantagens dos",
+    "titleHighlight": "Nossos Serviços",
+    "description": "Mais de {{years}} anos de experiência no setor da Formação, Certificação e Coordenação em soldadura",
+    "list": [
+      {
+        "title": "Equipa Qualificada",
+        "sub": "Especialistas Certificados",
+        "text": "Acompanhamento direto por Especialista Europeu em Soldadura (EWF/IIW) e Inspetor de Soldadura EWF, garantindo decisões técnicas fundamentadas.",
+        "tags": ["EWF/IIW", "Inspetor EWF"]
+      },
+      {
+        "title": "Experiência Prática",
+        "sub": "Conhecimento Aplicado",
+        "text": "Soldador certificado H-L045 nos três principais processos (TIG, MIG/MAG e MMA) com experiência prática que reforça a qualidade das soluções.",
+        "tags": ["TIG", "MIG/MAG", "MMA"]
+      },
+      {
+        "title": "Foco em Resultados",
+        "sub": "Excelência Técnica",
+        "text": "Foco na eficiência, fiabilidade e redução de custos, sempre com elevado padrão técnico e profissional. Soluções otimizadas para o seu negócio.",
+        "tags": ["Resultados Comprovados"]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Entre em Contacto",
+    "title": "Vamos trabalhar",
+    "titleHighlight": "juntos",
+    "description": "Conte com a LR Mourão sempre que necessitar. Estamos aqui para apoiar, responder e entregar soluções sem complicações.",
+    "form": {
+      "title": "Envie-nos uma mensagem",
+      "nameLabel": "Nome",
+      "namePlaceholder": "Seu nome",
+      "emailLabel": "Email",
+      "emailPlaceholder": "seu@email.com",
+      "phoneLabel": "Telefone",
+      "messageLabel": "Mensagem",
+      "messagePlaceholder": "Como podemos ajudar?",
+      "submitButton": "Enviar Mensagem",
+      "submittingButton": "A enviar...",
+      "successButton": "Enviado com sucesso!",
+      "errorMessage": "Erro ao enviar mensagem. Tente novamente."
+    },
+    "info": {
+      "phone": {
+        "title": "Telemóvel",
+        "value": "(+351) 916 672 566",
+        "sub": "Seg - Sex: 9h - 18h"
+      },
+      "email": {
+        "title": "Email",
+        "value": "geral@lrmourao.com",
+        "sub": "Resposta em 24h"
+      },
+      "location": {
+        "title": "Localização",
+        "address": "Leiria, Portugal",
+        "description": "Operamos por todo o país.",
+        "tag": "Cobertura nacional"
+      }
+    }
+  },
+  "footer": {
+    "logoAlt": "LR Mourão - soldamos o futuro | welding the future",
+    "copyright": "LR Mourão. Todos os direitos reservados.",
+    "producedBy": "Produzido por",
+    "withSupport": "com o apoio de"
+  },
+  "whatsapp": {
+    "message": "Fale connosco agora!",
+    "ariaLabel": "Contact via WhatsApp"
+  },
+  "common": {
+    "year": "{{year}}"
+  },
+  "languageSuggestion": {
+    "message": "Parece que nos visita de uma região de língua portuguesa.",
+    "question": "Gostaria de mudar para Português?",
+    "confirm": "Mudar para Português",
+    "dismiss": "Não, obrigado"
+  }
+}

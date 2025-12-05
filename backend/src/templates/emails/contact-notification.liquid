@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Contact Form Submission</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #ffffff; color: #333333;">
+  <div style="max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+    
+    <!-- Logo -->
+    <div style="margin-bottom: 40px; background-color: #0f172a; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%); padding: 40px 20px; border-radius: 8px; text-align: center; min-height: 60px;">
+      <img src="cid:logo" alt="LR Mourão" width="220" style="display: block; width: 220px; max-width: 100%; height: auto; border: 0; margin: 0 auto;">
+    </div>
+
+    <!-- Header -->
+    <h1 style="color: #111111; margin-top: 0; font-size: 24px; font-weight: 600; margin-bottom: 30px; letter-spacing: -0.5px;">
+      📬 New Contact Form Submission
+    </h1>
+    
+    <!-- Contact Details -->
+    <div style="margin-bottom: 30px;">
+      <h3 style="margin-top: 0; color: #111111; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; border-bottom: 2px solid #f59e0b; padding-bottom: 10px; display: inline-block; margin-bottom: 20px;">Contact Information</h3>
+      
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td style="padding: 8px 0; color: #777777; font-weight: 600; width: 120px; vertical-align: top;">Name:</td>
+          <td style="padding: 8px 0; color: #333333;">{{ name }}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; color: #777777; font-weight: 600; vertical-align: top;">Email:</td>
+          <td style="padding: 8px 0; color: #333333;">
+            <a href="mailto:{{ email }}" style="color: #f59e0b; text-decoration: none; font-weight: 500;">{{ email }}</a>
+          </td>
+        </tr>
+        {% if phone %}
+        <tr>
+          <td style="padding: 8px 0; color: #777777; font-weight: 600; vertical-align: top;">Phone:</td>
+          <td style="padding: 8px 0; color: #333333;">{{ phone }}</td>
+        </tr>
+        {% endif %}
+        {% if company %}
+        <tr>
+          <td style="padding: 8px 0; color: #777777; font-weight: 600; vertical-align: top;">Company:</td>
+          <td style="padding: 8px 0; color: #333333;">{{ company }}</td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td style="padding: 8px 0; color: #777777; font-weight: 600; vertical-align: top;">Submitted:</td>
+          <td style="padding: 8px 0; color: #333333;">{{ "now" | date: "%Y-%m-%d %H:%M" }}</td>
+        </tr>
+      </table>
+    </div>
+    
+    <!-- Message -->
+    <div style="margin-bottom: 40px;">
+      <h3 style="margin-top: 0; color: #111111; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; border-bottom: 2px solid #f59e0b; padding-bottom: 10px; display: inline-block; margin-bottom: 20px;">Message</h3>
+      <div style="background-color: #f9fafb; border-radius: 6px; padding: 20px; color: #444444; line-height: 1.6; white-space: pre-wrap; border: 1px solid #eeeeee;">{{ message }}</div>
+    </div>
+    
+    <!-- Quick Reply Button -->
+    <div style="margin-bottom: 40px;">
+      <a href="mailto:{{ email }}?subject={{ admin_reply_subject }}" style="display: inline-block; background-color: #f59e0b; color: white; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 15px;">
+        Reply to {{ name }}
+      </a>
+    </div>
+    
+    <!-- Footer -->
+    <div style="border-top: 1px solid #eeeeee; padding-top: 20px;">
+      <p style="color: #999999; font-size: 12px; margin: 0;">
+        This is an automated notification from your website contact form.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

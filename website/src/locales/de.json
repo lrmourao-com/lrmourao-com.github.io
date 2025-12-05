@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "default": {
+      "title": "LR Mourão | Schweißkoordination und -ausbildung",
+      "description": "Schweißaufsicht (ISO 3834, EN 1090), Schweißerausbildung, Verfahrensprüfung (WPS/WPQR) und industrielle Zertifizierung. Ansässig in Leiria (Region Mitte), landesweit tätig.",
+      "keywords": "LR Mourão, Leonel Mourão, Leonel Roque Mourão, Schweißausbildung, Schweißaufsicht, Schweißkurs Leiria, ISO 3834, EN 1090, EN ISO 9606, ASME IX, AWS D1.1, Schweißerzertifizierung, Schweißberatung, Schweißinspektion, Welding, Region Mitte, Portugal, MIG/MAG, TIG, MMA, Verfahrensprüfung, WPS, WPQR, EWF, IIW, Europäischer Schweißfachmann, Schweißausbilder",
+      "ogDescription": "Schweißaufsicht (ISO 3834, EN 1090), Schweißerausbildung, Verfahrensprüfung (WPS/WPQR) und industrielle Zertifizierung. Ansässig in Leiria (Region Mitte), landesweit tätig."
+    },
+    "index": {
+      "title": "LR Mourão | Schweißkoordination und -ausbildung",
+      "description": "Spezialisten für Schweißaufsicht (ISO 3834, EN 1090) und Schweißerausbildung in den Verfahren MIG/MAG, TIG und MMA. Wir bieten auch Verfahrensprüfungen und industrielle Zertifizierung an. Ansässig in Leiria, landesweit tätig.",
+      "ogTitle": "LR Mourão | Schweißkoordination und -ausbildung",
+      "ogDescription": "Spezialisten für Schweißaufsicht (ISO 3834, EN 1090) und Schweißerausbildung in den Verfahren MIG/MAG, TIG und MMA. Wir bieten auch Verfahrensprüfungen und industrielle Zertifizierung an. Ansässig in Leiria, landesweit tätig.",
+      "ogImageAlt": "LR Mourão - Industrielle Schweißdienstleistungen und Ausbildung",
+      "logoAlt": "LR Mourão Logo",
+      "jsonLd": {
+        "name": "LR Mourão - Schweißkoordination und -ausbildung",
+        "description": "Geleitet vom Schweißausbilder und Inspektor Leonel Roque Mourão. Experten für technische Koordination (ISO 3834, EN 1090), personalisierte Schweißerausbildung (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), Verfahrensprüfung (WPS/WPQR) und industrielle Beratung."
+      }
+    }
+  },
+  "nav": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "advantages": "Vorteile",
+    "contact": "Kontakt",
+    "toggleMenu": "Menü umschalten"
+  },
+  "hero": {
+    "badge": "Seit 2010",
+    "title": {
+      "part1": "Exzellenz in",
+      "part2": "Schweißausbildung und -koordination"
+    },
+    "subtitle": "Komplettlösungen in Ausbildung, Zertifizierung und Schweißaufsicht für die moderne Industrie.",
+    "stats": {
+      "experience": "Jahre Erfahrung",
+      "specializations": "Spezialisierte Bereiche",
+      "certified": "Zertifiziert"
+    },
+    "specializationsTitle": "Spezialisierungsbereiche",
+    "certificationsLabel": "Zertifizierungen und Normen:",
+    "scrollText": "Scrollen"
+  },
+  "heroButtons": {
+    "exploreServices": "Dienstleistungen erkunden",
+    "contact": "Kontakt aufnehmen"
+  },
+  "specializations": {
+    "formacao": "Schweißausbildung",
+    "coordenacao": "Schweißaufsicht",
+    "consultadoria": "Technische Beratung",
+    "inspecao": "Inspektion und Kontrolle",
+    "certificacao": "Zertifizierung",
+    "popular": "Beliebt"
+  },
+  "services": {
+    "badge": "Was Wir Tun",
+    "title": "Dienstleistungen",
+    "titleHighlight": "Spezialisiert",
+    "description": "Komplette und zertifizierte Lösungen für all Ihre Bedürfnisse in Schweißen und industrieller Koordination",
+    "formacao": {
+      "title": "Schweißausbildung",
+      "popular": "Beliebt",
+      "description": "Wir bilden professionelle Arbeitskräfte aus, die den Bedarf des nationalen und internationalen Marktes decken. Dynamische, maßgeschneiderte Kurse und eine exzellente Ausbildung.",
+      "processesTitle": "Verfahren:",
+      "processes": [
+        "MIG/MAG/FF 114/131/135/136/138",
+        "TIG 141/142",
+        "SER/MMA 111"
+      ],
+      "alloysTitle": "Legierungen:",
+      "alloys": "Kohlenstoffstahl, Edelstahl, Aluminium, Kupfer",
+      "coursesTitle": "Kurse/Schulungen:",
+      "courses": [
+        "Flexible und personalisierte Zeiten",
+        "Maßgeschneiderte Ausbildung",
+        "Einzelausbildung verfügbar"
+      ],
+      "certificationTitle": "Zertifizierung:",
+      "certification": "EN ISO 9606, ASME IX, AWS D1.1",
+      "locations": {
+        "title": "Schulungsort",
+        "local1": "Maßgeschneiderte Schulung in Leiria.",
+        "local2": "Schulung beim Kunden vor Ort."
+      }
+    },
+    "coordenacao": {
+      "title": "Koordination",
+      "description": "Spezialist für Koordination gemäß EN 1090 und ISO 3834.",
+      "enterpriseCertTitle": "Unternehmenszertifizierung",
+      "enterpriseCert": [
+        "EN ISO 3834",
+        "EN ISO 9606",
+        "EN 1090",
+        "EN 15614"
+      ],
+      "responsibilitiesTitle": "Technische Verantwortlichkeiten",
+      "responsibilities": [
+        "Durchführung von WPQR und WPS",
+        "Auswahl und/oder Genehmigung geeigneter Schweißverfahren für Material und Anwendung (TIG, MAG, MMA, etc.).",
+        "Validierung und Kontrolle von WPS (Schweißanweisungen).",
+        "Definition und Überwachung der Verfahrensprüfung (WPQR) und der Schweißer-/Bedienerprüfung.",
+        "Auswahl von Grund- und Zusatzwerkstoffen (siehe EN ISO 15608, 2560, 14341, etc.).",
+        "Bestimmung von Schutzgasen, Polaritäten, Schweißpositionen, elektrischen Parametern und Wärmebehandlungen.",
+        "Genehmigung von Inspektions- und Prüfplänen (ITP)."
+      ]
+    },
+    "consultadoria": {
+      "title": "Beratung",
+      "description": "Beratung für die unternehmerische Entwicklung in allen technischen und normativen Bereichen.",
+      "items": [
+        "Normen ISO 3834 und EN 1090",
+        "Anschaffung von Ausrüstung",
+        "Prozessschematisierung",
+        "Arbeitsplanung und Strukturen",
+        "Techniken und Verfahren",
+        "Visuelle Schweißinspektion",
+        "Einstellung von Schweißern",
+        "Zertifizierung von Schweißern"
+      ]
+    },
+    "inspecao": {
+      "title": "Inspektion und Kontrolle",
+      "description": "Qualitätssicherung durch strenge Inspektionen und Prozesskontrolle.",
+      "items": [
+        "Visuelle Inspektion EN ISO 17637 und ISO 5817",
+        "Maßkontrolle und Konformität",
+        "Überwachung auf Baustellen und im Werk",
+        "Detaillierte technische Berichte",
+        "Implementierung von Qualitätskontrollplänen",
+        "Überprüfung von WPQR und WPS"
+      ]
+    },
+    "certificacao": {
+      "title": "Zertifizierung",
+      "description": "Komplette Unterstützung bei der Erlangung und Aufrechterhaltung wesentlicher Zertifizierungen.",
+      "items": [
+        "Unternehmenszertifizierung EN 1090, EN ISO 9606, ISO 3834 und EN 15614",
+        "Schweißerzertifizierung EN ISO 9606, ASME IX, AWS D1.1",
+        "Kompletter Prozess: von der Vorbereitung bis zum Audit",
+        "Erneuerung und Aufrechterhaltung von Zertifizierungen",
+        "Vorbereitung technischer Dokumentation"
+      ]
+    }
+  },
+  "advantages": {
+    "badge": "Warum Uns Wählen",
+    "title": "Vorteile",
+    "titleHighlight": "Unserer Dienste",
+    "description": "Über {{years}} Jahre Erfahrung im Bereich Schweißausbildung, Zertifizierung und Koordination",
+    "list": [
+      {
+        "title": "Qualifiziertes Team",
+        "sub": "Zertifizierte Spezialisten",
+        "text": "Direkte Betreuung durch European Welding Specialist (EWF/IIW) und EWF Welding Inspector, was fundierte technische Entscheidungen garantiert.",
+        "tags": ["EWF/IIW", "EWF Inspektor"]
+      },
+      {
+        "title": "Praktische Erfahrung",
+        "sub": "Angewandtes Wissen",
+        "text": "Zertifizierter Schweißer H-L045 in den drei Hauptverfahren (TIG, MIG/MAG und MMA) mit praktischer Erfahrung, die die Qualität der Lösungen stärkt.",
+        "tags": ["TIG", "MIG/MAG", "MMA"]
+      },
+      {
+        "title": "Ergebnisorientierung",
+        "sub": "Technische Exzellenz",
+        "text": "Fokus auf Effizienz, Zuverlässigkeit und Kostenreduzierung, immer mit hohem technischem und professionellem Standard. Optimierte Lösungen für Ihr Unternehmen.",
+        "tags": ["Bewährte Ergebnisse"]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Kontaktieren Sie Uns",
+    "title": "Lassen Sie uns",
+    "titleHighlight": "zusammenarbeiten",
+    "description": "Zählen Sie auf LR Mourão, wann immer Sie uns brauchen. Wir sind hier, um zu unterstützen, zu antworten und Lösungen ohne Komplikationen zu liefern.",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "nameLabel": "Name",
+      "namePlaceholder": "Ihr Name",
+      "emailLabel": "E-Mail",
+      "emailPlaceholder": "ihre@email.com",
+      "phoneLabel": "Telefon",
+      "messageLabel": "Nachricht",
+      "messagePlaceholder": "Wie können wir helfen?",
+      "submitButton": "Nachricht Senden",
+      "submittingButton": "Wird gesendet...",
+      "successButton": "Erfolgreich gesendet!",
+      "errorMessage": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "phone": {
+        "title": "Mobil",
+        "value": "(+351) 916 672 566",
+        "sub": "Mo - Fr: 9:00 - 18:00"
+      },
+      "email": {
+        "title": "E-Mail",
+        "value": "geral@lrmourao.com",
+        "sub": "Antwort in 24h"
+      },
+      "location": {
+        "title": "Standort",
+        "address": "Leiria, Portugal",
+        "description": "Wir sind im ganzen Land tätig.",
+        "tag": "Nationale Abdeckung"
+      }
+    }
+  },
+  "footer": {
+    "logoAlt": "LR Mourão - wir schweißen die zukunft | welding the future",
+    "copyright": "LR Mourão. Alle Rechte vorbehalten.",
+    "producedBy": "Produziert von",
+    "withSupport": "mit Unterstützung von"
+  },
+  "whatsapp": {
+    "message": "Sprechen Sie jetzt mit uns!",
+    "ariaLabel": "Kontakt über WhatsApp"
+  },
+  "common": {
+    "year": "{{year}}"
+  },
+  "languageSuggestion": {
+    "message": "Es sieht so aus, als ob Sie uns aus einer deutschsprachigen Region besuchen.",
+    "question": "Möchten Sie auf Deutsch wechseln?",
+    "confirm": "Auf Deutsch wechseln",
+    "dismiss": "Nein, danke"
+  }
+}
+

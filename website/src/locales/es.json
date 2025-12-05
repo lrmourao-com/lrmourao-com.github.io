@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "default": {
+      "title": "LR Mourão | Coordinación y Formación de Soldadura",
+      "description": "Coordinación de soldadura (ISO 3834, EN 1090), Formación de soldadores, cualificación de procedimientos (WPS/WPQR) y certificación industrial. Ubicados en Leiria (Región Centro), actuamos en todo el territorio nacional.",
+      "keywords": "LR Mourão, Leonel Mourão, Leonel Roque Mourão, Formación Soldadura, Coordinación Soldadura, Curso Soldadura Leiria, ISO 3834, EN 1090, EN ISO 9606, ASME IX, AWS D1.1, Certificación Soldadores, Consultoría Soldadura, Inspección Soldadura, Welding, Región Centro, Portugal, MIG/MAG, TIG, MMA, Cualificación de Procedimientos, WPS, WPQR, EWF, IIW, Especialista Europeo de Soldadura, Formador Soldadura",
+      "ogDescription": "Coordinación de soldadura (ISO 3834, EN 1090), Formación de soldadores, cualificación de procedimientos (WPS/WPQR) y certificación industrial. Ubicados en Leiria (Región Centro), actuamos en todo el territorio nacional."
+    },
+    "index": {
+      "title": "LR Mourão | Coordinación y Formación de Soldadura",
+      "description": "Especialistas en coordinación de soldadura (ISO 3834, EN 1090) y formación de soldadores en los procesos MIG/MAG, TIG y MMA. También ofrecemos cualificación de procedimientos y certificación industrial. Ubicados en Leiria, operamos en todo el país.",
+      "ogTitle": "LR Mourão | Coordinación y Formación de Soldadura",
+      "ogDescription": "Especialistas en coordinación de soldadura (ISO 3834, EN 1090) y formación de soldadores en los procesos MIG/MAG, TIG y MMA. También ofrecemos cualificación de procedimientos y certificación industrial. Ubicados en Leiria, operamos en todo el país.",
+      "ogImageAlt": "LR Mourão - Servicios de Soldadura Industrial y Formación",
+      "logoAlt": "Logotipo LR Mourão",
+      "jsonLd": {
+        "name": "LR Mourão - Coordinación y Formación de Soldadura",
+        "description": "Liderada por el instructor de soldadura e inspector Leonel Roque Mourão. Expertos en coordinación técnica (ISO 3834, EN 1090), formación personalizada de soldadores (MIG/MAG 131/135/136/138, TIG 141/142, MMA 111), cualificación de procedimientos (WPS/WPQR) y consultoría industrial."
+      }
+    }
+  },
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "advantages": "Ventajas",
+    "contact": "Contacto",
+    "toggleMenu": "Alternar menú"
+  },
+  "hero": {
+    "badge": "Desde 2010",
+    "title": {
+      "part1": "Excelencia en",
+      "part2": "formación y coordinación de soldadura"
+    },
+    "subtitle": "Soluciones completas en formación, certificación y coordinación de soldadura para la industria moderna.",
+    "stats": {
+      "experience": "Años de Experiencia",
+      "specializations": "Áreas Especializadas",
+      "certified": "Certificado"
+    },
+    "specializationsTitle": "Áreas de Especialización",
+    "certificationsLabel": "Certificaciones y Normas:",
+    "scrollText": "Desplazarse"
+  },
+  "heroButtons": {
+    "exploreServices": "Explorar Servicios",
+    "contact": "Contactar"
+  },
+  "specializations": {
+    "formacao": "Formación de Soldadura",
+    "coordenacao": "Coordinación de Soldadura",
+    "consultadoria": "Consultoría Técnica",
+    "inspecao": "Inspección y Control",
+    "certificacao": "Certificación",
+    "popular": "Popular"
+  },
+  "services": {
+    "badge": "Qué Hacemos",
+    "title": "Servicios",
+    "titleHighlight": "Especializados",
+    "description": "Soluciones completas y certificadas para todas sus necesidades en soldadura y coordinación industrial",
+    "formacao": {
+      "title": "Formación de Soldadura",
+      "popular": "Popular",
+      "description": "Formamos mano de obra profesional que satisface las necesidades del mercado nacional e internacional. Cursos dinámicos, a medida y una formación de excelencia.",
+      "processesTitle": "Procesos:",
+      "processes": [
+        "MIG/MAG/FF 114/131/135/136/138",
+        "TIG 141/142",
+        "SER/MMA 111"
+      ],
+      "alloysTitle": "Aleaciones:",
+      "alloys": "Acero al carbono, Acero inoxidable, Aluminio, Cobre",
+      "coursesTitle": "Curso/Formaciones:",
+      "courses": [
+        "Horarios flexibles y personalizados",
+        "Formación a medida",
+        "Formación individual disponible"
+      ],
+      "certificationTitle": "Certificación:",
+      "certification": "EN ISO 9606, ASME IX, AWS D1.1",
+      "locations": {
+        "title": "Lugar de Formación",
+        "local1": "Formación a medida en Leiria.",
+        "local2": "Formación en las instalaciones del cliente."
+      }
+    },
+    "coordenacao": {
+      "title": "Coordinación",
+      "description": "Especialista en coordinación conforme a EN 1090 e ISO 3834.",
+      "enterpriseCertTitle": "Certificación empresarial",
+      "enterpriseCert": [
+        "EN ISO 3834",
+        "EN ISO 9606",
+        "EN 1090",
+        "EN 15614"
+      ],
+      "responsibilitiesTitle": "Responsabilidades Técnicas",
+      "responsibilities": [
+        "Realización de WPQR y WPS",
+        "Seleccionar y/o aprobar procesos de soldadura adecuados al material y aplicación (TIG, MAG, MMA, etc.).",
+        "Validar y controlar WPS (Especificaciones de Procedimientos de Soldadura).",
+        "Definir y supervisar la cualificación de procedimientos (WPQR) y de soldadores/operadores.",
+        "Elegir materiales base y de aporte (ver EN ISO 15608, 2560, 14341, etc.).",
+        "Determinar gases de protección, polaridades, posiciones de soldadura, parámetros eléctricos y tratamientos térmicos.",
+        "Aprobar planes de inspección y ensayo (ITP)."
+      ]
+    },
+    "consultadoria": {
+      "title": "Consultoría",
+      "description": "Asesoramiento para la evolución empresarial en todas las áreas técnicas y normativas.",
+      "items": [
+        "Normas ISO 3834 y EN 1090",
+        "Adquisición de equipos",
+        "Esquematización de procesos",
+        "Planificación laboral y estructuras",
+        "Técnicas y procesos",
+        "Inspección visual de soldadura",
+        "Contratación de soldadores",
+        "Certificación de soldadores"
+      ]
+    },
+    "inspecao": {
+      "title": "Inspección y Control",
+      "description": "Garantía de calidad a través de inspecciones rigurosas y control de procesos.",
+      "items": [
+        "Inspección visual EN ISO 17637 e ISO 5817",
+        "Control dimensional y conformidad",
+        "Supervisión en obra y fábrica",
+        "Informes técnicos detallados",
+        "Implementación de planes de control de calidad",
+        "Verificación de WPQR y WPS"
+      ]
+    },
+    "certificacao": {
+      "title": "Certificación",
+      "description": "Apoyo completo en la obtención y mantenimiento de certificaciones esenciales.",
+      "items": [
+        "Certificación empresas EN 1090, EN ISO 9606, ISO 3834 y EN 15614",
+        "Certificación soldadores EN ISO 9606, ASME IX, AWS D1.1",
+        "Proceso completo: desde la preparación hasta la auditoría",
+        "Renovación y mantenimiento de certificaciones",
+        "Preparación de documentación técnica"
+      ]
+    }
+  },
+  "advantages": {
+    "badge": "Por Qué Elegirnos",
+    "title": "Ventajas de",
+    "titleHighlight": "Nuestros Servicios",
+    "description": "Más de {{years}} años de experiencia en el sector de la Formación, Certificación y Coordinación en soldadura",
+    "list": [
+      {
+        "title": "Equipo Cualificado",
+        "sub": "Especialistas Certificados",
+        "text": "Acompañamiento directo por Especialista Europeo en Soldadura (EWF/IIW) e Inspector de Soldadura EWF, garantizando decisiones técnicas fundamentadas.",
+        "tags": ["EWF/IIW", "Inspector EWF"]
+      },
+      {
+        "title": "Experiencia Práctica",
+        "sub": "Conocimiento Aplicado",
+        "text": "Soldador certificado H-L045 en los tres principales procesos (TIG, MIG/MAG y MMA) con experiencia práctica que refuerza la calidad de las soluciones.",
+        "tags": ["TIG", "MIG/MAG", "MMA"]
+      },
+      {
+        "title": "Enfoque en Resultados",
+        "sub": "Excelencia Técnica",
+        "text": "Enfoque en la eficiencia, fiabilidad y reducción de costes, siempre con elevado estándar técnico y profesional. Soluciones optimizadas para su negocio.",
+        "tags": ["Resultados Comprobados"]
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Contacte con Nosotros",
+    "title": "Vamos a trabajar",
+    "titleHighlight": "juntos",
+    "description": "Cuente con LR Mourão siempre que lo necesite. Estamos aquí para apoyar, responder y entregar soluciones sin complicaciones.",
+    "form": {
+      "title": "Envíenos un mensaje",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Su nombre",
+      "emailLabel": "Email",
+      "emailPlaceholder": "su@email.com",
+      "phoneLabel": "Teléfono",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "¿Cómo podemos ayudar?",
+      "submitButton": "Enviar Mensaje",
+      "submittingButton": "Enviando...",
+      "successButton": "¡Enviado con éxito!",
+      "errorMessage": "Error al enviar mensaje. Inténtelo de nuevo."
+    },
+    "info": {
+      "phone": {
+        "title": "Móvil",
+        "value": "(+351) 916 672 566",
+        "sub": "Lun - Vie: 9h - 18h"
+      },
+      "email": {
+        "title": "Email",
+        "value": "geral@lrmourao.com",
+        "sub": "Respuesta en 24h"
+      },
+      "location": {
+        "title": "Ubicación",
+        "address": "Leiria, Portugal",
+        "description": "Operamos en todo el país.",
+        "tag": "Cobertura nacional"
+      }
+    }
+  },
+  "footer": {
+    "logoAlt": "LR Mourão - soldamos el futuro | welding the future",
+    "copyright": "LR Mourão. Todos los derechos reservados.",
+    "producedBy": "Producido por",
+    "withSupport": "con el apoyo de"
+  },
+  "whatsapp": {
+    "message": "¡Hable con nosotros ahora!",
+    "ariaLabel": "Contacto vía WhatsApp"
+  },
+  "common": {
+    "year": "{{year}}"
+  },
+  "languageSuggestion": {
+    "message": "Parece que nos visitas desde una región de habla hispana.",
+    "question": "¿Te gustaría cambiar a Español?",
+    "confirm": "Cambiar a Español",
+    "dismiss": "No, gracias"
+  }
+}
+
