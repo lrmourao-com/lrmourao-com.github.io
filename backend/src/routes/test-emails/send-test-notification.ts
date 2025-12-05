@@ -8,7 +8,7 @@ export const sendTestNotificationHandler = async (req: Request, res: Response) =
   try {
     const transporter = createTransporter();
 
-    const testEmail = 'tinipedro@gmail.com';
+    const testEmail = 'mourao@lrmourao.com';
     const timestamp = new Date().toLocaleString();
     const locale = 'pt';
     
