@@ -249,4 +249,3 @@ For production without Docker, you can either:
 ## License
 
 MIT
-
