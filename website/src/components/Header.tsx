@@ -102,7 +102,10 @@ export function Header() {
                           "flex items-center gap-3 px-4 py-2.5 text-sm transition-colors hover:bg-white/10",
                           i18n.language === lang.code ? "text-amber-400 font-bold bg-white/5" : "text-slate-200"
                         )}
-                        onClick={() => setIsLangDropdownOpen(false)}
+                        onClick={() => {
+                          setIsLangDropdownOpen(false);
+                          localStorage.setItem('i18nextLng', lang.code);
+                        }}
                       >
                         <span className="text-xl">{lang.flag}</span>
                         <span>{lang.label}</span>
@@ -146,6 +149,9 @@ export function Header() {
                   <a
                     key={lang.code}
                     href={lang.code === 'pt' ? '/' : `/${lang.code}`}
+                    onClick={() => {
+                      localStorage.setItem('i18nextLng', lang.code);
+                    }}
                     className={cn(
                       "flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors border border-transparent",
                       i18n.language === lang.code

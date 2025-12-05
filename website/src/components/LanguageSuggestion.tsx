@@ -19,6 +19,13 @@ export function LanguageSuggestion({ currentLang = 'pt' }: LanguageSuggestionPro
       const savedLang = localStorage.getItem('i18nextLng');
       const suggestionDismissed = localStorage.getItem('language_suggestion_dismissed');
 
+      const lastVisit = localStorage.getItem('last_visit_check');
+      const TWO_WEEKS_MS = 14 * 24 * 60 * 60 * 1000;
+      const now = Date.now();
+      
+      // Update visit time
+      localStorage.setItem('last_visit_check', now.toString());
+
       if (suggestionDismissed || (savedLang && savedLang === currentLang)) {
         return;
       }
@@ -35,6 +42,13 @@ export function LanguageSuggestion({ currentLang = 'pt' }: LanguageSuggestionPro
 
       // 2. Check IP/Location if no preference saved
       if (!savedLang) {
+        // Check if visit is recent (within 2 weeks)
+        const isRecentVisit = lastVisit && (now - parseInt(lastVisit) < TWO_WEEKS_MS);
+        
+        if (isRecentVisit) {
+          return;
+        }
+
         try {
           // Using a free IP API for demonstration. In production, consider rate limits or your own backend.
           const response = await fetch('https://ipapi.co/json/');
