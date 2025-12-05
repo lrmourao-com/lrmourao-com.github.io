@@ -21,6 +21,7 @@ const initialState: ContactFormState = {
   values: {
     name: "",
     email: "",
+    subject: "",
     phone: "",
     message: "",
   },

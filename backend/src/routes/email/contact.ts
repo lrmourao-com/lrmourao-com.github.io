@@ -9,6 +9,7 @@ import { getEmailTranslations } from '../../i18n/email-translations.js';
 const contactFormSchema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
+  subject: z.string().min(5),
   phone: z.string().optional().or(z.literal('')),
   message: z.string().min(10),
   locale: z.string().optional(),
@@ -26,7 +27,7 @@ export const contactHandler = async (req: Request, res: Response) => {
       });
     }
 
-    const { name, email, phone, message, locale } = result.data;
+    const { name, email, phone, message, locale, subject } = result.data;
     const transporter = createTransporter();
     const timestamp = new Date().toLocaleString();
     
@@ -44,6 +45,7 @@ export const contactHandler = async (req: Request, res: Response) => {
       name,
       email,
       phone,
+      subject,
       message,
       timestamp,
       locale: locale || 'en',
@@ -51,10 +53,10 @@ export const contactHandler = async (req: Request, res: Response) => {
     });
 
     const adminMailOptions: Mail.Options = {
-      from: process.env.EMAIL_FROM,
+      from: `"LR Mourão" <${process.env.EMAIL_FROM}>`,
       to: process.env.CONTACT_NOTIFICATION_EMAIL || process.env.EMAIL_FROM, // Send to configured admin email or fallback to sender
       replyTo: email,
-      subject: `New Contact Form Submission - ${name}`,
+      subject: `New Contact Form Submission - ${subject}`,
       html: notificationHtml,
       attachments: [{
         filename: 'lrmourao-logo.png',
@@ -84,7 +86,7 @@ export const contactHandler = async (req: Request, res: Response) => {
     });
 
     const userMailOptions: Mail.Options = {
-      from: process.env.EMAIL_FROM,
+      from: `"LR Mourão" <${process.env.EMAIL_FROM}>`,
       to: email,
       subject: translations.title,
       html: confirmationHtml,

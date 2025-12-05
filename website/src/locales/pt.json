@@ -182,6 +182,8 @@
       "emailLabel": "Email",
       "emailPlaceholder": "seu@email.com",
       "phoneLabel": "Telefone",
+      "subjectLabel": "Assunto",
+      "subjectPlaceholder": "Assunto da sua mensagem",
       "messageLabel": "Mensagem",
       "messagePlaceholder": "Como podemos ajudar?",
       "submitButton": "Enviar Mensagem",

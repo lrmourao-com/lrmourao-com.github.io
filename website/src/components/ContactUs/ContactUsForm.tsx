@@ -37,7 +37,7 @@ export function ContactUsForm() {
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label className="block text-slate-700 text-sm font-medium mb-2">
-                {t('contact.form.nameLabel')}
+                {t('contact.form.nameLabel')} <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -60,7 +60,7 @@ export function ContactUsForm() {
             </div>
             <div>
               <label className="block text-slate-700 text-sm font-medium mb-2">
-                {t('contact.form.emailLabel')}
+                {t('contact.form.emailLabel')} <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -108,7 +108,31 @@ export function ContactUsForm() {
 
           <div>
             <label className="block text-slate-700 text-sm font-medium mb-2">
-              {t('contact.form.messageLabel')}
+              {t('contact.form.subjectLabel')} <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="subject"
+              value={values.subject}
+              onChange={handleInputChange}
+              className={`w-full px-3 py-2.5 sm:px-4 sm:py-3 bg-white border-2 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all text-sm sm:text-base ${
+                errors.subject
+                  ? "border-red-300 focus:border-red-500"
+                  : "border-blue-100 focus:border-blue-500"
+              }`}
+              placeholder={t('contact.form.subjectPlaceholder')}
+            />
+            {errors.subject && (
+              <p className="mt-1 text-xs text-red-500 flex items-center gap-1">
+                <AlertCircle className="w-3 h-3" />
+                {errors.subject}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-slate-700 text-sm font-medium mb-2">
+              {t('contact.form.messageLabel')} <span className="text-red-500">*</span>
             </label>
             <textarea
               name="message"
