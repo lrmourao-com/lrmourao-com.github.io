@@ -49,7 +49,7 @@ export const contactHandler = async (req: Request, res: Response) => {
       message,
       timestamp,
       locale: locale || 'en',
-      admin_reply_subject: translations.admin_reply_subject, // Only pass the subject translation
+      admin_reply_subject: `${translations.admin_reply_subject} - ${subject}`, // Only pass the subject translation
     });
 
     const adminMailOptions: Mail.Options = {
