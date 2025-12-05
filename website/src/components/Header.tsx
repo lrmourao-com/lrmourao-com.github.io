@@ -47,13 +47,13 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full overflow-x-clip transition-all duration-300",
         isScrolled
-          ? "bg-gradient-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 backdrop-blur-md shadow-2xl shadow-amber-500/10 border-b border-amber-500/30"
+          ? "bg-linear-to-r from-blue-950/95 via-blue-900/95 to-blue-950/95 backdrop-blur-md shadow-2xl shadow-amber-500/10 border-b border-amber-500/30"
           : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 relative max-w-7xl">
         <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
-          <div className="absolute top-0 right-0 w-32 md:w-48 lg:w-64 h-full bg-gradient-to-l from-amber-500/10 to-transparent" />
+          <div className="absolute top-0 right-0 w-32 md:w-48 lg:w-64 h-full bg-linear-to-l from-amber-500/10 to-transparent" />
         </div>
 
         <div className="flex items-center justify-between h-24 relative z-10">
@@ -74,10 +74,10 @@ export function Header() {
                   e.preventDefault();
                   handleNavClick(id);
                 }}
-                className="no-underline text-slate-200 hover:!text-amber-400 transition-all duration-300 font-semibold hover:scale-105 relative group visited:text-slate-200"
+                className="no-underline text-slate-200 hover:text-amber-400! transition-all duration-300 font-semibold hover:scale-105 relative group visited:text-slate-200"
               >
                 {label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-amber-400 to-orange-500 group-hover:w-full transition-all duration-300" />
               </a>
             ))}
 
@@ -136,7 +136,7 @@ export function Header() {
                   e.preventDefault();
                   handleNavClick(id);
                 }}
-                className="no-underline block w-full text-left py-3 px-4 text-slate-200 hover:!text-amber-400 hover:bg-white/5 rounded-lg transition-all duration-300 font-semibold visited:text-slate-200"
+                className="no-underline block w-full text-left py-3 px-4 text-slate-200 hover:text-amber-400! hover:bg-white/5 rounded-lg transition-all duration-300 font-semibold visited:text-slate-200"
               >
                 {label}
               </a>
