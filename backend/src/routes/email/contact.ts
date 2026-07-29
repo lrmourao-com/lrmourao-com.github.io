@@ -3,6 +3,7 @@ import { z } from 'zod';
 import path from 'path';
 import type Mail from 'nodemailer/lib/mailer';
 import { createTransporter, renderEmailTemplate } from '../../services/email-service.js';
+import { analyzeContactSubmission } from '../../services/contact-spam-filter.js';
 import { getEmailTranslations } from '../../i18n/email-translations.js';
 
 // Zod schema for contact form
@@ -13,6 +14,8 @@ const contactFormSchema = z.object({
   phone: z.string().optional().or(z.literal('')),
   message: z.string().min(10),
   locale: z.string().optional(),
+  website: z.string().optional(),
+  startedAt: z.number().optional(),
 });
 
 export const contactHandler = async (req: Request, res: Response) => {
@@ -28,6 +31,21 @@ export const contactHandler = async (req: Request, res: Response) => {
     }
 
     const { name, email, phone, message, locale, subject } = result.data;
+    const spamResult = getSpamResult(result.data, req);
+
+    if (spamResult.isSpam) {
+      console.warn('Spam contact submission dropped:', {
+        email,
+        score: spamResult.score,
+        reasons: spamResult.reasons,
+      });
+
+      return res.json({
+        success: true,
+        message: 'Message sent successfully'
+      });
+    }
+
     const transporter = createTransporter();
     const timestamp = new Date().toLocaleString();
     
@@ -105,11 +123,44 @@ export const contactHandler = async (req: Request, res: Response) => {
       message: 'Message sent successfully'
     });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Contact form submission error:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+
     res.status(500).json({
       error: 'Failed to process contact form submission',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      details: process.env.NODE_ENV === 'development' ? errorMessage : undefined
     });
   }
 };
+
+function getClientIp(req: Request): string | undefined {
+  const forwardedFor = req.headers['x-forwarded-for'];
+  if (typeof forwardedFor === 'string') {
+    return forwardedFor.split(',')[0]?.trim();
+  }
+
+  if (Array.isArray(forwardedFor)) {
+    return forwardedFor[0]?.split(',')[0]?.trim();
+  }
+
+  return req.ip || req.socket.remoteAddress;
+}
+
+function getSpamResult(
+  data: z.infer<typeof contactFormSchema>,
+  req: Request,
+): ReturnType<typeof analyzeContactSubmission> {
+  try {
+    return analyzeContactSubmission(data, {
+      ip: getClientIp(req),
+    });
+  } catch (error) {
+    console.error('Contact spam filter failed open:', error);
+    return {
+      isSpam: false,
+      score: 0,
+      reasons: ['filter_error_fail_open'],
+    };
+  }
+}

@@ -7,7 +7,8 @@ export const contactFormSchema = z.object({
   phone: z.string().optional(),
   message: z.string().min(10, { message: "Message must be at least 10 characters" }),
   locale: z.string().optional(),
+  website: z.string().optional(),
+  startedAt: z.number().optional(),
 });
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;
-

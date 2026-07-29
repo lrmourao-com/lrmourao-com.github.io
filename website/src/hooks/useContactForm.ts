@@ -17,17 +17,25 @@ type ContactFormAction =
   | { type: "SUBMIT_ERROR"; message: string }
   | { type: "RESET" };
 
-const initialState: ContactFormState = {
-  values: {
+function createInitialValues(): ContactFormData {
+  return {
     name: "",
     email: "",
     subject: "",
     phone: "",
     message: "",
-  },
-  errors: {},
-  status: "idle",
-};
+    website: "",
+    startedAt: Date.now(),
+  };
+}
+
+function createInitialState(): ContactFormState {
+  return {
+    values: createInitialValues(),
+    errors: {},
+    status: "idle",
+  };
+}
 
 function contactFormReducer(
   state: ContactFormState,
@@ -57,7 +65,7 @@ function contactFormReducer(
       return {
         ...state,
         status: "success",
-        values: initialState.values, // Reset form on success
+        values: createInitialValues(),
       };
     case "SUBMIT_ERROR":
       return {
@@ -66,14 +74,14 @@ function contactFormReducer(
         errorMessage: action.message,
       };
     case "RESET":
-      return initialState;
+      return createInitialState();
     default:
       return state;
   }
 }
 
 export function useContactForm() {
-  const [state, dispatch] = useReducer(contactFormReducer, initialState);
+  const [state, dispatch] = useReducer(contactFormReducer, undefined, createInitialState);
 
   const setField = (field: keyof ContactFormData, value: string) => {
     dispatch({ type: "SET_FIELD", field, value });
@@ -138,4 +146,3 @@ export function useContactForm() {
     reset,
   };
 }
-

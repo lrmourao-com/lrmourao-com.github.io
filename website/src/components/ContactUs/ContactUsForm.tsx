@@ -34,6 +34,17 @@ export function ContactUsForm() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+          <input
+            type="text"
+            name="website"
+            value={values.website || ""}
+            onChange={handleInputChange}
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
+
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             <div>
               <label className="block text-slate-700 text-sm font-medium mb-2">
@@ -106,6 +117,8 @@ export function ContactUsForm() {
             )}
           </div>
 
+
+
           <div>
             <label className="block text-slate-700 text-sm font-medium mb-2">
               {t('contact.form.subjectLabel')} <span className="text-red-500">*</span>
@@ -129,6 +142,8 @@ export function ContactUsForm() {
               </p>
             )}
           </div>
+
+
 
 
 
