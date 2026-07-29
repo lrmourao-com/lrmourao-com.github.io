@@ -10,6 +10,7 @@
     "build": "tsc",
     "lint": "eslint src/**/*.ts",
     "test": "bash scripts/test-server.sh",
+    "test:spam": "node --import tsx --test tests/**/*.test.ts",
     "docker:build": "docker-compose build",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down",
