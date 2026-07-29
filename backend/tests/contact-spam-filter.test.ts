@@ -60,6 +60,19 @@ test('allows ordinary one-word subjects without an allowlist', () => {
   }
 });
 
+test('allows unknown human-looking one-word subjects', () => {
+  const result = analyzeContactSubmission(
+    {
+      ...baseSubmission,
+      subject: 'planeamento',
+    },
+    { ip: '203.0.113.12', now: 1_000_000 },
+  );
+
+  assert.equal(result.isSpam, false);
+  assert.equal(result.reasons.includes('random_subject'), false);
+});
+
 test('blocks submissions that fill the hidden website honeypot field', () => {
   const result = analyzeContactSubmission(
     {
