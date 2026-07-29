@@ -45,8 +45,8 @@ test('blocks lowercase gibberish subjects with no spaces', () => {
   assert.match(result.reasons.join(','), /random_subject/);
 });
 
-test('allows legitimate one-word service subjects', () => {
-  for (const [index, subject] of ['Soldadura', 'Certificacao', 'Formacao', 'WPQR', 'Orcamento', 'Disponibilidade', 'agendamento'].entries()) {
+test('allows ordinary one-word subjects without an allowlist', () => {
+  for (const [index, subject] of ['Soldadura', 'Certificacao', 'Formacao', 'WPQR', 'Orcamento', 'Disponibilidade', 'agendamento', 'reuniao'].entries()) {
     const result = analyzeContactSubmission(
       {
         ...baseSubmission,

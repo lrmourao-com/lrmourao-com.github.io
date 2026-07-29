@@ -31,31 +31,6 @@ const EMAIL_RATE_LIMIT = 3;
 const ipRateBuckets = new Map<string, RateEntry>();
 const emailRateBuckets = new Map<string, RateEntry>();
 
-const allowedSingleWordSubjects = new Set([
-  'certificacao',
-  'certificação',
-  'contacto',
-  'consultadoria',
-  'consultoria',
-  'coordenacao',
-  'coordenação',
-  'formacao',
-  'formação',
-  'informacoes',
-  'informações',
-  'inspecao',
-  'inspeção',
-  'orcamento',
-  'orçamento',
-  'pedido',
-  'preco',
-  'preço',
-  'qualificacao',
-  'qualificação',
-  'soldadura',
-  'wpqr',
-]);
-
 export function analyzeContactSubmission(
   payload: ContactSpamPayload,
   meta: ContactSpamMeta = {},
@@ -122,9 +97,6 @@ export function resetContactSpamFilterForTests() {
 function isRandomSubject(subject: string): boolean {
   const normalized = normalizeSpaces(subject);
   if (!normalized) return false;
-
-  const lower = normalized.toLocaleLowerCase();
-  if (allowedSingleWordSubjects.has(lower)) return false;
 
   const hasNoSpaces = !/\s/.test(normalized);
   if (!hasNoSpaces) {
